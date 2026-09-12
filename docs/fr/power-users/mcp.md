@@ -27,6 +27,15 @@ Sur ordinateur, l’application affiche le chemin exact des données locales sou
 - Une base de données Mindwtr locale (`mindwtr.db`) pour le mode local, ou une URL Mindwtr Cloud auto-hébergée et un jeton porteur pour le mode Cloud
 - **Bun** uniquement si vous exécutez l’utilitaire depuis l’arborescence des sources
 
+Avec **npm 12**, autorisez le script d’installation de la dépendance SQLite : sinon, une installation réussie peut échouer au démarrage faute de module natif. Pour `npx` ou une installation globale, autorisez uniquement `better-sqlite3` :
+
+```bash
+npx --allow-scripts=better-sqlite3 -y mindwtr-mcp --db "/path/to/mindwtr.db"
+npm install -g --allow-scripts=better-sqlite3 mindwtr-mcp
+```
+
+Dans les configurations MCP utilisant `npx`, ajoutez `"--allow-scripts=better-sqlite3"` avant `"mindwtr-mcp"` dans `args`. Pour une installation locale existante, exécutez `npm install-scripts approve better-sqlite3`, puis `npm rebuild better-sqlite3` depuis ce projet. Vérifiez la dépendance avant de l’autoriser ; n’activez pas tous les scripts.
+
 ### Emplacements par défaut de la base de données
 
 - **Linux :** `~/.local/share/mindwtr/mindwtr.db`

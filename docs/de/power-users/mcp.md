@@ -27,6 +27,15 @@ Auf dem Desktop zeigt die App den genauen lokalen Datenpfad unter **Einstellunge
 - eine lokale Mindwtr-Datenbank (`mindwtr.db`) für den lokalen Modus oder eine selbst gehostete Mindwtr-Cloud-URL und ein Bearer-Token für den Cloud-Modus
 - **Bun** nur, wenn Sie das Hilfsprogramm aus dem Quellbaum ausführen
 
+Mit **npm 12** müssen Sie das Installationsskript der SQLite-Abhängigkeit freigeben. Sonst kann die Installation erfolgreich sein, der Start aber wegen fehlender nativer Bindings scheitern. Erlauben Sie bei `npx` oder globalen Installationen nur `better-sqlite3`:
+
+```bash
+npx --allow-scripts=better-sqlite3 -y mindwtr-mcp --db "/path/to/mindwtr.db"
+npm install -g --allow-scripts=better-sqlite3 mindwtr-mcp
+```
+
+Fügen Sie in MCP-Konfigurationen mit `npx` den Eintrag `"--allow-scripts=better-sqlite3"` vor `"mindwtr-mcp"` in `args` ein. Bei einer vorhandenen projektlokalen Installation führen Sie im Projekt zuerst `npm install-scripts approve better-sqlite3`, dann `npm rebuild better-sqlite3` aus. Prüfen Sie die Abhängigkeit vor der Freigabe; erlauben Sie nicht pauschal alle Skripte.
+
 ### Standardspeicherorte der Datenbank
 
 - **Linux:** `~/.local/share/mindwtr/mindwtr.db`

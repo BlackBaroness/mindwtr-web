@@ -27,6 +27,15 @@ On desktop, the app shows the exact local data path in **Settings -> Sync -> Loc
 - A local Mindwtr database (`mindwtr.db`) for local mode, or a self-hosted Mindwtr Cloud URL and bearer token for Cloud mode
 - **Bun** only if you are running the helper from the source tree
 
+With **npm 12**, approve the SQLite dependency's install script; otherwise a successful install can still fail at startup with a missing native binding. For `npx` or global installs, allow only `better-sqlite3`:
+
+```bash
+npx --allow-scripts=better-sqlite3 -y mindwtr-mcp --db "/path/to/mindwtr.db"
+npm install -g --allow-scripts=better-sqlite3 mindwtr-mcp
+```
+
+In MCP client configurations using `npx`, add `"--allow-scripts=better-sqlite3"` before `"mindwtr-mcp"` in `args`. For an existing project-local install, run `npm install-scripts approve better-sqlite3`, then `npm rebuild better-sqlite3` from that project. Review the dependency before approving; do not enable all dependency scripts.
+
 ### Default Database Locations
 
 - **Linux:** `~/.local/share/mindwtr/mindwtr.db`

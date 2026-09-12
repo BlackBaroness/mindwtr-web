@@ -27,6 +27,15 @@ Mindwtr 提供可选的 **MCP（Model Context Protocol，模型上下文协议�
 - 本地模式需要本地 Mindwtr 数据库（`mindwtr.db`），Cloud 模式则需要自托管的 Mindwtr Cloud URL 和 bearer token
 - 仅当从源码树运行辅助程序时才需要 **Bun**
 
+使用 **npm 12** 时，需要批准 SQLite 依赖的安装脚本；否则，即使安装成功，启动时仍可能因缺少原生绑定而失败。使用 `npx` 或全局安装时，仅允许 `better-sqlite3`：
+
+```bash
+npx --allow-scripts=better-sqlite3 -y mindwtr-mcp --db "/path/to/mindwtr.db"
+npm install -g --allow-scripts=better-sqlite3 mindwtr-mcp
+```
+
+在使用 `npx` 的 MCP 配置中，将 `"--allow-scripts=better-sqlite3"` 添加到 `args` 的 `"mindwtr-mcp"` 之前。对于已安装到项目中的包，请在该项目内先运行 `npm install-scripts approve better-sqlite3`，再运行 `npm rebuild better-sqlite3`。批准前请检查该依赖，不要启用所有依赖脚本。
+
 ### 默认数据库位置
 
 - **Linux：**`~/.local/share/mindwtr/mindwtr.db`
