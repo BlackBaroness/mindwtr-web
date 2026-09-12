@@ -103,7 +103,7 @@ Errores anteriores de la misma clase: **#309** (el observador volvía a fusionar
 - Cada fallo de archivo remoto se clasifica como reintentable (con límites y espera progresiva) o terminal (404 → marcar como irrecuperable y detener). No hay reintentos sin límite en ninguna parte del código de adjuntos.
 - Las comprobaciones de identidad usan ID o claves canónicas, nunca formas textuales del URI del proveedor (barras finales de SAF, peculiaridades de `content://`).
 - Las fases de adjuntos se omiten cuando los metadatos indican que no hay trabajo pendiente (por rendimiento *y* seguridad del bucle).
-- Riesgo abierto conocido (revisión de 2026-06): `duplicateTask` comparte el `cloudKey` entre las copias sin recuento de referencias; eliminar una borra los bytes de la otra. No añadas nuevas rutas con claves compartidas.
+- Los bytes de los adjuntos compartidos se conservan mientras una tarea o proyecto activo o restaurable haga referencia a su URI canónico o `cloudKey`. La limpieza comprueba esas referencias antes de borrar archivos locales o remotos; conserva esta protección al añadir rutas que compartan archivos.
 
 ---
 
@@ -116,7 +116,7 @@ Errores anteriores de la misma clase: **#309** (el observador volvía a fusionar
 - **#367:** la zona aislada de Mac App Store trasladaba la base de datos; el resolutor de rutas de MCP solo conocía las rutas sin aislamiento.
 
 **Protecciones:**
-- La creación de todas las entidades pasa por las fábricas del núcleo, que asignan todos los campos necesarios para la sincronización (`rev`, `revBy`, `createdAt`, `updatedAt`, valores predeterminados). Un escritor que construye JSON a mano será un error de pérdida de datos en el futuro. (El mismo caso es la ausencia de asignación de revisiones en `POST /v1/tasks` del servidor en la nube; corrección pendiente).
+- Las entidades deben crearse mediante la fábrica del núcleo o el endpoint REST de Cloud responsable, que asigna todos los campos de sincronización (`rev`, `revBy`, `createdAt`, `updatedAt`, valores predeterminados). El servidor Cloud ahora asigna revisiones y marcas de tiempo al crear entidades; conserva este contrato en todos los escritores.
 - Los escritores externos integran el almacén del núcleo y el adaptador de almacenamiento, o bien son de solo lectura.
 - Protocolo de escritura entre procesos: adquirir bloqueo → (en caso de conflicto) volver a cargar → volver a aplicar → escribir. Se prohíbe continuar a partir de una instantánea obsoleta.
 - La resolución de rutas debe enumerar los canales de instalación aislados (contenedores de App Store, Flatpak, etc.).
@@ -224,7 +224,7 @@ Una entidad nueva (o un campo nuevo) debe afectar a: tipo del núcleo y asignaci
 - La persistencia de modificaciones es incremental; los guardados de instantáneas completas quedan reservados para los límites del ciclo de vida y la sincronización.
 - Cada fase periódica o de sincronización termina antes si no hay trabajo.
 - Los controladores de toques son idempotentes (los toques duplicados en cola son inocuos).
-- El conjunto de rendimiento para almacenes grandes (`bun run test:perf`, con presupuestos en `docs/performance-budgets.md`) incorpora un caso cada vez que se publica una nueva ruta crítica.
+- El conjunto de rendimiento para almacenes grandes (`bun run test:perf`, con presupuestos en `docs/performance/budgets.md`) incorpora un caso cada vez que se publica una nueva ruta crítica.
 
 ---
 

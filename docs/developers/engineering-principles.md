@@ -103,7 +103,7 @@ Earlier same-class bugs: **#309** (watcher merging the app's own `data.json` bac
 - Every remote-file failure classifies as retryable (bounded, with backoff) or terminal (404 → mark unrecoverable, stop). No unbounded retries anywhere in attachment code.
 - Identity checks use canonical IDs/keys, never provider URI string forms (SAF trailing slashes, `content://` quirks).
 - Attachment phases skip when metadata shows no pending work (perf *and* loop safety).
-- Known open hazard (2026-06 review): `duplicateTask` shares `cloudKey` between copies with no refcount — deleting one deletes the other's bytes. Don't add new shared-key paths.
+- Shared attachment bytes are retained while a live or restorable task/project references their canonical URI or `cloudKey`. Cleanup checks those references before local or remote deletion; preserve this guard when adding paths that share files.
 
 ---
 
@@ -116,7 +116,7 @@ Earlier same-class bugs: **#309** (watcher merging the app's own `data.json` bac
 - **#367:** Mac App Store sandbox relocated the DB; MCP's path resolver knew only unsandboxed paths.
 
 **Guardrails:**
-- All entity creation goes through core factories that stamp every sync-required field (`rev`, `revBy`, `createdAt`, `updatedAt`, defaults). A writer that hand-rolls JSON is a future data-loss bug. (The cloud server's `POST /v1/tasks` missing rev-stamping is this same class — fix pending.)
+- Entity creation must use the owning core factory or Cloud REST endpoint so every sync-required field (`rev`, `revBy`, `createdAt`, `updatedAt`, defaults) is stamped. The Cloud server now stamps revisions and timestamps on creation; preserve that contract in every writer.
 - External writers either embed core's store + storage adapter, or stay read-only.
 - Cross-process write protocol: acquire lock → (on conflict) reload → reapply → write. Stale-snapshot continuation is forbidden.
 - Path resolution must enumerate sandboxed install channels (App Store containers, Flatpak, etc.).
@@ -224,7 +224,7 @@ New entity (or new field) must touch: core type + factory stamping; normalizatio
 - Mutation persistence is incremental; full-snapshot saves are for lifecycle/sync boundaries only.
 - Every periodic/sync phase has a no-work early exit.
 - Tap handlers are idempotent (queued duplicate taps are harmless).
-- The large-store perf suite (`bun run test:perf`, budgets in `docs/performance-budgets.md`) gains a case whenever a new hot path ships.
+- The large-store perf suite (`bun run test:perf`, budgets in `docs/performance/budgets.md`) gains a case whenever a new hot path ships.
 
 ---
 

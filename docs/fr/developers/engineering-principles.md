@@ -103,7 +103,7 @@ Bogues antérieurs de la même catégorie : **#309** (l’observateur fusionnait
 - Chaque échec de fichier distant est classé comme récupérable (borné, avec temporisation progressive) ou définitif (404 → marquer comme irrécupérable, arrêter). Aucune nouvelle tentative non bornée dans le code des pièces jointes.
 - Les contrôles d’identité utilisent des ID/clés canoniques, jamais les formes de chaîne des URI des fournisseurs (barres obliques finales SAF, particularités de `content://`).
 - Les phases des pièces jointes sont ignorées lorsque les métadonnées n’indiquent aucun travail en attente (pour les performances *et* pour éviter les boucles).
-- Danger connu encore ouvert (revue 2026-06) : `duplicateTask` partage le `cloudKey` entre les copies sans compteur de références — supprimer l’une efface les octets de l’autre. N’ajoutez pas de nouveaux chemins à clé partagée.
+- Les octets des pièces jointes partagées sont conservés tant qu’une tâche ou un projet actif ou restaurable référence leur URI canonique ou leur `cloudKey`. Le nettoyage vérifie ces références avant toute suppression locale ou distante ; conservez cette protection pour les nouveaux chemins partageant des fichiers.
 
 ---
 
@@ -116,7 +116,7 @@ Bogues antérieurs de la même catégorie : **#309** (l’observateur fusionnait
 - **#367 :** le bac à sable du Mac App Store avait déplacé la base de données ; le résolveur de chemins de MCP ne connaissait que les chemins hors bac à sable.
 
 **Garde-fous :**
-- Toute création d’entité passe par les fabriques du cœur, qui définissent chaque champ requis pour la synchronisation (`rev`, `revBy`, `createdAt`, `updatedAt`, valeurs par défaut). Un auteur qui construit du JSON à la main est un futur bogue de perte de données. (L’absence de marquage de révision dans `POST /v1/tasks` sur le serveur cloud appartient à la même catégorie — correctif en attente.)
+- Les entités doivent être créées par la fabrique du cœur ou le point de terminaison REST Cloud responsable, afin de renseigner tous les champs de synchronisation (`rev`, `revBy`, `createdAt`, `updatedAt`, valeurs par défaut). Le serveur Cloud définit désormais les révisions et horodatages à la création ; préservez ce contrat dans chaque chemin d’écriture.
 - Les auteurs externes intègrent soit le store du cœur et l’adaptateur de stockage, soit restent en lecture seule.
 - Protocole d’écriture interprocessus : acquérir le verrou → (en cas de conflit) recharger → réappliquer → écrire. Il est interdit de poursuivre depuis un instantané périmé.
 - La résolution des chemins doit énumérer les canaux d’installation en bac à sable (conteneurs App Store, Flatpak, etc.).
@@ -224,7 +224,7 @@ Une nouvelle entité (ou un nouveau champ) doit concerner : le type du cœur et 
 - La persistance des modifications est incrémentielle ; les enregistrements d’instantanés complets sont réservés aux limites de cycle de vie/synchronisation.
 - Chaque phase périodique/de synchronisation quitte immédiatement lorsqu’il n’y a aucun travail.
 - Les gestionnaires de toucher sont idempotents (des touchers en double mis en file sont sans effet).
-- La suite de performances pour les grands stores (`bun run test:perf`, budgets dans `docs/performance-budgets.md`) reçoit un cas chaque fois qu’un nouveau chemin critique est livré.
+- La suite de performances pour les grands stores (`bun run test:perf`, budgets dans `docs/performance/budgets.md`) reçoit un cas chaque fois qu’un nouveau chemin critique est livré.
 
 ---
 

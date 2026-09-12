@@ -116,7 +116,7 @@ Frühere Fehler derselben Klasse: **#309** (Watcher führte das app-eigene `data
 - Jeder Fehler bei entfernten Dateien wird als wiederholbar (begrenzt, mit Backoff) oder endgültig klassifiziert (404 → als nicht wiederherstellbar markieren, stoppen). Nirgendwo im Anhangscode sind unbegrenzte Wiederholungen zulässig.
 - Identitätsprüfungen verwenden maßgebliche IDs/Schlüssel, niemals URI-Zeichenfolgenformen des Anbieters (SAF-Schlussschrägstriche, Besonderheiten von `content://`).
 - Anhangsphasen werden übersprungen, wenn die Metadaten keine ausstehende Arbeit zeigen (Leistung *und* Schleifensicherheit).
-- Bekannte offene Gefahr (Überprüfung 2026-06): `duplicateTask` teilt `cloudKey` ohne Referenzzähler zwischen Kopien — beim Löschen einer Kopie werden die Bytes der anderen gelöscht. Fügen Sie keine neuen Pfade mit gemeinsamem Schlüssel hinzu.
+- Gemeinsam genutzte Anhangsdaten bleiben erhalten, solange eine aktive oder wiederherstellbare Aufgabe bzw. ein Projekt auf ihre kanonische URI oder ihren `cloudKey` verweist. Die Bereinigung prüft diese Referenzen vor lokalem oder entferntem Löschen. Behalten Sie diesen Schutz bei neuen Pfaden mit gemeinsam genutzten Dateien bei.
 
 ---
 
@@ -131,7 +131,7 @@ Frühere Fehler derselben Klasse: **#309** (Watcher führte das app-eigene `data
 
 **Leitplanken:**
 
-- Die Erstellung aller Entitäten läuft durch Core-Factories, die jedes für die Synchronisierung erforderliche Feld setzen (`rev`, `revBy`, `createdAt`, `updatedAt`, Standardwerte). Ein Schreiber, der JSON selbst zusammenstellt, ist ein künftiger Datenverlustfehler. (Dass beim `POST /v1/tasks` des Cloud-Servers keine Revision gesetzt wird, gehört zur selben Klasse — Korrektur ausstehend.)
+- Entitäten müssen über die zuständige Core-Factory oder den Cloud-REST-Endpunkt erstellt werden, damit alle Synchronisierungsfelder (`rev`, `revBy`, `createdAt`, `updatedAt`, Standardwerte) gesetzt werden. Der Cloud-Server setzt jetzt Revisionen und Zeitstempel beim Erstellen; jeder Schreiber muss diesen Vertrag erhalten.
 - Externe Schreiber betten entweder den Core-Store + Speicheradapter ein oder bleiben schreibgeschützt.
 - Schreibprotokoll über Prozessgrenzen: Sperre beziehen → (bei Konflikt) neu laden → erneut anwenden → schreiben. Fortsetzen mit einem veralteten Snapshot ist verboten.
 - Die Pfadauflösung muss Installationskanäle mit Sandbox aufführen (App-Store-Container, Flatpak usw.).
@@ -255,7 +255,7 @@ Neue Entität (oder neues Feld) muss betreffen: Core-Typ + Setzen durch Factory;
 - Änderungspersistenz ist inkrementell; vollständige Snapshot-Speichervorgänge sind nur für Lebenszyklus-/Synchronisierungsgrenzen vorgesehen.
 - Jede periodische/Synchronisierungsphase hat bei fehlender Arbeit einen frühen Ausstieg.
 - Tipp-Handler sind idempotent (eingereihte doppelte Tipps sind harmlos).
-- Die Leistungssuite für große Stores (`bun run test:perf`, Budgets in `docs/performance-budgets.md`) erhält bei jedem neuen häufig durchlaufenen Pfad einen Fall.
+- Die Leistungssuite für große Stores (`bun run test:perf`, Budgets in `docs/performance/budgets.md`) erhält bei jedem neuen häufig durchlaufenen Pfad einen Fall.
 
 ---
 
