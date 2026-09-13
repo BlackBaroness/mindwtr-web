@@ -559,7 +559,7 @@ In jeder Voreinstellung setzt `s` plus Buchstabe direkt den Status (`si` Eingang
 
 ### Allgemein
 - **Darstellung**: System, Hell, Dunkel, E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia oder OLED / Mitternacht
-- **Sprache**: Englisch, Chinesisch (vereinfacht/traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch
+- **Sprache**: Englisch, Chinesisch (vereinfacht/traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch, Ungarisch
 - **Tastenkürzel**: Standard, Vim oder Emacs
 - **Beim Systemstart öffnen**: Mindwtr nach der Anmeldung automatisch starten
 - **Ansichten der Seitenleiste**: Blenden Sie Einträge der Seitenleiste aus, die Sie nicht nutzen, etwa Irgendwann/Vielleicht, Kalender oder Board. Eingang und Projekte bleiben immer sichtbar. Die Auswahl gilt nur für dieses Gerät; ausgeblendete Ansichten behalten ihre Daten und bleiben über die Suche erreichbar.

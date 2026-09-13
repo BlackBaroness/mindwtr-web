@@ -97,6 +97,7 @@ Mindwtr currently supports these language options, listed roughly by total speak
 - Nederlands
 - Čeština
 - Svenska
+- Magyar
 
 ### Where is my data stored?
 
