@@ -70,7 +70,7 @@ Open **Trash** and tap **Select** to manage several deleted tasks and projects. 
 
 ## Reference
 
-Reference is for notes and material you want to keep. Its rows and editor emphasize the title, description, project or area, people, tags, attachments, and links. Task scheduling and completion controls stay out of the way. Use **Convert to action** when a reference becomes something to do.
+Reference is for notes and material you want to keep. Its rows and editor emphasize the title, description, project or area, people, tags, attachments, and links. Task scheduling and completion controls stay out of the way. Use **Convert to action** when a reference becomes something to do. In the next release after 1.2.8, existing checklist items appear as a plain list in Reference and remain editable. Their saved checked states return if you convert the reference back to an action.
 
 Search within Reference matches every space-separated term anywhere in the title or description, ignoring case. For example, `ke 1 2` matches `key1 key2 key3`. Terms are literal text; this field does not interpret quick-add or advanced search syntax.
 
