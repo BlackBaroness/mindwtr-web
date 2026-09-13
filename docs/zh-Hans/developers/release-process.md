@@ -82,6 +82,8 @@ RC 输入 `run_msstore_flight` 默认启用。Windows 工作流对 RC 保持 `ru
 
 如需单独构建 Windows 安装程序和便携版，请手动运行 **Release Windows**，并关闭 `run_msstore` 和 `run_msstore_flight`。选择已有标签不会启用商店发布；这类构建接受 `1.3.0-rc.2a` 等自定义发布后缀，不应用商店软件包版本规则。公开商店发布由稳定版标签推送或显式的 `run_msstore` 请求启用；Beta 测试版使用 `run_msstore_flight`。
 
+请从 `main` 启动工作流，以使用最新的工作流修复。发布标签字段用于选择同一仓库中已有标签的源代码，不会创建或推送标签。请先创建并推送标签（从 fork 构建时，推送到你的 fork），再填写完整的标签名称，包括可能存在的 `v` 前缀。
+
 ### 当前 RC 自动化
 
 RC 工作流为 `.github/workflows/release-rc.yml`。

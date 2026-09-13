@@ -82,6 +82,8 @@ Store package versions use `X.Y.(Z*100+N).0` for `X.Y.Z-rc.N`, with RC numbers 1
 
 For standalone Windows installer and portable builds, manually run **Release Windows** with `run_msstore` and `run_msstore_flight` disabled. Selecting an existing tag does not enable Store publishing, and these builds accept custom release suffixes such as `1.3.0-rc.2a` without applying Store package-version rules. Public Store publishing is selected by a stable tag push or an explicit `run_msstore` request; beta flights use `run_msstore_flight`.
 
+Start the workflow from `main` to use its latest fixes. The release tag field selects source code from a tag that already exists in the same repository; it does not create or push a tag. Create and push the tag first (in your fork when building from a fork), then enter its exact name, including any `v` prefix.
+
 ### Current RC Automation
 
 The RC workflow is `.github/workflows/release-rc.yml`.

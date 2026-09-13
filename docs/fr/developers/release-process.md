@@ -82,6 +82,8 @@ Les versions des paquets utilisent `X.Y.(Z*100+N).0` pour `X.Y.Z-rc.N`, avec des
 
 Pour produire des installateurs Windows et des versions portables indépendantes, lancez manuellement **Release Windows** avec `run_msstore` et `run_msstore_flight` désactivés. La sélection d’une étiquette existante n’active pas la publication sur le Store, et ces builds acceptent des suffixes personnalisés comme `1.3.0-rc.2a` sans appliquer les règles des versions de paquets du Store. La publication sur le Store public est activée par l’envoi d’une étiquette stable ou une demande explicite `run_msstore` ; les flights bêta utilisent `run_msstore_flight`.
 
+Lancez le workflow depuis `main` pour utiliser ses dernières corrections. Le champ de l’étiquette de version sélectionne le code source d’une étiquette qui existe déjà dans le même dépôt ; il ne crée ni n’envoie d’étiquette. Créez et envoyez d’abord l’étiquette (dans votre fork si vous compilez depuis un fork), puis saisissez son nom exact, y compris le préfixe `v` éventuel.
+
 ### Automatisation RC actuelle
 
 Le flux de travail RC est `.github/workflows/release-rc.yml`.

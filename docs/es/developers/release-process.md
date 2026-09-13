@@ -82,6 +82,8 @@ Las versiones de paquetes usan `X.Y.(Z*100+N).0` para `X.Y.Z-rc.N`, con números
 
 Para generar instaladores de Windows y versiones portátiles independientes, ejecuta **Release Windows** manualmente con `run_msstore` y `run_msstore_flight` desactivados. Seleccionar una etiqueta existente no activa la publicación en la tienda, y estas compilaciones aceptan sufijos personalizados como `1.3.0-rc.2a` sin aplicar las reglas de versiones de paquetes de la tienda. La publicación en la tienda pública se activa al enviar una etiqueta estable o solicitar explícitamente `run_msstore`; los pilotos beta usan `run_msstore_flight`.
 
+Inicia el flujo desde `main` para usar sus últimas correcciones. El campo de etiqueta de versión selecciona el código fuente de una etiqueta que ya existe en el mismo repositorio; no crea ni envía etiquetas. Primero crea y envía la etiqueta (a tu fork si compilas desde un fork) y después introduce su nombre exacto, incluido el prefijo `v` si lo tiene.
+
 ### Automatización actual de RC
 
 El flujo de trabajo de RC es `.github/workflows/release-rc.yml`.

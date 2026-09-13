@@ -82,6 +82,8 @@ Store-Paketversionen verwenden `X.Y.(Z*100+N).0` für `X.Y.Z-rc.N` mit RC-Nummer
 
 Für eigenständige Windows-Installer und portable Builds starten Sie **Release Windows** manuell mit deaktiviertem `run_msstore` und `run_msstore_flight`. Die Auswahl eines vorhandenen Tags aktiviert keine Store-Veröffentlichung. Diese Builds akzeptieren eigene Release-Suffixe wie `1.3.0-rc.2a`, ohne die Regeln für Store-Paketversionen anzuwenden. Die Veröffentlichung im öffentlichen Store wird durch das Pushen eines stabilen Tags oder eine ausdrückliche `run_msstore`-Anforderung ausgewählt; Beta-Flights verwenden `run_msstore_flight`.
 
+Starten Sie den Workflow von `main`, um seine neuesten Korrekturen zu verwenden. Das Feld für den Release-Tag wählt den Quellcode eines Tags aus, der bereits im selben Repository existiert; es erstellt und pusht keinen Tag. Erstellen und pushen Sie den Tag zuerst (bei einem Fork im Fork-Repository), und geben Sie dann seinen genauen Namen einschließlich eines etwaigen `v`-Präfixes ein.
+
 ### Aktuelle RC-Automatisierung
 
 Der RC-Workflow ist `.github/workflows/release-rc.yml`.

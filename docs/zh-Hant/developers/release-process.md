@@ -82,6 +82,8 @@ RC 輸入 `run_msstore_flight` 預設啟用。Windows 工作流程對 RC 保持 
 
 如需單獨建置 Windows 安裝程式與可攜版，請手動執行 **Release Windows**，並關閉 `run_msstore` 和 `run_msstore_flight`。選擇既有標籤不會啟用商店發布；這類建置接受 `1.3.0-rc.2a` 等自訂發布後綴，不套用商店套件版本規則。公開商店發布由穩定版標籤推送或明確的 `run_msstore` 請求啟用；Beta 測試版使用 `run_msstore_flight`。
 
+請從 `main` 啟動工作流程，以使用最新的工作流程修正。發布標籤欄位用於選擇同一儲存庫中既有標籤的原始碼，不會建立或推送標籤。請先建立並推送標籤（從 fork 建置時，推送到你的 fork），再填寫完整的標籤名稱，包括可能存在的 `v` 前綴。
+
 ### 目前的 RC 自動化
 
 RC 工作流程為 `.github/workflows/release-rc.yml`。
