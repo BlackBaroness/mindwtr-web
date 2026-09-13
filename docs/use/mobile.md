@@ -10,7 +10,7 @@ The Mindwtr mobile app provides the complete guided GTD workflow on iPhone and A
 
 The mobile app uses bottom tabs for core flows and a Menu page for additional views.
 
-**Next release:** Android navigation adapts to the available app window: roomy windows use a side rail, while narrow or short windows keep compact navigation. Task editors and Quick Capture fit within a usable pane when Android reports a separating or obstructing hinge. There is no foldable mode to enable. Foldable emulator checks cover these layouts; physical Galaxy Z Fold and Z Flip confirmation is still pending.
+Android navigation adapts to the available app window: roomy windows use a side rail, while narrow or short windows keep compact navigation. Task editors and Quick Capture fit within a usable pane when Android reports a separating or obstructing hinge. There is no foldable mode to enable. Foldable emulator checks cover these layouts; physical Galaxy Z Fold and Z Flip confirmation is still pending.
 
 ---
 
@@ -78,7 +78,7 @@ Turn on **Include archived projects** in the Reference filters to find material 
 
 ## Bulk Actions
 
-**Next release:** In **Bulk organize**, search for a project or area, or type a new name and choose **Create** without losing your task selection or other form fields. Creation saves and selects the destination; tasks move only after **Apply to selected**. Cancelling the bulk edit leaves your tasks unchanged and keeps any destination you created. If creation fails, your selection and form stay available for retry.
+In **Bulk organize**, search for a project or area, or type a new name and choose **Create** without losing your task selection or other form fields. Creation saves and selects the destination; tasks move only after **Apply to selected**. Cancelling the bulk edit leaves your tasks unchanged and keeps any destination you created. If creation fails, your selection and form stay available for retry.
 
 ---
 
@@ -158,7 +158,7 @@ Great for:
 
 ### Android automation capture {#android-automation-capture}
 
-Available in the next release after 1.2.8. In **Settings → GTD → Capture defaults**, enable **Automation capture** and copy the capture token. This setting and token stay on this device. Give the token only to automation apps you trust; turning the setting off revokes it, and turning it on again creates a new token.
+In **Settings → GTD → Capture defaults**, enable **Automation capture** and copy the capture token. This setting and token stay on this device. Give the token only to automation apps you trust; turning the setting off revokes it, and turning it on again creates a new token.
 
 This is a general Android broadcast intent; Tasker is not required. Any app or automation tool that can send an explicit broadcast with String extras can use it. Send the action below to this receiver, with `text` containing the captured text and `token` containing your capture token:
 
@@ -198,7 +198,7 @@ Add the Mindwtr widget to your home screen for quick access:
 
 1. Long-press on your home screen
 2. Select **Widgets**
-3. Find **Mindwtr** and add the **Tasks** widget, the one-cell **Quick capture** button or, on Android in the next release after 1.2.8, the optional smaller **Compact** widget. The Tasks widget shows a **+** button and your tasks, each with its priority colour, its project or area, and its due date. On Android, a newly added Tasks widget shows Focus, with the inbox count in its header and a short view of Today's Focus and Today in the next release after 1.2.8. Review Due, Next actions and Upcoming stay in the app. To switch the list, tap the widget's title, which carries a small down arrow. A sheet lists Focus, Inbox, Next Actions, Waiting For, Someday/Maybe and your **Saved Filters**. Tap one and the widget redraws. To show a single project on a widget, save a Focus filter for that project in the app and pick that filter here. This works on every launcher, and some launchers have no edit action of their own for widgets. You can add several Tasks widgets with different lists.
+3. Find **Mindwtr** and add the **Tasks** widget, the one-cell **Quick capture** button or, on Android, the optional smaller **Compact** widget. The Tasks widget shows a **+** button and your tasks, each with its priority colour, its project or area, and its due date. On Android, a newly added Tasks widget shows Focus, with the inbox count in its header and a short view of Today's Focus and Today. Review Due, Next actions and Upcoming stay in the app. To switch the list, tap the widget's title, which carries a small down arrow. A sheet lists Focus, Inbox, Next Actions, Waiting For, Someday/Maybe and your **Saved Filters**. Tap one and the widget redraws. To show a single project on a widget, save a Focus filter for that project in the app and pick that filter here. This works on every launcher, and some launchers have no edit action of their own for widgets. You can add several Tasks widgets with different lists.
 4. On a task-list widget, tap a task to open its small native detail sheet. On Tasks, tap the ring at the start of a row to complete it. Use the capture button on any of the three Android widgets to add something to Inbox.
 
 The Tasks widget prioritizes Today's Focus, followed by Today, including overdue tasks. It keeps the existing size limits and does not fill empty space with other next actions. On Android, it follows the Focus screen's filters and sort order. The filters you have set there apply to the widget too: contexts, tags, priority, energy, time estimate and a saved filter. The sort you have chosen on the Focus screen applies as well, and the widget updates when you change either. The area you have selected in the app narrows every widget list.
@@ -211,15 +211,15 @@ On Android, tapping a ring in the Tasks widget completes the task. The row shows
 
 On Android, the capture button on any of the three widgets, the Quick Settings tile, the app shortcut and the capture notification open the same native floating capture window on top of whatever you are doing, without opening the main app. **Save** adds the task to the Inbox, shows a short confirmation and closes the window; the task appears the next time you open Mindwtr. iOS captures through the app as before.
 
-In the next release after 1.2.8, enabling speech-to-text also adds a microphone button to this native Android window. Record, tap Stop, then Save; the main app stays closed. Recordings are saved on the device and transcribed with your configured provider when Mindwtr next opens or returns to the foreground. F-Droid uses offline Whisper. Failed transcription keeps the recording for another attempt. Recording stops when you leave the window and is limited to five minutes.
+Enabling speech-to-text also adds a microphone button to this native Android window. Record, tap Stop, then Save; the main app stays closed. Recordings are saved on the device and transcribed with your configured provider when Mindwtr next opens or returns to the foreground. F-Droid uses offline Whisper. Failed transcription keeps the recording for another attempt. Recording stops when you leave the window and is limited to five minutes.
 
 On Android, dated rows show **Today**, a weekday for the coming week, or a compact date. Tasks due today or overdue receive extra emphasis.
 
 ### iOS Home Screen Widget
 
-**Next release:** Choose **Tasks** for the regular widget, available in small, medium and large sizes (plus extra-large on supported iPads), or **Compact** for smaller text and a flat Focus list. Compact has no list picker or check-off rings; medium and larger sizes still link to tasks and quick capture.
+Choose **Tasks** for the regular widget, available in small, medium and large sizes (plus extra-large on supported iPads), or **Compact** for smaller text and a flat Focus list. Compact has no list picker or check-off rings; medium and larger sizes still link to tasks and quick capture.
 
-**Next release:** The iOS Tasks widget shows Today's Focus and Today, including overdue tasks, with the date, priority rings, project or area labels, and the app's Focus filters and sort order. It does not fill unused space with other next actions.
+The iOS Tasks widget shows Today's Focus and Today, including overdue tasks, with the date, priority rings, project or area labels, and the app's Focus filters and sort order. It does not fill unused space with other next actions.
 
 On iOS 17 and later, long-press a Tasks widget and choose **Edit Widget** to select Focus, Inbox, Next Actions, Waiting For, Someday/Maybe, or a saved filter. Multiple widgets can show different lists. Tap a ring to queue completion; the row stays struck through until Mindwtr next runs and saves the change. Tap the ring again to undo before the app claims it. There is a minimum three-second grace period. Completion and sync happen through the app, not directly from the widget.
 
@@ -452,7 +452,7 @@ The list icon beside **Filters** in the Focus header toggles **Details**: turn i
 ### Features
 
 - **Context filter**: Tap a context chip to filter the Next list.
-- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates. In the next release after 1.2.8, tap a saved filter to apply it; tap it again or tap **All** to clear it. To delete a saved filter, long-press its chip and confirm **Delete**. Screen readers also offer a delete action on each saved filter.
+- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates. Tap a saved filter to apply it; tap it again or tap **All** to clear it. To delete a saved filter, long-press its chip and confirm **Delete**. Screen readers also offer a delete action on each saved filter.
 - **Swipe to Focus**: Swipe a task right to toggle "Focus" status (moves it to Today).
 - **Quick Status**: Tap the status badge to change status.
 - **Pomodoro (Optional)**: Enable in **Settings → GTD → Features → Pomodoro timer** to show a compact focus/break timer. Leave it as **Timer only**, or turn on **Link timer to task** to show the Timer task picker and **Mark task done** action. Collapse the card to keep the remaining time, phase, and **Running** or **Paused** status visible in a slim row.
@@ -715,7 +715,7 @@ Make sure notifications are enabled:
 
 ### Reminders arriving late on Android
 
-Android 12 and later can withhold permission to schedule exact alarms. Without that permission, Android may delay reminders; there is no one-minute limit. Mindwtr shows **Reminders may arrive late** in **Settings → Notifications**, with an **Allow** button. From the next release, Pomodoro shows its own explanation directly below **Alert when timer ends**, with an **Open Android settings** action. The switch controls whether you receive timer alerts; the Android permission controls their timing. Permission help appears only while Pomodoro alerts are on and the permission is missing.
+Android 12 and later can withhold permission to schedule exact alarms. Without that permission, Android may delay reminders; there is no one-minute limit. Mindwtr shows **Reminders may arrive late** in **Settings → Notifications**, with an **Allow** button. Pomodoro shows its own explanation directly below **Alert when timer ends**, with an **Open Android settings** action. The switch controls whether you receive timer alerts; the Android permission controls their timing. Permission help appears only while Pomodoro alerts are on and the permission is missing.
 
 Tap **Allow** to open the Android permission screen for Mindwtr. You can also reach it at device **Settings → Apps → Mindwtr → Alarms & reminders**. As soon as the permission is granted, Mindwtr reschedules its reminders as exact alarms without restarting the app, and the row goes away. The row never appears before Android 12, where every alarm is already exact.
 

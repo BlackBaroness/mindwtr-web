@@ -68,7 +68,7 @@ Ejemplo para xAI (Grok):
 
 ## Modelos lentos y tiempo de espera
 
-A partir de v1.3.0, abre **Avanzado → Tiempo de espera** dentro de los ajustes del asistente de IA, tanto en escritorio como en móvil. Puedes elegir **30, 60, 120 o 300 segundos**; el valor predeterminado sigue siendo 30 segundos. Para un modelo local lento, prueba primero con 120 segundos.
+Abre **Avanzado → Tiempo de espera** dentro de los ajustes del asistente de IA, tanto en escritorio como en móvil. Puedes elegir **30, 60, 120 o 300 segundos**; el valor predeterminado sigue siendo 30 segundos. Para un modelo local lento, prueba primero con 120 segundos.
 
 El límite se aplica a las respuestas del asistente y de Copilot, no a la transcripción ni a la consulta de modelos. Las solicitudes canceladas o que agoten el tiempo no se reintentan automáticamente. Los errores temporales de red o del servidor pueden seguir teniendo un número limitado de reintentos. El tiempo de espera sigue tu preferencia actual de sincronización de los ajustes de IA.
 

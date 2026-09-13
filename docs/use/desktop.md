@@ -54,7 +54,7 @@ Mindwtr runs in the background to handle auto-sync.
 On macOS 14 and later, the desktop app brings a widget of its own.
 
 - **Add it from the widget gallery** — click the date in the menu bar, then **Edit Widgets** — and pick **Mindwtr** in small, medium, or large. It shows today's focus tasks and updates as that list changes.
-- **Click the task list** to open the desktop app. In the next release after 1.2.8, the widget also has a **Quick capture** button that opens only the existing floating Quick Add panel, not the main window. If Mindwtr is not already running, macOS may start it in the background to show the panel. The Mac widget also takes precedence over the iPhone widget the gallery used to offer through Continuity, which opened the app on the phone instead.
+- **Click the task list** to open the desktop app. The widget also has a **Quick capture** button that opens only the existing floating Quick Add panel, not the main window. If Mindwtr is not already running, macOS may start it in the background to show the panel. The Mac widget also takes precedence over the iPhone widget the gallery used to offer through Continuity, which opened the app on the phone instead.
 - The widget ships in the signed Developer ID build (the DMG); the Mac App Store build gets it in a later release.
 
 ## Views
@@ -432,7 +432,7 @@ Configure notifications in Settings:
 - Markdown checkboxes in the description are notes-only; they do not affect the task checklist
 - Paste multi-line text into a checklist item to create one item per line (bullets, numbering, and `[x]` markers are recognized)
 - Assign to a project from the editor, or from a task row's `⋯` menu — pick **Project…** to move the task into a project or out of the one it is in
-- **Next release:** In that **Project…** picker, type a new name and choose **Create**. The new project is saved immediately; the task moves only when you choose **Save**. **Cancel** leaves the task unchanged and keeps the project you created.
+- In that **Project…** picker, type a new name and choose **Create**. The new project is saved immediately; the task moves only when you choose **Save**. **Cancel** leaves the task unchanged and keeps the project you created.
 
 ### Task Properties
 
@@ -479,7 +479,7 @@ Use the same recurrence sheet to set an end date or an occurrence count when you
 
 ## Bulk Actions
 
-**Next release:** In **Bulk organize**, search for a project or area, or type a new name and choose **Create** without losing your task selection or other form fields. Creation saves and selects the destination; tasks move only after **Apply to selected**. Cancelling the bulk edit leaves your tasks unchanged and keeps any destination you created. If creation fails, your selection and form stay available for retry.
+In **Bulk organize**, search for a project or area, or type a new name and choose **Create** without losing your task selection or other form fields. Creation saves and selects the destination; tasks move only after **Apply to selected**. Cancelling the bulk edit leaves your tasks unchanged and keeps any destination you created. If creation fails, your selection and form stay available for retry.
 
 Select multiple tasks to perform batch operations:
 

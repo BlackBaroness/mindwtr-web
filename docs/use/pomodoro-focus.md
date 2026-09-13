@@ -34,7 +34,7 @@ When a phase ends while the desktop window is in the background, Mindwtr flashes
 
 When a focus session or a break ends, Mindwtr plays a sound and shows a notification. This does not depend on task reminders. To work in silence, turn off **Settings → GTD → Pomodoro timer → Session-end alert**.
 
-From the next release, this switch is named **Alert when timer ends**. On Android, any missing timing permission is explained directly below it, with **Open Android settings**. This is permission help, not a second alert switch. Notification sound still follows your device's sound and notification settings.
+This switch is named **Alert when timer ends**. On Android, any missing timing permission is explained directly below it, with **Open Android settings**. This is permission help, not a second alert switch. Notification sound still follows your device's sound and notification settings.
 
 Task linking is optional and off by default. Turn on **Settings → GTD → Pomodoro timer → Link timer to task** when you want the Timer task picker and **Mark task done** action in Focus.
 

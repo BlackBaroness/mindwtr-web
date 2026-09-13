@@ -34,7 +34,7 @@ Every column except `Title` is optional, and you only need the ones you actually
 | --- | --- | --- |
 | `Title` | any text | Required. The task title. |
 | `Description` | any text | The task description. Line breaks are kept inside a quoted value. |
-| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | Case-insensitive. Left empty, the status becomes `archived` when `Cancelled At` is set (from the next release after 1.2.8), otherwise `done` when `Completed At` is set, otherwise `next` when the row names a project, otherwise `inbox`. A value Mindwtr does not recognize becomes `inbox` with a warning. |
+| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | Case-insensitive. Left empty, the status becomes `archived` when `Cancelled At` is set, otherwise `done` when `Completed At` is set, otherwise `next` when the row names a project, otherwise `inbox`. A value Mindwtr does not recognize becomes `inbox` with a warning. |
 | `Project` | a project name | Creates the project once and puts the task in it. Names are matched without regard to case. |
 | `Section` | a section name inside that row's project | Needs a `Project` on the same row. Without one the value is ignored with a warning. |
 | `Area` | an area name | With a `Project` on the row, the area holds the project. Without one, the task itself is filed in the area. |
@@ -47,7 +47,7 @@ Every column except `Title` is optional, and you only need the ones you actually
 | `Due Date` | a date or date and time | The deadline. |
 | `Review Date` | a date or date and time | The tickler date for a later reconsideration. |
 | `Completed At` | a date and time | The completion timestamp. When `Cancelled At` is absent, it turns an empty `Status` into `done`. It is kept only for `done` or non-cancelled `archived` tasks. |
-| `Cancelled At` | a date and time | From the next release after 1.2.8: the cancellation timestamp. With an empty `Status`, it selects `archived` before `Completed At` is considered. It is kept only for `archived` tasks; cancellation clears `Completed At` and does not generate a recurring occurrence. |
+| `Cancelled At` | a date and time | The cancellation timestamp. With an empty `Status`, it selects `archived` before `Completed At` is considered. It is kept only for `archived` tasks; cancellation clears `Completed At` and does not generate a recurring occurrence. |
 | `Created At` | a date and time | The creation timestamp. Left empty, the task is created as of the import. |
 | `Checklist` | items separated by line breaks or `\|` | Becomes the task's checklist. An item written as `[x] Buy stamps` starts completed; `[ ] Buy stamps` and a bare `Buy stamps` start open. A task with checklist items becomes a list task. |
 | `Location` | any text | The task's location field. |
@@ -100,7 +100,7 @@ Mindwtr gives every row a stable identity, so importing the same file twice does
 
 Mindwtr writes this same format, so the round trip is complete. **Settings → Data → Backup → Export CSV** saves your live tasks as one CSV file, on desktop and mobile.
 
-- From the next release, desktop CSV export is available in the bulk-selection actions. Filter a task list or Contexts view, choose **Select**, select the tasks you want, then choose **Export selected tasks as CSV**. Only selected tasks are exported, including selected rows outside the visible screen. To include the whole filtered list, expand the groups you want before using **Select all**. Export does not change your tasks or selection. Full-data export remains in Settings.
+- Desktop CSV export is available in the bulk-selection actions. Filter a task list or Contexts view, choose **Select**, select the tasks you want, then choose **Export selected tasks as CSV**. Only selected tasks are exported, including selected rows outside the visible screen. To include the whole filtered list, expand the groups you want before using **Select all**. Export does not change your tasks or selection. Full-data export remains in Settings.
 - The `ID` column is always written, so re-importing an export does not duplicate anything: rows whose `ID` matches a task you already have are skipped with a warning. Edits made to an exported file are **not** pushed back in — change those tasks in the app instead. The identity notes above apply directly.
 - Deleted tasks are never exported. The format has no column for them, and such a row would return as a live task on the next import.
 - Recurrence is written as the repeat rule the importer reads back, so repeats survive the round trip. How far a counted series has already run is not written, so an imported repeat starts a fresh series.

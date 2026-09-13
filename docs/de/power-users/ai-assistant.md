@@ -67,7 +67,7 @@ Beispiel für xAI (Grok):
 
 ## Langsame Modelle und Zeitlimits
 
-Ab v1.3.0 finden Sie in den KI-Assistenten-Einstellungen auf Desktop und Mobilgeräten **Erweitert → Zeitlimit für Anfragen**. Wählen Sie **30, 60, 120 oder 300 Sekunden**; der Standard bleibt 30 Sekunden. Bei einem langsamen lokalen Modell können Sie zunächst 120 Sekunden versuchen.
+In den KI-Assistenten-Einstellungen auf Desktop und Mobilgeräten finden Sie unter **Erweitert → Zeitlimit für Anfragen** die Optionen **30, 60, 120 oder 300 Sekunden**; der Standard bleibt 30 Sekunden. Bei einem langsamen lokalen Modell können Sie zunächst 120 Sekunden versuchen.
 
 Das Limit gilt für Antworten des KI-Assistenten und von Copilot, nicht für Transkription oder das Laden der Modellliste. Abgebrochene Anfragen und Anfragen mit Zeitüberschreitung werden nicht automatisch wiederholt. Vorübergehende Netzwerk- oder Serverfehler können weiterhin begrenzt wiederholt werden. Das Zeitlimit folgt Ihrer bestehenden Einstellung zur Synchronisierung der KI-Einstellungen.
 

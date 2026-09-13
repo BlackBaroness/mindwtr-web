@@ -221,7 +221,7 @@ The **Project Section** field on a task assigns that task to one of its project'
 
 Sequential projects can use a project-wide scope or a section scope. Use section scope when a project has independent phases or workstreams: Mindwtr shows the first available task in each section instead of blocking the whole project behind one task. With section scope, completing a section's last next action asks "What's the next action?" for that section, just as finishing a project's last action does for the whole project.
 
-**In the next release after 1.2.8:** **Sequential → Across Sections** follows the manual order shown with **Default** sorting: section order first, then task order within each section, with **No Section** last. Moving a section or task changes that sequence. Sorting the display by title, priority or date does not change it. **Within Sections** still selects a task independently for each section; existing starred, due-date and review-date exceptions still apply.
+**Sequential → Across Sections** follows the manual order shown with **Default** sorting: section order first, then task order within each section, with **No Section** last. Moving a section or task changes that sequence. Sorting the display by title, priority or date does not change it. **Within Sections** still selects a task independently for each section; existing starred, due-date and review-date exceptions still apply.
 
 ### Due Dates and Reminders
 
@@ -310,7 +310,7 @@ Use the **Focus** view to see:
 
 Focus is not a full inventory view. It keeps future-start tasks and later tasks in sequential projects out of the actionable lists so they reflect actions that are available now. Use **Contexts**, **Projects**, or **Search** when you need to inspect all next actions, including deferred or blocked items.
 
-**In the next release after 1.2.8:** Use **Focus only** in the desktop or mobile Focus header to leave **Today's Focus** open and fold Today, Review Due, Next Actions, Upcoming, and Projects to review. Their headings and counts stay visible, so you can reopen a section individually. **Expand sections** opens them all again. Each device remembers its section state. On desktop, this replaces **Show Top 3 Only**; it does not limit or change the tasks you starred.
+Use **Focus only** in the desktop or mobile Focus header to leave **Today's Focus** open and fold Today, Review Due, Next Actions, Upcoming, and Projects to review. Their headings and counts stay visible, so you can reopen a section individually. **Expand sections** opens them all again. Each device remembers its section state. On desktop, this replaces **Show Top 3 Only**; it does not limit or change the tasks you starred.
 
 ### How Focus sorts available actions
 
@@ -319,7 +319,7 @@ Focus first decides whether a task is available, then sorts the visible actions:
 1. **Today's Focus** shows tasks you explicitly focused for today. You can arrange them by hand into the order you plan to work them — drag the grip handle on desktop, or use the reorder toggle on the section header on mobile. The manual order applies while the Focus sort is at its default, syncs across devices, and a task keeps its place until it leaves Focus.
 2. **Today / Schedule** shows available `next` tasks that are overdue, due today, or start today, including a start timed for later today, with those rows showing their start time until it arrives. These are ordered by the earliest due/start time, then priority when priorities are enabled, then oldest creation date.
 
-   **In the next release after 1.2.8:** Today lists tasks available now first, followed by a **Later today** group when any tasks have a start time later today. Each group keeps the selected sort order. At the start time, the task moves into the main Today list; the group disappears when empty. Date-only starts stay in the main list. This adds no setting and does not change Today's Focus or Upcoming.
+   Today lists tasks available now first, followed by a **Later today** group when any tasks have a start time later today. Each group keeps the selected sort order. At the start time, the task moves into the main Today list; the group disappears when empty. Date-only starts stay in the main list. This adds no setting and does not change Today's Focus or Upcoming.
 3. **Next Actions** shows the remaining available `next` tasks. The default order is:
    - due soon first, earliest due date first (currently due within the next 30 days)
    - undated actions next
@@ -409,7 +409,7 @@ For setup steps and option details, see [Recurring Tasks](/use/recurring-tasks).
 
 ## Cancelling a commitment
 
-**In the next release after 1.2.8:** Use **Cancel task** or **Cancel project** when you decide not to continue but want to keep the record. Cancelled tasks remain in Archive and search, marked **Cancelled**, and do not count as completed work. Projects appear under **Closed**, distinguished as Completed or Cancelled.
+Use **Cancel task** or **Cancel project** when you decide not to continue but want to keep the record. Cancelled tasks remain in Archive and search, marked **Cancelled**, and do not count as completed work. Projects appear under **Closed**, distinguished as Completed or Cancelled.
 
 Cancelling a project preserves completed steps and cancels its remaining actions. **Reactivate** restores the actions that were cancelled by that project and have not since been independently changed. Reference material, notes and attachments are kept. You can put a reason in Notes; no reason is required.
 

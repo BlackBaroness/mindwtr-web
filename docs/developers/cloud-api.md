@@ -167,7 +167,7 @@ Cloud-backed MCP mode reads `/v1/data` and exposes read tools for tasks, project
 
 ## `cancelledAt`
 
-**In the next release after 1.2.8:** `cancelledAt` is an optional ISO timestamp with a timezone on Task and Project. Setting it archives the commitment without marking it completed. A cancelled task has no `completedAt` and generates no next recurring occurrence. A project cancellation preserves completed steps and cancels its remaining actions. Upgrade every writer before using this field with sync. See [Cancelling a commitment](/use/gtd-workflow#cancelling-a-commitment).
+`cancelledAt` is an optional ISO timestamp with a timezone on Task and Project. Setting it archives the commitment without marking it completed. A cancelled task has no `completedAt` and generates no next recurring occurrence. A project cancellation preserves completed steps and cancels its remaining actions. Upgrade every writer before using this field with sync. See [Cancelling a commitment](/use/gtd-workflow#cancelling-a-commitment).
 
 Use `PATCH /v1/tasks/:id` or `PATCH /v1/projects/:id` with `{ "cancelledAt": "2026-09-07T12:00:00.000Z" }`. An explicit active `status` clears cancellation and reactivates the record; sending `cancelledAt: null` alone only clears the outcome marker. Creation accepts the field in `props`.
 
