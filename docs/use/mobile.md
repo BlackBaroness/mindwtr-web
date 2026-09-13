@@ -452,7 +452,7 @@ The list icon beside **Filters** in the Focus header toggles **Details**: turn i
 ### Features
 
 - **Context filter**: Tap a context chip to filter the Next list.
-- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates.
+- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates. In the next release after 1.2.8, tap a saved filter to apply it; tap it again or tap **All** to clear it. To delete a saved filter, long-press its chip and confirm **Delete**. Screen readers also offer a delete action on each saved filter.
 - **Swipe to Focus**: Swipe a task right to toggle "Focus" status (moves it to Today).
 - **Quick Status**: Tap the status badge to change status.
 - **Pomodoro (Optional)**: Enable in **Settings → GTD → Features → Pomodoro timer** to show a compact focus/break timer. Leave it as **Timer only**, or turn on **Link timer to task** to show the Timer task picker and **Mark task done** action. Collapse the card to keep the remaining time, phase, and **Running** or **Paused** status visible in a slim row.
