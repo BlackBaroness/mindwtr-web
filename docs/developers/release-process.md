@@ -80,6 +80,8 @@ The RC input `run_msstore_flight` defaults to true. The Windows workflow keeps `
 
 Store package versions use `X.Y.(Z*100+N).0` for `X.Y.Z-rc.N`, with RC numbers 1–98, and `X.Y.(Z*100+99).0` for stable `X.Y.Z`. Every component must fit 0–65535 and the first must be positive. For example, `1.3.0-rc.2` becomes `1.3.2.0`, and stable `1.3.0` becomes `1.3.99.0`. The fourth component stays zero for the Store. Stable releases also update the configured flight because enrolled accounts remain assigned to it. Verify a Store-delivered upgrade preserves tasks and attachments.
 
+For standalone Windows installer and portable builds, manually run **Release Windows** with `run_msstore` and `run_msstore_flight` disabled. Selecting an existing tag does not enable Store publishing, and these builds accept custom release suffixes such as `1.3.0-rc.2a` without applying Store package-version rules. Public Store publishing is selected by a stable tag push or an explicit `run_msstore` request; beta flights use `run_msstore_flight`.
+
 ### Current RC Automation
 
 The RC workflow is `.github/workflows/release-rc.yml`.

@@ -80,6 +80,8 @@ L’entrée RC `run_msstore_flight` est activée par défaut. Pour les RC, le fl
 
 Les versions des paquets utilisent `X.Y.(Z*100+N).0` pour `X.Y.Z-rc.N`, avec des numéros RC de 1–98, et `X.Y.(Z*100+99).0` pour la version stable `X.Y.Z`. Chaque composant doit être compris entre 0–65535 et le premier doit être positif. Par exemple, `1.3.0-rc.2` devient `1.3.2.0` et la version stable `1.3.0` devient `1.3.99.0`. Le quatrième composant reste à zéro pour le Store. Les versions stables actualisent aussi le flight configuré, car les comptes inscrits lui restent affectés. Vérifiez qu’une mise à jour reçue du Store conserve les tâches et les pièces jointes.
 
+Pour produire des installateurs Windows et des versions portables indépendantes, lancez manuellement **Release Windows** avec `run_msstore` et `run_msstore_flight` désactivés. La sélection d’une étiquette existante n’active pas la publication sur le Store, et ces builds acceptent des suffixes personnalisés comme `1.3.0-rc.2a` sans appliquer les règles des versions de paquets du Store. La publication sur le Store public est activée par l’envoi d’une étiquette stable ou une demande explicite `run_msstore` ; les flights bêta utilisent `run_msstore_flight`.
+
 ### Automatisation RC actuelle
 
 Le flux de travail RC est `.github/workflows/release-rc.yml`.

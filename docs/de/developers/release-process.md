@@ -80,6 +80,8 @@ Die RC-Eingabe `run_msstore_flight` ist standardmäßig true. Für RCs bleibt `r
 
 Store-Paketversionen verwenden `X.Y.(Z*100+N).0` für `X.Y.Z-rc.N` mit RC-Nummern 1–98 und `X.Y.(Z*100+99).0` für stabile Versionen `X.Y.Z`. Jede Komponente muss in 0–65535 liegen, die erste muss positiv sein. Beispielsweise wird `1.3.0-rc.2` zu `1.3.2.0` und die stabile Version `1.3.0` zu `1.3.99.0`. Die vierte Komponente bleibt für den Store null. Stabile Releases aktualisieren auch den konfigurierten Flight, da angemeldete Konten diesem zugeordnet bleiben. Prüfen Sie, dass ein Store-Update Aufgaben und Anhänge erhält.
 
+Für eigenständige Windows-Installer und portable Builds starten Sie **Release Windows** manuell mit deaktiviertem `run_msstore` und `run_msstore_flight`. Die Auswahl eines vorhandenen Tags aktiviert keine Store-Veröffentlichung. Diese Builds akzeptieren eigene Release-Suffixe wie `1.3.0-rc.2a`, ohne die Regeln für Store-Paketversionen anzuwenden. Die Veröffentlichung im öffentlichen Store wird durch das Pushen eines stabilen Tags oder eine ausdrückliche `run_msstore`-Anforderung ausgewählt; Beta-Flights verwenden `run_msstore_flight`.
+
 ### Aktuelle RC-Automatisierung
 
 Der RC-Workflow ist `.github/workflows/release-rc.yml`.

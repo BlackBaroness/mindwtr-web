@@ -80,6 +80,8 @@ La entrada RC `run_msstore_flight` está activada de forma predeterminada. Para 
 
 Las versiones de paquetes usan `X.Y.(Z*100+N).0` para `X.Y.Z-rc.N`, con números RC de 1–98, y `X.Y.(Z*100+99).0` para la versión estable `X.Y.Z`. Cada componente debe estar entre 0–65535 y el primero debe ser positivo. Por ejemplo, `1.3.0-rc.2` pasa a `1.3.2.0` y la versión estable `1.3.0` a `1.3.99.0`. El cuarto componente permanece en cero para la tienda. Las versiones estables también actualizan el piloto configurado porque las cuentas inscritas siguen asignadas a él. Comprueba que una actualización de la tienda conserva las tareas y los adjuntos.
 
+Para generar instaladores de Windows y versiones portátiles independientes, ejecuta **Release Windows** manualmente con `run_msstore` y `run_msstore_flight` desactivados. Seleccionar una etiqueta existente no activa la publicación en la tienda, y estas compilaciones aceptan sufijos personalizados como `1.3.0-rc.2a` sin aplicar las reglas de versiones de paquetes de la tienda. La publicación en la tienda pública se activa al enviar una etiqueta estable o solicitar explícitamente `run_msstore`; los pilotos beta usan `run_msstore_flight`.
+
 ### Automatización actual de RC
 
 El flujo de trabajo de RC es `.github/workflows/release-rc.yml`.
