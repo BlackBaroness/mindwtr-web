@@ -167,7 +167,7 @@ Le mode MCP adossé au Cloud lit `/v1/data` et expose des outils de lecture pour
 
 ## `cancelledAt`
 
-**Dans la prochaine version après 1.2.8 :** Task et Project acceptent `cancelledAt`, un horodatage ISO facultatif avec fuseau horaire. Il archive l'engagement comme annulé. La tâche n'a pas de `completedAt` et ne génère pas d'occurrence suivante. Pour un projet, les étapes terminées sont conservées et les actions restantes sont annulées. Mettez à jour tous les clients qui écrivent les données avant la synchronisation. Voir le [flux GTD](/fr/use/gtd-workflow).
+Task et Project acceptent `cancelledAt`, un horodatage ISO facultatif avec fuseau horaire. Il archive l'engagement comme annulé. La tâche n'a pas de `completedAt` et ne génère pas d'occurrence suivante. Pour un projet, les étapes terminées sont conservées et les actions restantes sont annulées. Mettez à jour tous les clients qui écrivent les données avant la synchronisation. Voir le [flux GTD](/fr/use/gtd-workflow).
 
 `cancelledAt: null` seul efface le marqueur sans réactiver l'élément. Pour le réactiver, définissez explicitement un `status` non archivé.
 

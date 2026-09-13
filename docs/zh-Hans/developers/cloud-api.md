@@ -167,7 +167,7 @@ Cloud 后端 MCP 模式读取 `/v1/data`，并提供任务、项目、分区、�
 
 ## `cancelledAt`
 
-**1.2.8 之后的下个版本提供：** Task 和 Project 的 `cancelledAt` 是带时区的可选 ISO 时间戳。设置它会取消并归档该记录。取消的任务没有 `completedAt`，也不会生成下一次重复任务；取消项目会保留已完成步骤，取消剩余待办。同步使用此字段前，请升级所有会写入数据的客户端。详见 [GTD 工作流](/zh-Hans/use/gtd-workflow)。
+Task 和 Project 的 `cancelledAt` 是带时区的可选 ISO 时间戳。设置它会取消并归档该记录。取消的任务没有 `completedAt`，也不会生成下一次重复任务；取消项目会保留已完成步骤，取消剩余待办。同步使用此字段前，请升级所有会写入数据的客户端。详见 [GTD 工作流](/zh-Hans/use/gtd-workflow)。
 
 单独发送 `cancelledAt: null` 只会清除取消标记，不会重新激活。重新激活请显式设置非归档的 `status`。
 

@@ -308,7 +308,7 @@ Si la synchronisation consomme toujours plus de batterie que vous ne le souhaite
 - **Restreignez l’utilisation en arrière-plan** de Mindwtr dans les réglages de batterie d’Android. Cela n’arrête que la tâche planifiée ; la synchronisation pendant que l’application est ouverte n’est pas affectée. C’est sans risque pour vos données : chaque cycle est une lecture, une fusion et une écriture complètes, et un cycle interrompu par le système reprend simplement depuis le début à la prochaine ouverture de l’application.
 - **Utilisez la synchronisation de fichiers** avec l’application de synchronisation de votre choix si vous n’avez pas besoin que Mindwtr se synchronise lui-même en arrière-plan.
 
-Dans la prochaine version après la 1.2.8, la planification en arrière-plan devient automatique et le sélecteur d’intervalle disparaît. À la prochaine ouverture de l’application, les anciens intervalles, y compris Désactivée, passent à la même planification automatique. Désactiver entièrement la synchronisation désactive toujours les tâches en arrière-plan. Le système peut retarder ou ignorer une exécution ; la synchronisation manuelle et celle effectuée lorsque l’application est ouverte restent disponibles.
+La planification en arrière-plan est automatique et le sélecteur d’intervalle n’apparaît plus. À la prochaine ouverture de l’application, les anciens intervalles, y compris Désactivée, passent à la même planification automatique. Désactiver entièrement la synchronisation désactive toujours les tâches en arrière-plan. Le système peut retarder ou ignorer une exécution ; la synchronisation manuelle et celle effectuée lorsque l’application est ouverte restent disponibles.
 
 ### Options de synchronisation des réglages
 

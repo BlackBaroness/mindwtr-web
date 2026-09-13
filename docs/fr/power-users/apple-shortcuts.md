@@ -16,7 +16,7 @@ Surfaces prises en charge :
 | Siri | Oui |
 | Spotlight / raccourcis suggérés | Oui |
 | Bouton Action exécutant un raccourci | Oui |
-| Actions directes sur Apple Watch | Oui, dans l’app Watch native : ouvrir la capture et démarrer Pomodoro. Incluse à partir de la prochaine version stable |
+| Actions directes sur Apple Watch | Oui, dans l’app Watch native : ouvrir la capture et démarrer Pomodoro. Incluse |
 | CarPlay | Non, pas dans la v1 |
 
 ## Actions

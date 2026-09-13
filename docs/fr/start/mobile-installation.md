@@ -66,7 +66,7 @@ La bêta TestFlight est disponible à l’adresse https://testflight.apple.com/j
 
 [![TestFlight beta](https://img.shields.io/badge/TestFlight-Beta-0A84FF?logo=apple&logoColor=white)](https://testflight.apple.com/join/7SMJCTSR)
 
-À partir de la prochaine version stable de l’App Store, l’app iOS inclut une app native pour Apple Watch testée sur une montre physique jumelée. Jumelez une Apple Watch sous watchOS 10 ou version ultérieure avec votre iPhone, installez Mindwtr, puis installez-la depuis l’app Watch de l’iPhone. Touchez **Parler** pour enregistrer un son que l’iPhone transcrira, ou **Saisie** pour entrer du texte. Vous pouvez aussi terminer ou reporter des tâches Focus et contrôler un minuteur Pomodoro associé.
+l’app iOS inclut une app native pour Apple Watch testée sur une montre physique jumelée. Jumelez une Apple Watch sous watchOS 10 ou version ultérieure avec votre iPhone, installez Mindwtr, puis installez-la depuis l’app Watch de l’iPhone. Touchez **Parler** pour enregistrer un son que l’iPhone transcrira, ou **Saisie** pour entrer du texte. Vous pouvez aussi terminer ou reporter des tâches Focus et contrôler un minuteur Pomodoro associé.
 
 ### Options
 

@@ -308,7 +308,7 @@ If sync still uses more battery than you want:
 - **Restrict background usage** for Mindwtr in the Android battery settings. This stops only the scheduled job; syncing while the app is open is unaffected. It is safe for your data: every cycle is one complete read, merge and write, and a cycle the system interrupts simply runs again from the start the next time the app is open.
 - **Use File Sync** with a sync app of your choice if you do not need Mindwtr itself to sync in the background.
 
-In the next release after 1.2.8, background scheduling is automatic and the interval picker is removed. When you next open the app, previously saved intervals, including Off, move to the same automatic schedule. Turning sync off entirely still disables background sync. Scheduled jobs may be delayed or skipped by the operating system; manual sync and syncing while the app is open remain available.
+Background scheduling is automatic and the interval picker is removed. When you next open the app, previously saved intervals, including Off, move to the same automatic schedule. Turning sync off entirely still disables background sync. Scheduled jobs may be delayed or skipped by the operating system; manual sync and syncing while the app is open remain available.
 
 ### Settings Sync Options
 

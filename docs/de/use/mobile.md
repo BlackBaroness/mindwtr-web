@@ -10,7 +10,7 @@ Die mobile Mindwtr-App bietet auf iPhone und Android den vollständigen geführt
 
 Die App verwendet untere Tabs für zentrale Abläufe und eine Menüseite für weitere Ansichten.
 
-**Nächste Version:** Unter Android passt sich die Navigation dem verfügbaren App-Fenster an: Geräumige Fenster verwenden eine seitliche Navigationsleiste, schmale oder niedrige Fenster behalten die kompakte Navigation. Aufgabenbearbeitung und Schnellerfassung bleiben in einem nutzbaren Bereich, wenn Android ein trennendes oder verdeckendes Scharnier meldet. Ein eigener Modus für faltbare Geräte muss nicht aktiviert werden. Diese Layouts wurden im Emulator geprüft; die Bestätigung auf physischen Galaxy Z Fold und Z Flip steht noch aus.
+Unter Android passt sich die Navigation dem verfügbaren App-Fenster an: Geräumige Fenster verwenden eine seitliche Navigationsleiste, schmale oder niedrige Fenster behalten die kompakte Navigation. Aufgabenbearbeitung und Schnellerfassung bleiben in einem nutzbaren Bereich, wenn Android ein trennendes oder verdeckendes Scharnier meldet. Ein eigener Modus für faltbare Geräte muss nicht aktiviert werden. Diese Layouts wurden im Emulator geprüft; die Bestätigung auf physischen Galaxy Z Fold und Z Flip steht noch aus.
 
 ---
 
@@ -78,7 +78,7 @@ Aktivieren Sie **Archivierte Projekte einbeziehen** in den Referenzfiltern, um M
 
 ## Stapelaktionen
 
-**Nächste Version:** Suche unter **Sammel-Organisation** nach einem Projekt oder Bereich oder gib einen neuen Namen ein und wähle **Erstellen**, ohne die Aufgabenauswahl oder andere Formularfelder zu verlieren. Das Erstellen speichert und wählt das Ziel; erst **Auf Auswahl anwenden** verschiebt die Aufgaben. Beim Abbrechen bleiben die Aufgaben unverändert und erstellte Ziele erhalten. Schlägt das Erstellen fehl, bleiben Auswahl und Formular für einen erneuten Versuch erhalten.
+Suche unter **Sammel-Organisation** nach einem Projekt oder Bereich oder gib einen neuen Namen ein und wähle **Erstellen**, ohne die Aufgabenauswahl oder andere Formularfelder zu verlieren. Das Erstellen speichert und wählt das Ziel; erst **Auf Auswahl anwenden** verschiebt die Aufgaben. Beim Abbrechen bleiben die Aufgaben unverändert und erstellte Ziele erhalten. Schlägt das Erstellen fehl, bleiben Auswahl und Formular für einen erneuten Versuch erhalten.
 
 ---
 
@@ -149,7 +149,7 @@ Geeignet für:
 
 ### Android-Automatisierung zur Erfassung {#android-automation-capture}
 
-Verfügbar in der nächsten Version nach 1.2.8. Aktivieren Sie unter **Einstellungen → GTD → Erfassungs-Standardwerte** die **Automatisierte Erfassung** und kopieren Sie den Erfassungstoken. Einstellung und Token bleiben auf diesem Gerät. Geben Sie den Token nur an vertrauenswürdige Automatisierungs-Apps weiter. Ausschalten widerruft ihn; erneutes Einschalten erzeugt einen neuen Token.
+Aktivieren Sie unter **Einstellungen → GTD → Erfassungs-Standardwerte** die **Automatisierte Erfassung** und kopieren Sie den Erfassungstoken. Einstellung und Token bleiben auf diesem Gerät. Geben Sie den Token nur an vertrauenswürdige Automatisierungs-Apps weiter. Ausschalten widerruft ihn; erneutes Einschalten erzeugt einen neuen Token.
 
 Dies ist ein allgemeiner Android-Broadcast-Intent; Tasker ist nicht erforderlich. Jede App oder Automatisierung, die einen expliziten Broadcast mit String-Extras senden kann, kann ihn verwenden. Senden Sie die folgende Aktion an diesen Empfänger: `text` enthält den erfassten Text, `token` Ihren Erfassungstoken.
 
@@ -187,7 +187,7 @@ Die folgenden Bedienelemente gelten für Android. Für iOS siehe **iOS-Widget au
 
 1. Startbildschirm lange drücken
 2. **Widgets** wählen
-3. **Mindwtr** suchen und das Widget **Aufgaben**, die einzellige Schaltfläche **Schnellerfassung** oder auf Android ab der nächsten Version nach 1.2.8 das optionale kleinere Widget **Kompakt** hinzufügen. Das Aufgaben-Widget zeigt eine **+**-Schaltfläche und Ihre Aufgaben, jeweils mit Prioritätsfarbe, Projekt oder Bereich und Fälligkeitsdatum. Auf Android zeigt ein neu hinzugefügtes Aufgaben-Widget den Fokus, mit dem Eingangszähler in der Kopfzeile und ab der nächsten Version nach 1.2.8 einer kurzen Ansicht von Heutiger Fokus und Heute. Durchsicht fällig, Nächste Aktionen und Anstehend bleiben in der App. Um die Liste zu wechseln, tippen Sie auf den Titel des Widgets; er trägt einen kleinen Pfeil nach unten. Es öffnet sich eine Auswahl mit Fokus, Eingang, Nächste Aktionen, Warten auf, Irgendwann/Vielleicht und Ihren **gespeicherten Filtern**. Tippen Sie einen Eintrag an, und das Widget wird neu gezeichnet. Um ein einzelnes Projekt auf einem Widget zu zeigen, speichern Sie in der App einen Fokus-Filter für dieses Projekt und wählen Sie ihn hier aus. Das funktioniert auf jedem Launcher, und manche Launcher bieten selbst keine Bearbeitungsaktion für Widgets. Sie können mehrere Aufgaben-Widgets mit verschiedenen Listen hinzufügen.
+3. **Mindwtr** suchen und das Widget **Aufgaben**, die einzellige Schaltfläche **Schnellerfassung** oder auf Android das optionale kleinere Widget **Kompakt** hinzufügen. Das Aufgaben-Widget zeigt eine **+**-Schaltfläche und Ihre Aufgaben, jeweils mit Prioritätsfarbe, Projekt oder Bereich und Fälligkeitsdatum. Auf Android zeigt ein neu hinzugefügtes Aufgaben-Widget den Fokus, mit dem Eingangszähler in der Kopfzeile und einer kurzen Ansicht von Heutiger Fokus und Heute. Durchsicht fällig, Nächste Aktionen und Anstehend bleiben in der App. Um die Liste zu wechseln, tippen Sie auf den Titel des Widgets; er trägt einen kleinen Pfeil nach unten. Es öffnet sich eine Auswahl mit Fokus, Eingang, Nächste Aktionen, Warten auf, Irgendwann/Vielleicht und Ihren **gespeicherten Filtern**. Tippen Sie einen Eintrag an, und das Widget wird neu gezeichnet. Um ein einzelnes Projekt auf einem Widget zu zeigen, speichern Sie in der App einen Fokus-Filter für dieses Projekt und wählen Sie ihn hier aus. Das funktioniert auf jedem Launcher, und manche Launcher bieten selbst keine Bearbeitungsaktion für Widgets. Sie können mehrere Aufgaben-Widgets mit verschiedenen Listen hinzufügen.
 4. Tippen Sie in einem Aufgabenlisten-Widget auf eine Aufgabe, um das kleine native Aufgabenblatt zu öffnen. Im Aufgaben-Widget können Sie die Aufgabe über den Ring am Zeilenanfang abschließen. Über die Erfassungsschaltfläche in jedem der drei Android-Widgets gelangt etwas in den Eingang.
 
 Das Aufgaben-Widget zeigt zuerst Heutiger Fokus, danach Heute einschließlich überfälliger Aufgaben. Die bisherigen Größenbegrenzungen bleiben bestehen; leere Plätze werden nicht mit weiteren nächsten Aktionen gefüllt. Auf Android gelten die Filter und die Sortierung des Fokus-Bildschirms. Die dort gesetzten Filter gelten auch für das Widget: Kontexte, Tags, Priorität, Energie, Zeitaufwand und ein gespeicherter Filter. Auch die auf dem Fokus-Bildschirm gewählte Sortierung gilt, und das Widget wird aktualisiert, sobald Sie eines von beidem ändern. Der in der App ausgewählte Bereich schränkt jede Widget-Liste ein.
@@ -200,15 +200,15 @@ Auf Android schließt ein Tippen auf den Ring im Aufgaben-Widget die Aufgabe ab.
 
 Auf Android öffnen die Erfassungsschaltfläche in jedem der drei Widgets, die Schnelleinstellungskachel, die App-Verknüpfung und die Erfassungsbenachrichtigung dasselbe native schwebende Erfassungsfenster über dem, was Sie gerade tun, ohne die Haupt-App zu öffnen. **Speichern** legt die Aufgabe im Eingang ab, zeigt kurz eine Bestätigung und schließt das Fenster; die Aufgabe erscheint beim nächsten Öffnen von Mindwtr. iOS erfasst wie bisher über die App.
 
-In der nächsten Version nach 1.2.8 erscheint bei aktivierter Spracherkennung auch eine Mikrofontaste in diesem nativen Android-Fenster. Nehmen Sie auf, tippen Sie auf Stopp und dann auf Speichern; die Haupt-App bleibt geschlossen. Aufnahmen werden auf dem Gerät gespeichert und beim nächsten Öffnen von Mindwtr oder bei der Rückkehr in den Vordergrund mit dem konfigurierten Anbieter transkribiert. F-Droid verwendet Offline-Whisper. Schlägt die Transkription fehl, bleibt die Aufnahme für einen weiteren Versuch erhalten. Die Aufnahme endet beim Verlassen des Fensters und ist auf fünf Minuten begrenzt.
+Bei aktivierter Spracherkennung erscheint auch eine Mikrofontaste in diesem nativen Android-Fenster. Nehmen Sie auf, tippen Sie auf Stopp und dann auf Speichern; die Haupt-App bleibt geschlossen. Aufnahmen werden auf dem Gerät gespeichert und beim nächsten Öffnen von Mindwtr oder bei der Rückkehr in den Vordergrund mit dem konfigurierten Anbieter transkribiert. F-Droid verwendet Offline-Whisper. Schlägt die Transkription fehl, bleibt die Aufnahme für einen weiteren Versuch erhalten. Die Aufnahme endet beim Verlassen des Fensters und ist auf fünf Minuten begrenzt.
 
 Auf Android zeigen Fälligkeitsangaben **Heute**, den Wochentag für Aufgaben innerhalb der nächsten Woche oder ein kompaktes Datum für spätere Aufgaben. Überfällige und heute fällige Aufgaben werden hervorgehoben.
 
 ### iOS-Widget auf dem Home-Bildschirm
 
-**Nächste Version:** Wählen Sie **Aufgaben** für das reguläre Widget in klein, mittel oder groß (zusätzlich extragroß auf unterstützten iPads), oder **Kompakt** für kleinere Schrift und eine flache Fokusliste. Kompakt hat weder Listenauswahl noch Abschlussringe; mittlere und größere Varianten öffnen weiterhin Aufgaben und die Schnellerfassung.
+Wählen Sie **Aufgaben** für das reguläre Widget in klein, mittel oder groß (zusätzlich extragroß auf unterstützten iPads), oder **Kompakt** für kleinere Schrift und eine flache Fokusliste. Kompakt hat weder Listenauswahl noch Abschlussringe; mittlere und größere Varianten öffnen weiterhin Aufgaben und die Schnellerfassung.
 
-**Nächste Version:** Das iOS-Aufgaben-Widget zeigt Heutiger Fokus und Heute einschließlich überfälliger Aufgaben, mit Datum, Prioritätsringen, Projekt oder Bereich sowie den Filtern und der Sortierung des Fokus-Bildschirms. Freie Plätze werden nicht mit weiteren nächsten Aktionen gefüllt.
+Das iOS-Aufgaben-Widget zeigt Heutiger Fokus und Heute einschließlich überfälliger Aufgaben, mit Datum, Prioritätsringen, Projekt oder Bereich sowie den Filtern und der Sortierung des Fokus-Bildschirms. Freie Plätze werden nicht mit weiteren nächsten Aktionen gefüllt.
 
 Ab iOS 17 wählen Sie durch langes Drücken auf das Aufgaben-Widget und **Widget bearbeiten** zwischen Fokus, Eingang, Nächste Aktionen, Warten auf, Irgendwann/Vielleicht und einem gespeicherten Filter. Mehrere Widgets können unterschiedliche Listen zeigen. Ein Tippen auf einen Ring merkt den Abschluss vor; die Zeile bleibt durchgestrichen, bis Mindwtr wieder läuft und die Änderung speichert. Erneutes Tippen macht dies rückgängig, solange die App den Auftrag noch nicht übernommen hat. Dafür bleiben mindestens drei Sekunden. Abschluss und Synchronisierung erfolgen über die App.
 
@@ -653,7 +653,7 @@ Erinnerungen werden auf dem Telefon geplant; es gibt keinen Push-Server. Wenn Si
 
 ### Verspätete Erinnerungen unter Android
 
-Ab Android 12 kann das System die Berechtigung für exakte Alarme verweigern. Ohne sie können Erinnerungen verspätet eintreffen; eine Grenze von einer Minute gibt es nicht. Unter **Einstellungen → Benachrichtigungen** zeigt Mindwtr den Hinweis **Erinnerungen kommen möglicherweise zu spät** mit **Zulassen**. Ab der nächsten Version steht die Erklärung für Pomodoro direkt unter dem Schalter für Hinweise am Timerende, mit einer Aktion zum Öffnen der Android-Einstellungen. Der Schalter bestimmt, ob der Timer benachrichtigt; die Android-Berechtigung betrifft den Zeitpunkt. Die Hilfe erscheint nur bei eingeschalteten Pomodoro-Hinweisen und fehlender Berechtigung.
+Ab Android 12 kann das System die Berechtigung für exakte Alarme verweigern. Ohne sie können Erinnerungen verspätet eintreffen; eine Grenze von einer Minute gibt es nicht. Unter **Einstellungen → Benachrichtigungen** zeigt Mindwtr den Hinweis **Erinnerungen kommen möglicherweise zu spät** mit **Zulassen**. Die Erklärung für Pomodoro steht direkt unter dem Schalter für Hinweise am Timerende, mit einer Aktion zum Öffnen der Android-Einstellungen. Der Schalter bestimmt, ob der Timer benachrichtigt; die Android-Berechtigung betrifft den Zeitpunkt. Die Hilfe erscheint nur bei eingeschalteten Pomodoro-Hinweisen und fehlender Berechtigung.
 
 Tippen Sie auf **Zulassen**, um den Android-Berechtigungsbildschirm für Mindwtr zu öffnen. Sie erreichen ihn auch über die Geräte-**Einstellungen → Apps → Mindwtr → Wecker und Erinnerungen**. Sobald die Berechtigung erteilt ist, plant Mindwtr die Erinnerungen ohne Neustart als exakte Alarme neu, und die Zeile verschwindet. Vor Android 12 erscheint die Zeile nicht, denn dort ist bereits jeder Alarm exakt.
 

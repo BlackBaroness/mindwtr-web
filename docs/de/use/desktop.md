@@ -54,7 +54,7 @@ Mindwtr läuft für die automatische Synchronisierung im Hintergrund.
 Unter macOS 14 oder neuer bringt die Desktop-App ein eigenes Widget mit.
 
 - **Fügen Sie es aus der Widget-Galerie hinzu** — klicken Sie auf das Datum in der Menüleiste, dann auf **Widgets bearbeiten** — und wählen Sie **Mindwtr** in Klein, Mittel oder Groß. Es zeigt die heutigen Fokusaufgaben und aktualisiert sich, sobald sich diese Liste ändert.
-- **Klicken Sie auf die Aufgabenliste**, um die Desktop-App zu öffnen. In der nächsten Version nach 1.2.8 erhält das Widget außerdem eine Schaltfläche **Schnellerfassung**, die nur das vorhandene schwebende Schnellerfassungsfenster öffnet, nicht das Hauptfenster. Läuft Mindwtr noch nicht, kann macOS es im Hintergrund starten, um dieses Fenster anzuzeigen. Das Mac-Widget hat außerdem Vorrang vor dem iPhone-Widget, das die Galerie bisher über Continuity anbot und das die App stattdessen auf dem Telefon öffnete.
+- **Klicken Sie auf die Aufgabenliste**, um die Desktop-App zu öffnen. Das Widget erhält außerdem eine Schaltfläche **Schnellerfassung**, die nur das vorhandene schwebende Schnellerfassungsfenster öffnet, nicht das Hauptfenster. Läuft Mindwtr noch nicht, kann macOS es im Hintergrund starten, um dieses Fenster anzuzeigen. Das Mac-Widget hat außerdem Vorrang vor dem iPhone-Widget, das die Galerie bisher über Continuity anbot und das die App stattdessen auf dem Telefon öffnete.
 - Das Widget ist im signierten Developer-ID-Build (dem DMG) enthalten; der Mac-App-Store-Build erhält es in einer späteren Version.
 
 ## Ansichten
@@ -434,7 +434,7 @@ In den Einstellungen:
 - Markdown-Kontrollkästchen in Beschreibungen sind reine Notizen und beeinflussen die Aufgabencheckliste nicht
 - Mehrzeiligen Text in einen Checklistenpunkt einfügen, um je Zeile einen Punkt zu erstellen (Aufzählungen, Nummerierungen und `[x]` werden erkannt)
 - Ein Projekt im Editor zuweisen oder im `⋯`-Menü einer Aufgabenzeile: **Projekt…** verschiebt die Aufgabe in ein Projekt oder aus ihrem Projekt heraus
-- **Nächste Version:** In dieser **Projekt…**-Auswahl einen neuen Namen eingeben und **Erstellen** wählen. Das neue Projekt wird sofort gespeichert; die Aufgabe wird erst mit **Speichern** zugeordnet. **Abbrechen** lässt die Aufgabe unverändert und behält das erstellte Projekt.
+- In dieser **Projekt…**-Auswahl einen neuen Namen eingeben und **Erstellen** wählen. Das neue Projekt wird sofort gespeichert; die Aufgabe wird erst mit **Speichern** zugeordnet. **Abbrechen** lässt die Aufgabe unverändert und behält das erstellte Projekt.
 
 ### Aufgabeneigenschaften
 
@@ -476,7 +476,7 @@ Stellen Sie **Nach Abschluss wiederholen**, Enddatum oder Anzahl im Wiederholung
 
 ## Stapelaktionen
 
-**Nächste Version:** Suche unter **Sammel-Organisation** nach einem Projekt oder Bereich oder gib einen neuen Namen ein und wähle **Erstellen**, ohne die Aufgabenauswahl oder andere Formularfelder zu verlieren. Das Erstellen speichert und wählt das Ziel; erst **Auf Auswahl anwenden** verschiebt die Aufgaben. Beim Abbrechen bleiben die Aufgaben unverändert und erstellte Ziele erhalten. Schlägt das Erstellen fehl, bleiben Auswahl und Formular für einen erneuten Versuch erhalten.
+Suche unter **Sammel-Organisation** nach einem Projekt oder Bereich oder gib einen neuen Namen ein und wähle **Erstellen**, ohne die Aufgabenauswahl oder andere Formularfelder zu verlieren. Das Erstellen speichert und wählt das Ziel; erst **Auf Auswahl anwenden** verschiebt die Aufgaben. Beim Abbrechen bleiben die Aufgaben unverändert und erstellte Ziele erhalten. Schlägt das Erstellen fehl, bleiben Auswahl und Formular für einen erneuten Versuch erhalten.
 
 Mehrere Aufgaben gemeinsam bearbeiten:
 

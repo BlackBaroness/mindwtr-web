@@ -10,7 +10,7 @@ La aplicación móvil Mindwtr ofrece el flujo de trabajo GTD guiado completo en 
 
 La aplicación móvil usa pestañas inferiores para los flujos principales y una página Menú para las vistas adicionales.
 
-**Próxima versión:** En Android, la navegación se adapta al espacio disponible en la ventana: las ventanas amplias usan una barra lateral, mientras que las estrechas o de poca altura mantienen la navegación compacta. El editor de tareas y la captura rápida se ajustan a una zona utilizable cuando Android informa de una bisagra que separa u obstruye la pantalla. No hay que activar ningún modo para dispositivos plegables. Estos diseños se han comprobado en emuladores; aún falta confirmarlos en dispositivos Galaxy Z Fold y Z Flip físicos.
+En Android, la navegación se adapta al espacio disponible en la ventana: las ventanas amplias usan una barra lateral, mientras que las estrechas o de poca altura mantienen la navegación compacta. El editor de tareas y la captura rápida se ajustan a una zona utilizable cuando Android informa de una bisagra que separa u obstruye la pantalla. No hay que activar ningún modo para dispositivos plegables. Estos diseños se han comprobado en emuladores; aún falta confirmarlos en dispositivos Galaxy Z Fold y Z Flip físicos.
 
 ---
 
@@ -78,7 +78,7 @@ Activa **Incluir proyectos archivados** en los filtros de Referencia para encont
 
 ## Acciones en bloque
 
-**Próxima versión:** En **Organizar en lote**, busca un proyecto o área, o escribe un nombre nuevo y elige **Crear** sin perder la selección de tareas ni los demás campos. Al crear se guarda y selecciona el destino; las tareas solo se mueven al pulsar **Aplicar a las seleccionadas**. Cancelar la edición no cambia las tareas y conserva los destinos creados. Si la creación falla, se mantienen la selección y el formulario para volver a intentarlo.
+En **Organizar en lote**, busca un proyecto o área, o escribe un nombre nuevo y elige **Crear** sin perder la selección de tareas ni los demás campos. Al crear se guarda y selecciona el destino; las tareas solo se mueven al pulsar **Aplicar a las seleccionadas**. Cancelar la edición no cambia las tareas y conserva los destinos creados. Si la creación falla, se mantienen la selección y el formulario para volver a intentarlo.
 
 ---
 
@@ -158,7 +158,7 @@ Es ideal para:
 
 ### Captura mediante automatización en Android {#android-automation-capture}
 
-Disponible en la próxima versión después de 1.2.8. En **Ajustes → GTD → Valores predeterminados de captura**, activa **Captura automatizada** y copia el token de captura. El ajuste y el token permanecen en este dispositivo. Compártelo solo con aplicaciones de automatización de confianza. Al desactivar el ajuste se revoca el token; al activarlo de nuevo se genera otro.
+En **Ajustes → GTD → Valores predeterminados de captura**, activa **Captura automatizada** y copia el token de captura. El ajuste y el token permanecen en este dispositivo. Compártelo solo con aplicaciones de automatización de confianza. Al desactivar el ajuste se revoca el token; al activarlo de nuevo se genera otro.
 
 Es un intent de difusión general de Android; Tasker no es necesario. Cualquier aplicación o herramienta de automatización que pueda enviar una difusión explícita con extras de tipo String puede usarlo. Envía la siguiente acción a este receptor, con el texto capturado en `text` y tu token de captura en `token`:
 
@@ -198,7 +198,7 @@ Añade el widget de Mindwtr a la pantalla de inicio para acceder rápidamente:
 
 1. Mantén pulsada la pantalla de inicio
 2. Selecciona **Widgets**
-3. Busca **Mindwtr** y añade el widget **Tareas**, el botón de una celda **Captura rápida** o, en Android en la próxima versión después de 1.2.8, el widget opcional más pequeño **Compacto**. El widget Tareas muestra un botón **+** y tus tareas, cada una con su color de prioridad, su proyecto o área y su fecha de vencimiento. En Android, un widget Tareas recién añadido muestra Foco, con el recuento de la bandeja de entrada en su encabezado y, en la próxima versión después de 1.2.8, una vista breve de Foco de hoy y Hoy. Revisión pendiente, Próximas acciones y Próximas se quedan en la aplicación. Para cambiar de lista, toca el título del widget, que lleva una pequeña flecha hacia abajo. Se abre una lista con Foco, Bandeja de entrada, Próximas acciones, En espera, Algún día/Tal vez y tus **filtros guardados**. Toca uno y el widget se vuelve a dibujar. Para mostrar un solo proyecto en un widget, guarda en la aplicación un filtro de Foco para ese proyecto y elígelo aquí. Esto funciona en cualquier lanzador, y algunos lanzadores no ofrecen ninguna acción de edición propia para los widgets. Puedes añadir varios widgets Tareas con listas distintas.
+3. Busca **Mindwtr** y añade el widget **Tareas**, el botón de una celda **Captura rápida** o, en Android, el widget opcional más pequeño **Compacto**. El widget Tareas muestra un botón **+** y tus tareas, cada una con su color de prioridad, su proyecto o área y su fecha de vencimiento. En Android, un widget Tareas recién añadido muestra Foco, con el recuento de la bandeja de entrada en su encabezado y una vista breve de Foco de hoy y Hoy. Revisión pendiente, Próximas acciones y Próximas se quedan en la aplicación. Para cambiar de lista, toca el título del widget, que lleva una pequeña flecha hacia abajo. Se abre una lista con Foco, Bandeja de entrada, Próximas acciones, En espera, Algún día/Tal vez y tus **filtros guardados**. Toca uno y el widget se vuelve a dibujar. Para mostrar un solo proyecto en un widget, guarda en la aplicación un filtro de Foco para ese proyecto y elígelo aquí. Esto funciona en cualquier lanzador, y algunos lanzadores no ofrecen ninguna acción de edición propia para los widgets. Puedes añadir varios widgets Tareas con listas distintas.
 4. En un widget con lista de tareas, toca una tarea para abrir su pequeña ficha nativa. En Tareas, toca el anillo al principio de una fila para completarla. Usa el botón de captura de cualquiera de los tres widgets de Android para añadir algo a la Bandeja de entrada.
 
 El widget Tareas muestra primero Foco de hoy y después Hoy, incluidas las tareas vencidas. Mantiene los límites de tamaño existentes y no llena el espacio vacío con otras próximas acciones. En Android, sigue los filtros y el orden de la pantalla Foco. Los filtros que has puesto allí también se aplican al widget: contextos, etiquetas, prioridad, energía, tiempo estimado y un filtro guardado. El orden que has elegido en la pantalla Foco se aplica igualmente, y el widget se actualiza cuando cambias cualquiera de los dos. El área que tienes seleccionada en la aplicación acota todas las listas del widget.
@@ -211,15 +211,15 @@ En Android, tocar el anillo del widget Tareas completa la tarea. La fila aparece
 
 En Android, el botón de captura de cualquiera de los tres widgets, el mosaico de Ajustes rápidos, el acceso directo de la aplicación y la notificación de captura abren la misma ventana nativa flotante sobre lo que estés haciendo, sin abrir la aplicación principal. **Guardar** añade la tarea a la Bandeja de entrada, muestra una breve confirmación y cierra la ventana; la tarea aparece la próxima vez que abras Mindwtr. iOS captura a través de la aplicación como antes.
 
-En la próxima versión después de la 1.2.8, activar la transcripción también añade un botón de micrófono a esta ventana nativa de Android. Graba, pulsa Detener y después Guardar; la aplicación principal permanece cerrada. Las grabaciones se guardan en el dispositivo y se transcriben con el proveedor configurado cuando Mindwtr se abre o vuelve al primer plano. F-Droid usa Whisper sin conexión. Si la transcripción falla, la grabación se conserva para otro intento. La grabación se detiene al salir de la ventana y tiene un límite de cinco minutos.
+Activar la transcripción también añade un botón de micrófono a esta ventana nativa de Android. Graba, pulsa Detener y después Guardar; la aplicación principal permanece cerrada. Las grabaciones se guardan en el dispositivo y se transcriben con el proveedor configurado cuando Mindwtr se abre o vuelve al primer plano. F-Droid usa Whisper sin conexión. Si la transcripción falla, la grabación se conserva para otro intento. La grabación se detiene al salir de la ventana y tiene un límite de cinco minutos.
 
 En Android, las etiquetas de vencimiento muestran **Hoy**, el día de la semana para tareas dentro de los próximos siete días o una fecha compacta para fechas posteriores. Las tareas vencidas y las que vencen hoy aparecen destacadas.
 
 ### Widget de la pantalla de inicio de iOS
 
-**Próxima versión:** Elige **Tareas** para el widget normal, disponible en tamaños pequeño, mediano y grande (también extragrande en iPads compatibles), o **Compacto** para texto más pequeño y una lista plana de Enfoque. Compacto no tiene selector de lista ni anillos para completar; los tamaños mediano y superiores permiten abrir tareas y la captura rápida.
+Elige **Tareas** para el widget normal, disponible en tamaños pequeño, mediano y grande (también extragrande en iPads compatibles), o **Compacto** para texto más pequeño y una lista plana de Enfoque. Compacto no tiene selector de lista ni anillos para completar; los tamaños mediano y superiores permiten abrir tareas y la captura rápida.
 
-**Próxima versión:** El widget Tareas de iOS muestra el enfoque de hoy y Hoy, incluidas las tareas vencidas, con la fecha, anillos de prioridad, el proyecto o área y los filtros y el orden de Enfoque. No rellena el espacio libre con otras próximas acciones.
+El widget Tareas de iOS muestra el enfoque de hoy y Hoy, incluidas las tareas vencidas, con la fecha, anillos de prioridad, el proyecto o área y los filtros y el orden de Enfoque. No rellena el espacio libre con otras próximas acciones.
 
 En iOS 17 o posterior, mantén pulsado el widget y elige **Editar widget** para seleccionar Enfoque, Bandeja de entrada, Próximas acciones, En espera, Algún día/Tal vez o un filtro guardado. Varios widgets pueden mostrar listas distintas. Toca un anillo para dejar pendiente la finalización; la fila permanece tachada hasta que Mindwtr vuelva a ejecutarse y guarde el cambio. Toca de nuevo para deshacer antes de que la app lo procese. Hay un margen mínimo de tres segundos. La finalización y la sincronización se realizan desde la app.
 
@@ -311,7 +311,7 @@ En iPhone y iPad, Mindwtr ofrece acciones nativas de Atajos de Apple para captur
 
 ### App para Apple Watch
 
-La app nativa para Apple Watch se ha probado en un Watch físico enlazado con watchOS 10 o posterior y se incluirá a partir de la próxima versión estable de App Store. Instala Mindwtr en el reloj desde la app Watch del iPhone.
+La app nativa para Apple Watch se ha probado en un Watch físico enlazado con watchOS 10 o posterior y se incluye. Instala Mindwtr en el reloj desde la app Watch del iPhone.
 
 - **Capturar:** Toca **Hablar** para grabar audio en el reloj y transcribirlo en el iPhone. Toca **Escribir** para introducir texto; el iPhone puede ofrecer su teclado como método de entrada opcional. Las capturas llegan a la Bandeja de entrada local de Mindwtr; la sincronización en la nube es opcional.
 - **Foco:** Revisa las tareas de Foco, completa una o aplázala hasta mañana.
@@ -715,7 +715,7 @@ Asegúrate de que las notificaciones estén activadas:
 
 ### Recordatorios que llegan tarde en Android
 
-A partir de Android 12, el sistema puede denegar el permiso para programar alarmas exactas. Sin él, Android puede retrasar los recordatorios; no existe un límite de un minuto. Mindwtr muestra **Los recordatorios pueden llegar tarde** en **Ajustes → Notificaciones**, con el botón **Permitir**. Desde la próxima versión, Pomodoro muestra su propia explicación debajo del interruptor de aviso al terminar el temporizador, con una acción para abrir los ajustes de Android. El interruptor decide si recibes avisos; el permiso de Android afecta a su puntualidad. La ayuda solo aparece si los avisos de Pomodoro están activados y falta el permiso.
+A partir de Android 12, el sistema puede denegar el permiso para programar alarmas exactas. Sin él, Android puede retrasar los recordatorios; no existe un límite de un minuto. Mindwtr muestra **Los recordatorios pueden llegar tarde** en **Ajustes → Notificaciones**, con el botón **Permitir**. Pomodoro muestra su propia explicación debajo del interruptor de aviso al terminar el temporizador, con una acción para abrir los ajustes de Android. El interruptor decide si recibes avisos; el permiso de Android afecta a su puntualidad. La ayuda solo aparece si los avisos de Pomodoro están activados y falta el permiso.
 
 Toca **Permitir** para abrir la pantalla de permisos de Android para Mindwtr. También puedes llegar a ella en **Ajustes → Aplicaciones → Mindwtr → Alarmas y recordatorios** del dispositivo. En cuanto concedes el permiso, Mindwtr vuelve a programar sus recordatorios como alarmas exactas sin reiniciar la aplicación, y la fila desaparece. En versiones anteriores a Android 12 la fila no aparece, porque allí todas las alarmas ya son exactas.
 

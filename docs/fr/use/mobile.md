@@ -10,7 +10,7 @@ L’application mobile Mindwtr offre l’ensemble du flux GTD guidé sur iPhone 
 
 L’application mobile utilise des onglets inférieurs pour les principaux flux et une page Menu pour les vues supplémentaires.
 
-**Prochaine version :** Sur Android, la navigation s’adapte à l’espace disponible dans la fenêtre : les fenêtres spacieuses utilisent une barre latérale, tandis que les fenêtres étroites ou peu hautes conservent une navigation compacte. L’éditeur de tâches et la capture rapide restent dans une zone utilisable lorsqu’Android signale une charnière qui sépare ou masque une partie de l’écran. Aucun mode pour appareil pliable n’est à activer. Ces dispositions ont été contrôlées sur émulateur ; la confirmation sur des Galaxy Z Fold et Z Flip physiques reste à faire.
+Sur Android, la navigation s’adapte à l’espace disponible dans la fenêtre : les fenêtres spacieuses utilisent une barre latérale, tandis que les fenêtres étroites ou peu hautes conservent une navigation compacte. L’éditeur de tâches et la capture rapide restent dans une zone utilisable lorsqu’Android signale une charnière qui sépare ou masque une partie de l’écran. Aucun mode pour appareil pliable n’est à activer. Ces dispositions ont été contrôlées sur émulateur ; la confirmation sur des Galaxy Z Fold et Z Flip physiques reste à faire.
 
 ---
 
@@ -78,7 +78,7 @@ Activez **Inclure les projets archivés** dans les filtres de Référence pour r
 
 ## Actions groupées
 
-**Prochaine version :** Dans **Bulk organize**, recherchez un projet ou un domaine, ou saisissez un nouveau nom et choisissez **Créer** sans perdre les tâches sélectionnées ni les autres champs. La création enregistre et sélectionne la destination ; les tâches ne sont déplacées qu’après **Apply to selected**. Annuler la modification laisse les tâches inchangées et conserve les destinations créées. En cas d’échec de création, la sélection et le formulaire restent disponibles pour réessayer.
+Dans **Bulk organize**, recherchez un projet ou un domaine, ou saisissez un nouveau nom et choisissez **Créer** sans perdre les tâches sélectionnées ni les autres champs. La création enregistre et sélectionne la destination ; les tâches ne sont déplacées qu’après **Apply to selected**. Annuler la modification laisse les tâches inchangées et conserve les destinations créées. En cas d’échec de création, la sélection et le formulaire restent disponibles pour réessayer.
 
 ---
 
@@ -158,7 +158,7 @@ Idéal pour :
 
 ### Capture automatisée sur Android {#android-automation-capture}
 
-Disponible dans la prochaine version après 1.2.8. Dans **Réglages → GTD → Capture defaults**, activez **Capture automatisée** et copiez le jeton de capture. Le réglage et le jeton restent sur cet appareil. Ne transmettez le jeton qu’à des applications d’automatisation de confiance. La désactivation le révoque ; une nouvelle activation crée un nouveau jeton.
+Dans **Réglages → GTD → Capture defaults**, activez **Capture automatisée** et copiez le jeton de capture. Le réglage et le jeton restent sur cet appareil. Ne transmettez le jeton qu’à des applications d’automatisation de confiance. La désactivation le révoque ; une nouvelle activation crée un nouveau jeton.
 
 Il s’agit d’un intent de broadcast Android général ; Tasker n’est pas nécessaire. Toute application ou automatisation capable d’envoyer un broadcast explicite avec des extras de type String peut l’utiliser. Envoyez l’action suivante à ce récepteur, avec le texte à capturer dans `text` et votre jeton de capture dans `token` :
 
@@ -198,7 +198,7 @@ Ajoutez le widget Mindwtr à votre écran d’accueil pour y accéder rapidement
 
 1. Appuyez longuement sur votre écran d’accueil
 2. Sélectionnez **Widgets**
-3. Trouvez **Mindwtr** et ajoutez le widget **Tâches**, le bouton d’une cellule **Capture rapide** ou, sous Android dans la prochaine version après 1.2.8, le petit widget facultatif **Compact**. Le widget Tâches affiche un bouton **+** et vos tâches, chacune avec sa couleur de priorité, son projet ou domaine et sa date d’échéance. Sous Android, un widget Tâches qui vient d’être ajouté affiche Focus, avec le nombre d’éléments de la boîte de réception dans son en-tête et, dans la prochaine version après 1.2.8, une vue courte de Focus du jour et Aujourd’hui. Revue due, Prochaines actions et À venir restent dans l’application. Pour changer de liste, touchez le titre du widget, qui porte une petite flèche vers le bas. Une liste s’ouvre avec Focus, Boîte de réception, Prochaines actions, En attente, Un jour/Peut-être et vos **filtres enregistrés**. Touchez-en un et le widget se redessine. Pour afficher un seul projet sur un widget, enregistrez dans l’application un filtre Focus pour ce projet et choisissez-le ici. Cela fonctionne sur tous les lanceurs, et certains lanceurs ne proposent aucune action de modification pour les widgets. Vous pouvez ajouter plusieurs widgets Tâches avec des listes différentes.
+3. Trouvez **Mindwtr** et ajoutez le widget **Tâches**, le bouton d’une cellule **Capture rapide** ou, sous Android, le petit widget facultatif **Compact**. Le widget Tâches affiche un bouton **+** et vos tâches, chacune avec sa couleur de priorité, son projet ou domaine et sa date d’échéance. Sous Android, un widget Tâches qui vient d’être ajouté affiche Focus, avec le nombre d’éléments de la boîte de réception dans son en-tête et une vue courte de Focus du jour et Aujourd’hui. Revue due, Prochaines actions et À venir restent dans l’application. Pour changer de liste, touchez le titre du widget, qui porte une petite flèche vers le bas. Une liste s’ouvre avec Focus, Boîte de réception, Prochaines actions, En attente, Un jour/Peut-être et vos **filtres enregistrés**. Touchez-en un et le widget se redessine. Pour afficher un seul projet sur un widget, enregistrez dans l’application un filtre Focus pour ce projet et choisissez-le ici. Cela fonctionne sur tous les lanceurs, et certains lanceurs ne proposent aucune action de modification pour les widgets. Vous pouvez ajouter plusieurs widgets Tâches avec des listes différentes.
 4. Dans un widget qui affiche des tâches, touchez une tâche pour ouvrir sa petite fiche native. Dans Tâches, touchez l’anneau au début d’une ligne pour la terminer. Utilisez le bouton de capture de n’importe lequel des trois widgets Android pour ajouter un élément à la Boîte de réception.
 
 Le widget Tâches affiche d’abord Focus du jour, puis Aujourd’hui, y compris les tâches en retard. Il conserve les limites de taille existantes et ne remplit pas les espaces libres avec d’autres prochaines actions. Sous Android, il suit les filtres et le tri de l’écran Focus. Les filtres que vous y avez définis s’appliquent aussi au widget : contextes, étiquettes, priorité, énergie, temps estimé et un filtre enregistré. Le tri choisi sur l’écran Focus s’applique également, et le widget se met à jour dès que vous changez l’un ou l’autre. Le domaine sélectionné dans l’application restreint toutes les listes du widget.
@@ -211,15 +211,15 @@ Sous Android, toucher l’anneau du widget Tâches termine la tâche. La ligne e
 
 Sous Android, le bouton de capture de chacun des trois widgets, la tuile des Réglages rapides, le raccourci de l’application et la notification de capture ouvrent la même fenêtre native flottante par-dessus ce que vous faites, sans ouvrir l’application principale. **Enregistrer** ajoute la tâche à la Boîte de réception, affiche une brève confirmation et ferme la fenêtre ; la tâche apparaît à la prochaine ouverture de Mindwtr. iOS capture via l’application comme avant.
 
-Dans la prochaine version après la 1.2.8, l’activation de la transcription ajoute aussi un bouton microphone à cette fenêtre Android native. Enregistrez, appuyez sur Arrêter, puis sur Enregistrer ; l’application principale reste fermée. Les enregistrements sont conservés sur l’appareil et transcrits avec le fournisseur configuré à la prochaine ouverture de Mindwtr ou à son retour au premier plan. F-Droid utilise Whisper hors ligne. Si la transcription échoue, l’enregistrement est conservé pour une nouvelle tentative. L’enregistrement s’arrête lorsque vous quittez la fenêtre et est limité à cinq minutes.
+l’activation de la transcription ajoute aussi un bouton microphone à cette fenêtre Android native. Enregistrez, appuyez sur Arrêter, puis sur Enregistrer ; l’application principale reste fermée. Les enregistrements sont conservés sur l’appareil et transcrits avec le fournisseur configuré à la prochaine ouverture de Mindwtr ou à son retour au premier plan. F-Droid utilise Whisper hors ligne. Si la transcription échoue, l’enregistrement est conservé pour une nouvelle tentative. L’enregistrement s’arrête lorsque vous quittez la fenêtre et est limité à cinq minutes.
 
 Sous Android, les libellés d’échéance indiquent **Aujourd’hui**, le jour de la semaine pour les tâches des sept prochains jours, ou une date compacte pour les échéances ultérieures. Les tâches en retard ou à échéance aujourd’hui sont mises en évidence.
 
 ### Widget iOS de l’écran d’accueil
 
-**Prochaine version :** Choisissez **Tâches** pour le widget classique, disponible en petit, moyen et grand format (ainsi qu’extra-large sur les iPad compatibles), ou **Compact** pour un texte plus petit et une liste Focus sans sections. Compact n’a ni choix de liste ni anneaux de clôture ; les formats moyens et grands permettent toujours d’ouvrir les tâches et la capture rapide.
+Choisissez **Tâches** pour le widget classique, disponible en petit, moyen et grand format (ainsi qu’extra-large sur les iPad compatibles), ou **Compact** pour un texte plus petit et une liste Focus sans sections. Compact n’a ni choix de liste ni anneaux de clôture ; les formats moyens et grands permettent toujours d’ouvrir les tâches et la capture rapide.
 
-**Prochaine version :** Le widget Tâches iOS affiche le focus du jour et Aujourd’hui, y compris les tâches en retard, avec la date, les anneaux de priorité, le projet ou le domaine, ainsi que les filtres et le tri de Focus. Il ne remplit pas l’espace libre avec d’autres prochaines actions.
+Le widget Tâches iOS affiche le focus du jour et Aujourd’hui, y compris les tâches en retard, avec la date, les anneaux de priorité, le projet ou le domaine, ainsi que les filtres et le tri de Focus. Il ne remplit pas l’espace libre avec d’autres prochaines actions.
 
 À partir d’iOS 17, maintenez le widget appuyé et choisissez **Modifier le widget** pour sélectionner Focus, Boîte de réception, Prochaines actions, En attente, Un jour/Peut-être ou un filtre enregistré. Plusieurs widgets peuvent afficher des listes différentes. Touchez un anneau pour mettre la clôture en attente ; la ligne reste barrée jusqu’à ce que Mindwtr s’exécute à nouveau et enregistre le changement. Touchez de nouveau pour annuler avant que l’app ne prenne la demande en charge. Vous disposez d’au moins trois secondes. La clôture et la synchronisation passent par l’app.
 
@@ -311,7 +311,7 @@ Sur iPhone et iPad, Mindwtr propose des actions Raccourcis Apple natives pour la
 
 ### App Apple Watch
 
-L’app native pour Apple Watch a été testée sur une montre physique jumelée sous watchOS 10 ou version ultérieure et sera incluse à partir de la prochaine version stable de l’App Store. Installez Mindwtr sur la montre depuis l’app Watch de l’iPhone.
+L’app native pour Apple Watch a été testée sur une montre physique jumelée sous watchOS 10 ou version ultérieure. Installez Mindwtr sur la montre depuis l’app Watch de l’iPhone.
 
 - **Capturer :** Touchez **Parler** pour enregistrer l’audio sur la montre et le transcrire sur l’iPhone. Touchez **Saisie** pour entrer du texte ; l’iPhone peut proposer son clavier comme méthode de saisie facultative. Les captures arrivent dans la Boîte de réception locale de Mindwtr ; la synchronisation dans le cloud reste facultative.
 - **Focus :** Consultez les tâches Focus, terminez-en une ou reportez-la à demain.
@@ -715,7 +715,7 @@ Assurez-vous que les notifications sont activées :
 
 ### Rappels qui arrivent en retard sur Android
 
-À partir d’Android 12, le système peut refuser l’autorisation de programmer des alarmes exactes. Sans elle, Android peut retarder les rappels ; il n’existe pas de limite d’une minute. Mindwtr affiche **Les rappels peuvent arriver en retard** dans **Paramètres → Notifications**, avec le bouton **Autoriser**. Dès la prochaine version, Pomodoro affiche sa propre explication sous l’interrupteur d’alerte à la fin du minuteur, avec une action pour ouvrir les paramètres Android. L’interrupteur détermine si vous recevez une alerte ; l’autorisation Android concerne sa ponctualité. Cette aide apparaît uniquement si les alertes Pomodoro sont activées et que l’autorisation manque.
+À partir d’Android 12, le système peut refuser l’autorisation de programmer des alarmes exactes. Sans elle, Android peut retarder les rappels ; il n’existe pas de limite d’une minute. Mindwtr affiche **Les rappels peuvent arriver en retard** dans **Paramètres → Notifications**, avec le bouton **Autoriser**. Pomodoro affiche sa propre explication sous l’interrupteur d’alerte à la fin du minuteur, avec une action pour ouvrir les paramètres Android. L’interrupteur détermine si vous recevez une alerte ; l’autorisation Android concerne sa ponctualité. Cette aide apparaît uniquement si les alertes Pomodoro sont activées et que l’autorisation manque.
 
 Touchez **Autoriser** pour ouvrir l’écran d’autorisation Android de Mindwtr. Vous pouvez aussi y accéder par les **Paramètres → Applications → Mindwtr → Alarmes et rappels** de l’appareil. Dès que l’autorisation est accordée, Mindwtr replanifie ses rappels en alarmes exactes sans redémarrer l’application, et la ligne disparaît. Avant Android 12, la ligne n’apparaît pas, car toutes les alarmes y sont déjà exactes.
 

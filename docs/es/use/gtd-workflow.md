@@ -221,7 +221,7 @@ El campo **Sección del proyecto** de una tarea asigna esa tarea a una de las se
 
 Los proyectos secuenciales pueden usar un ámbito para todo el proyecto o un ámbito por sección. Usa el ámbito por sección cuando un proyecto tenga fases o líneas de trabajo independientes: Mindwtr muestra la primera tarea disponible de cada sección en lugar de bloquear todo el proyecto detrás de una única tarea. Con el ámbito por sección, al completar la última próxima acción de una sección, Mindwtr pregunta «¿Cuál es la próxima acción?» para esa sección, igual que tras la última acción del proyecto completo.
 
-**En la próxima versión después de 1.2.8:** **Secuencial → Entre secciones** sigue el orden manual que muestra la ordenación **Predeterminada**: primero las secciones y después las tareas de cada sección, con **Sin sección** al final. Mover una sección o tarea cambia la secuencia. Ordenar la vista por título, prioridad o fecha no la cambia. **Dentro de las secciones** sigue seleccionando una tarea por sección; se mantienen las excepciones existentes para tareas destacadas, vencimientos y fechas de revisión.
+**Secuencial → Entre secciones** sigue el orden manual que muestra la ordenación **Predeterminada**: primero las secciones y después las tareas de cada sección, con **Sin sección** al final. Mover una sección o tarea cambia la secuencia. Ordenar la vista por título, prioridad o fecha no la cambia. **Dentro de las secciones** sigue seleccionando una tarea por sección; se mantienen las excepciones existentes para tareas destacadas, vencimientos y fechas de revisión.
 
 ### Fechas límite y recordatorios
 
@@ -310,7 +310,7 @@ Usa la vista **Enfoque** para ver:
 
 Enfoque no es una vista de inventario completo. Mantiene las tareas con fecha de inicio futura y las tareas posteriores de proyectos secuenciales fuera de las listas accionables para que reflejen las acciones disponibles ahora. Usa **Contextos**, **Proyectos** o **Búsqueda** cuando necesites consultar todas las próximas acciones, incluidos los elementos aplazados o bloqueados.
 
-**En la próxima versión después de la 1.2.8:** Usa **Solo enfoque** en la cabecera de Enfoque, en escritorio o móvil, para mantener abierto **Enfoque de hoy** y contraer Hoy, Revisión pendiente, Próximas acciones, Próximamente y Proyectos por revisar. Los títulos y las cantidades siguen visibles y permiten abrir cada sección por separado. **Expandir secciones** las abre todas. Cada dispositivo recuerda su estado. En escritorio, sustituye a **Mostrar solo el top 3**, sin limitar ni cambiar las tareas que has marcado con una estrella.
+Usa **Solo enfoque** en la cabecera de Enfoque, en escritorio o móvil, para mantener abierto **Enfoque de hoy** y contraer Hoy, Revisión pendiente, Próximas acciones, Próximamente y Proyectos por revisar. Los títulos y las cantidades siguen visibles y permiten abrir cada sección por separado. **Expandir secciones** las abre todas. Cada dispositivo recuerda su estado. En escritorio, sustituye a **Mostrar solo el top 3**, sin limitar ni cambiar las tareas que has marcado con una estrella.
 
 ### Cómo ordena Enfoque las acciones disponibles
 
@@ -319,7 +319,7 @@ Enfoque determina primero si una tarea está disponible y después ordena las ac
 1. **Enfoque de hoy** muestra las tareas que has seleccionado explícitamente para hoy. Puedes organizarlas manualmente en el orden en que piensas trabajar: arrastra el controlador en el escritorio o usa el interruptor de reordenación del encabezado de la sección en el móvil. El orden manual se aplica mientras la ordenación de Enfoque esté en su valor predeterminado, se sincroniza entre dispositivos y una tarea conserva su lugar hasta que sale de Enfoque.
 2. **Hoy / Agenda** muestra las tareas `next` disponibles que están vencidas, vencen hoy o comienzan hoy, incluidas las que empiezan más tarde hoy, y esas filas muestran su hora de inicio hasta que llega. Se ordenan por la fecha/hora de vencimiento o inicio más próxima, después por prioridad cuando las prioridades están activadas y, a continuación, por la fecha de creación más antigua.
 
-   **En la próxima versión después de 1.2.8:** Hoy muestra primero las tareas disponibles ahora y después el grupo **Más tarde hoy**, si hay tareas cuya hora de inicio aún no ha llegado. Cada grupo conserva el orden seleccionado. A la hora de inicio, la tarea pasa a la lista principal de Hoy; el grupo desaparece cuando queda vacío. Las fechas de inicio sin hora permanecen en la lista principal. No se añade ningún ajuste ni cambia el Foco de hoy o Próximas.
+   Hoy muestra primero las tareas disponibles ahora y después el grupo **Más tarde hoy**, si hay tareas cuya hora de inicio aún no ha llegado. Cada grupo conserva el orden seleccionado. A la hora de inicio, la tarea pasa a la lista principal de Hoy; el grupo desaparece cuando queda vacío. Las fechas de inicio sin hora permanecen en la lista principal. No se añade ningún ajuste ni cambia el Foco de hoy o Próximas.
 3. **Próximas acciones** muestra las demás tareas `next` disponibles. El orden predeterminado es:
    - primero las que vencen pronto, empezando por la fecha límite más próxima (actualmente, las que vencen en los próximos 30 días)
    - después las acciones sin fecha
@@ -409,7 +409,7 @@ Para conocer los pasos de configuración y los detalles de las opciones, consult
 
 ## Cancelar un compromiso
 
-**En la próxima versión después de 1.2.8:** usa **Cancelar tarea** o **Cancelar proyecto** cuando decidas no continuar pero quieras conservar el historial. Las tareas canceladas permanecen en el archivo y en la búsqueda, marcadas como **Cancelada**, y no cuentan como trabajo completado. Los proyectos aparecen en **Cerrados**, distinguiendo los completados de los cancelados.
+usa **Cancelar tarea** o **Cancelar proyecto** cuando decidas no continuar pero quieras conservar el historial. Las tareas canceladas permanecen en el archivo y en la búsqueda, marcadas como **Cancelada**, y no cuentan como trabajo completado. Los proyectos aparecen en **Cerrados**, distinguiendo los completados de los cancelados.
 
 Cancelar un proyecto conserva los pasos completados y cancela las acciones restantes. **Reactivar** restaura las tareas canceladas junto con ese proyecto que no se hayan modificado individualmente después. Se conservan el material de referencia, las notas y los adjuntos. Puedes escribir el motivo en las notas; no es obligatorio.
 

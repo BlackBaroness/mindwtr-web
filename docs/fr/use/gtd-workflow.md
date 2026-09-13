@@ -221,7 +221,7 @@ Le champ **Section de projet** d’une tâche l’associe à l’une des section
 
 Les projets séquentiels peuvent utiliser une portée au niveau du projet ou de la section. Utilisez la portée de section lorsqu’un projet comporte des phases ou des flux de travail indépendants : Mindwtr affiche la première tâche disponible de chaque section au lieu de bloquer tout le projet derrière une seule tâche. Avec la portée par section, terminer la dernière action suivante d’une section déclenche la question « Quelle est l’action suivante ? » pour cette section, comme après la dernière action du projet entier.
 
-**Dans la prochaine version après 1.2.8 :** **Séquentiel → Entre les sections** suit l’ordre manuel affiché avec le tri **Par défaut** : d’abord les sections, puis les tâches de chaque section, avec **Sans section** en dernier. Déplacer une section ou une tâche modifie cette séquence. Trier l’affichage par titre, priorité ou date ne la modifie pas. **Au sein des sections** sélectionne toujours une tâche par section ; les exceptions existantes pour les tâches marquées, les échéances et les dates de révision restent applicables.
+**Séquentiel → Entre les sections** suit l’ordre manuel affiché avec le tri **Par défaut** : d’abord les sections, puis les tâches de chaque section, avec **Sans section** en dernier. Déplacer une section ou une tâche modifie cette séquence. Trier l’affichage par titre, priorité ou date ne la modifie pas. **Au sein des sections** sélectionne toujours une tâche par section ; les exceptions existantes pour les tâches marquées, les échéances et les dates de révision restent applicables.
 
 ### Dates d’échéance et rappels
 
@@ -310,7 +310,7 @@ Utilisez la vue **Focus** pour voir :
 
 Focus n’est pas une vue d’inventaire complète. Elle tient les tâches dont la date de début est future et les tâches ultérieures des projets séquentiels à l’écart des listes actionnables, afin que celles-ci reflètent les actions disponibles maintenant. Utilisez **Contextes**, **Projets** ou **Recherche** pour examiner toutes les prochaines actions, y compris les éléments reportés ou bloqués.
 
-**Dans la prochaine version après la 1.2.8 :** Utilisez **Focus uniquement** dans l’en-tête de Focus, sur ordinateur ou mobile, pour garder **Focus du jour** ouvert et replier Aujourd’hui, À revoir, Prochaines actions, À venir et Projets à revoir. Les titres et les nombres restent visibles pour rouvrir chaque section séparément. **Développer les sections** les ouvre toutes. Chaque appareil mémorise cet état. Sur ordinateur, ce bouton remplace **Afficher uniquement les 3 premiers**, sans limiter ni modifier les tâches marquées d’une étoile.
+Utilisez **Focus uniquement** dans l’en-tête de Focus, sur ordinateur ou mobile, pour garder **Focus du jour** ouvert et replier Aujourd’hui, À revoir, Prochaines actions, À venir et Projets à revoir. Les titres et les nombres restent visibles pour rouvrir chaque section séparément. **Développer les sections** les ouvre toutes. Chaque appareil mémorise cet état. Sur ordinateur, ce bouton remplace **Afficher uniquement les 3 premiers**, sans limiter ni modifier les tâches marquées d’une étoile.
 
 ### Comment Focus trie les actions disponibles
 
@@ -319,7 +319,7 @@ Focus détermine d’abord si une tâche est disponible, puis trie les actions v
 1. **Focus du jour** affiche les tâches que vous avez explicitement choisies pour aujourd’hui. Vous pouvez les classer manuellement dans l’ordre où vous prévoyez de travailler : faites glisser la poignée sur ordinateur, ou utilisez le bouton de réorganisation dans l’en-tête de la section sur mobile. L’ordre manuel s’applique lorsque le tri de Focus est réglé sur sa valeur par défaut, se synchronise entre les appareils et conserve la place d’une tâche jusqu’à ce qu’elle quitte Focus.
 2. **Aujourd’hui/Planning** affiche les tâches `next` disponibles qui sont en retard, dues aujourd’hui ou qui commencent aujourd’hui, y compris avec une heure de début plus tard dans la journée, ces lignes affichant leur heure de début jusqu’à ce qu’elle arrive. Elles sont classées selon l’heure de début/d’échéance la plus proche, puis selon la priorité lorsque les priorités sont activées, puis selon la date de création la plus ancienne.
 
-   **Dans la prochaine version après 1.2.8 :** Aujourd’hui présente d’abord les tâches disponibles, puis le groupe **Plus tard aujourd’hui** si des tâches attendent leur heure de début. Chaque groupe conserve le tri choisi. À l’heure de début, la tâche rejoint la liste principale ; le groupe disparaît quand il est vide. Les dates de début sans heure restent dans la liste principale. Aucun réglage supplémentaire, et aucun changement au Focus du jour ou à la section À venir.
+   Aujourd’hui présente d’abord les tâches disponibles, puis le groupe **Plus tard aujourd’hui** si des tâches attendent leur heure de début. Chaque groupe conserve le tri choisi. À l’heure de début, la tâche rejoint la liste principale ; le groupe disparaît quand il est vide. Les dates de début sans heure restent dans la liste principale. Aucun réglage supplémentaire, et aucun changement au Focus du jour ou à la section À venir.
 3. **Prochaines actions** affiche les autres tâches `next` disponibles. L’ordre par défaut est :
    - d’abord les échéances proches, de la date d’échéance la plus proche à la plus lointaine (actuellement celles des 30 prochains jours)
    - ensuite les actions sans date
@@ -409,7 +409,7 @@ Pour connaître les étapes de configuration et le détail des options, consulte
 
 ## Annuler un engagement
 
-**Dans la prochaine version après 1.2.8 :** utilisez **Annuler la tâche** ou **Annuler le projet** pour arrêter un engagement tout en conservant son historique. Les tâches annulées restent dans les archives et la recherche, marquées **Annulée**, et ne comptent pas comme travail accompli. Les projets sont regroupés sous **Clôturés**, avec une distinction entre terminés et annulés.
+utilisez **Annuler la tâche** ou **Annuler le projet** pour arrêter un engagement tout en conservant son historique. Les tâches annulées restent dans les archives et la recherche, marquées **Annulée**, et ne comptent pas comme travail accompli. Les projets sont regroupés sous **Clôturés**, avec une distinction entre terminés et annulés.
 
 Annuler un projet conserve les étapes terminées et annule les actions restantes. **Réactiver** restaure les tâches annulées avec ce projet qui n'ont pas été modifiées individuellement depuis. Les références, notes et pièces jointes sont conservées. Vous pouvez expliquer la raison dans les notes, sans obligation.
 

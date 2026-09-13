@@ -307,7 +307,7 @@ Wenn die Synchronisierung weiterhin mehr Akku verbraucht als gewünscht:
 - **Hintergrundnutzung einschränken** für Mindwtr in den Android-Akkueinstellungen. Das stoppt nur den geplanten Auftrag; die Synchronisierung bei geöffneter App bleibt unberührt. Für Ihre Daten ist das unbedenklich: Jeder Durchlauf ist ein vollständiges Lesen, Zusammenführen und Schreiben, und ein vom System unterbrochener Durchlauf beginnt beim nächsten Öffnen der App einfach von vorn.
 - **Dateisynchronisierung verwenden** zusammen mit einer Synchronisierungs-App Ihrer Wahl, wenn Mindwtr selbst nicht im Hintergrund synchronisieren muss.
 
-In der nächsten Version nach 1.2.8 wird die Hintergrundplanung automatisch verwaltet und die Intervallauswahl entfernt. Beim nächsten Öffnen der App wechseln alle zuvor gespeicherten Intervalle, einschließlich Aus, zur gleichen automatischen Planung. Wird die Synchronisierung vollständig ausgeschaltet, bleiben auch Hintergrundaufträge deaktiviert. Das Betriebssystem kann Ausführungen verzögern oder überspringen; manuelle Synchronisierung und Synchronisierung bei geöffneter App bleiben verfügbar.
+Die Hintergrundplanung wird automatisch verwaltet und die Intervallauswahl entfernt. Beim nächsten Öffnen der App wechseln alle zuvor gespeicherten Intervalle, einschließlich Aus, zur gleichen automatischen Planung. Wird die Synchronisierung vollständig ausgeschaltet, bleiben auch Hintergrundaufträge deaktiviert. Das Betriebssystem kann Ausführungen verzögern oder überspringen; manuelle Synchronisierung und Synchronisierung bei geöffneter App bleiben verfügbar.
 
 ### Synchronisierte Einstellungen
 

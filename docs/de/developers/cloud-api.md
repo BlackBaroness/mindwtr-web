@@ -167,7 +167,7 @@ Der Cloud-gestützte MCP-Modus liest `/v1/data` und stellt Lesewerkzeuge für Au
 
 ## `cancelledAt`
 
-**Ab der nächsten Version nach 1.2.8:** Task und Project unterstützen `cancelledAt`, einen optionalen ISO-Zeitstempel mit Zeitzone. Er archiviert die Verpflichtung als abgebrochen. Die Aufgabe erhält kein `completedAt` und erzeugt keine weitere Wiederholung. Beim Projekt bleiben erledigte Schritte erhalten; die übrigen Aktionen werden abgebrochen. Aktualisieren Sie vor der Synchronisierung alle schreibenden Clients. Siehe [GTD-Workflow](/de/use/gtd-workflow).
+Task und Project unterstützen `cancelledAt`, einen optionalen ISO-Zeitstempel mit Zeitzone. Er archiviert die Verpflichtung als abgebrochen. Die Aufgabe erhält kein `completedAt` und erzeugt keine weitere Wiederholung. Beim Projekt bleiben erledigte Schritte erhalten; die übrigen Aktionen werden abgebrochen. Aktualisieren Sie vor der Synchronisierung alle schreibenden Clients. Siehe [GTD-Workflow](/de/use/gtd-workflow).
 
 `cancelledAt: null` allein entfernt nur die Abbruchkennzeichnung. Zum Reaktivieren setzen Sie ausdrücklich einen nicht archivierten `status`.
 

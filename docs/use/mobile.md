@@ -70,7 +70,7 @@ Open **Trash** and tap **Select** to manage several deleted tasks and projects. 
 
 ## Reference
 
-Reference is for notes and material you want to keep. Its rows and editor emphasize the title, description, project or area, people, tags, attachments, and links. Task scheduling and completion controls stay out of the way. Use **Convert to action** when a reference becomes something to do. In the next release after 1.2.8, existing checklist items appear as a plain list in Reference and remain editable. Their saved checked states return if you convert the reference back to an action.
+Reference is for notes and material you want to keep. Its rows and editor emphasize the title, description, project or area, people, tags, attachments, and links. Task scheduling and completion controls stay out of the way. Use **Convert to action** when a reference becomes something to do. Existing checklist items appear as a plain list in Reference and remain editable. Their saved checked states return if you convert the reference back to an action.
 
 Search within Reference matches every space-separated term anywhere in the title or description, ignoring case. For example, `ke 1 2` matches `key1 key2 key3`. Terms are literal text; this field does not interpret quick-add or advanced search syntax.
 
@@ -311,7 +311,7 @@ On iPhone and iPad, Mindwtr exposes native Apple Shortcuts actions for Inbox cap
 
 ### Apple Watch companion
 
-The native Apple Watch companion has been tested on a paired physical Watch running watchOS 10 or later and will be included starting with the next stable App Store release. Install Mindwtr on the Watch from the iPhone Watch app.
+The native Apple Watch companion supports watchOS 10 or later and has been tested on a paired physical Watch. Install Mindwtr on the Watch from the iPhone Watch app.
 
 - **Capture:** Tap **Speak to Capture** to record audio on the Watch for iPhone transcription. Tap **Type** to enter text; the iPhone may offer its keyboard as an optional input method. Captures enter Mindwtr's local Inbox, so cloud sync is optional.
 - **Focus:** Review Focus tasks, mark one complete, or defer it until tomorrow.

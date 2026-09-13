@@ -54,7 +54,7 @@ Mindwtr fonctionne en arrière-plan pour gérer la synchronisation automatique.
 Sur macOS 14 et versions ultérieures, l’application de bureau apporte son propre widget.
 
 - **Ajoutez-le depuis la galerie de widgets** — cliquez sur la date dans la barre des menus, puis sur **Modifier les widgets** — et choisissez **Mindwtr** en petit, moyen ou grand format. Il affiche les tâches prioritaires du jour et se met à jour dès que cette liste change.
-- **Cliquez sur la liste des tâches** pour ouvrir l’application de bureau. Dans la prochaine version après la 1.2.8, le widget comportera aussi un bouton **Capture rapide** qui ouvre uniquement le panneau flottant de capture rapide existant, et non la fenêtre principale. Si Mindwtr n’est pas déjà en cours d’exécution, macOS peut le lancer en arrière-plan pour afficher le panneau. Le widget Mac est en outre prioritaire sur le widget iPhone que la galerie proposait jusqu’ici via Continuité, lequel ouvrait l’application sur le téléphone.
+- **Cliquez sur la liste des tâches** pour ouvrir l’application de bureau. Le widget comporte aussi un bouton **Capture rapide** qui ouvre uniquement le panneau flottant de capture rapide existant, et non la fenêtre principale. Si Mindwtr n’est pas déjà en cours d’exécution, macOS peut le lancer en arrière-plan pour afficher le panneau. Le widget Mac est en outre prioritaire sur le widget iPhone que la galerie proposait jusqu’ici via Continuité, lequel ouvrait l’application sur le téléphone.
 - Le widget est inclus dans la version signée Developer ID (le DMG) ; la version du Mac App Store en bénéficiera lors d’une prochaine livraison.
 
 ## Vues
@@ -432,7 +432,7 @@ Configurez les notifications dans les Paramètres :
 - Les cases à cocher Markdown de la description ne sont que des notes ; elles n’ont aucun effet sur la liste de contrôle de la tâche
 - Collez un texte de plusieurs lignes dans un élément de liste de contrôle pour créer un élément par ligne (les puces, la numérotation et les marqueurs `[x]` sont reconnus)
 - Attribuez la tâche à un projet depuis l’éditeur ou depuis le menu `⋯` d’une ligne de tâche : **Projet…** la déplace dans un projet ou l’en retire
-- **Prochaine version :** Dans ce sélecteur **Projet…**, saisissez un nouveau nom et choisissez **Créer**. Le projet est enregistré immédiatement ; la tâche n’y est déplacée qu’avec **Enregistrer**. **Annuler** laisse la tâche inchangée et conserve le projet créé.
+- Dans ce sélecteur **Projet…**, saisissez un nouveau nom et choisissez **Créer**. Le projet est enregistré immédiatement ; la tâche n’y est déplacée qu’avec **Enregistrer**. **Annuler** laisse la tâche inchangée et conserve le projet créé.
 
 ### Propriétés des tâches
 
@@ -479,7 +479,7 @@ Utilisez la même feuille de récurrence pour définir une date de fin ou un nom
 
 ## Actions groupées
 
-**Prochaine version :** Dans **Bulk organize**, recherchez un projet ou un domaine, ou saisissez un nouveau nom et choisissez **Créer** sans perdre les tâches sélectionnées ni les autres champs. La création enregistre et sélectionne la destination ; les tâches ne sont déplacées qu’après **Apply to selected**. Annuler la modification laisse les tâches inchangées et conserve les destinations créées. En cas d’échec de création, la sélection et le formulaire restent disponibles pour réessayer.
+Dans **Bulk organize**, recherchez un projet ou un domaine, ou saisissez un nouveau nom et choisissez **Créer** sans perdre les tâches sélectionnées ni les autres champs. La création enregistre et sélectionne la destination ; les tâches ne sont déplacées qu’après **Apply to selected**. Annuler la modification laisse les tâches inchangées et conserve les destinations créées. En cas d’échec de création, la sélection et le formulaire restent disponibles pour réessayer.
 
 Sélectionnez plusieurs tâches pour effectuer des opérations par lot :
 

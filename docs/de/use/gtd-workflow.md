@@ -221,7 +221,7 @@ Das Feld **Projektabschnitt** einer Aufgabe weist sie einem Abschnitt ihres Proj
 
 Sequenzielle Projekte können projektweit oder abschnittsweise gelten. Verwenden Sie den Abschnittsumfang, wenn ein Projekt unabhängige Phasen oder Arbeitsstränge besitzt: Mindwtr zeigt dann die erste verfügbare Aufgabe jedes Abschnitts, statt das gesamte Projekt hinter einer Aufgabe zu blockieren. Beim Abschnittsumfang fragt Mindwtr nach Abschluss der letzten nächsten Aktion eines Abschnitts „Was ist die nächste Aktion?“ für diesen Abschnitt, genau wie nach der letzten Aktion des gesamten Projekts.
 
-**In der nächsten Version nach 1.2.8:** **Sequenziell → Über Abschnitte hinweg** folgt der manuellen Reihenfolge bei **Standardsortierung**: zuerst die Abschnitte, dann die Aufgaben innerhalb jedes Abschnitts; **Ohne Abschnitt** steht zuletzt. Das Verschieben eines Abschnitts oder einer Aufgabe ändert diese Reihenfolge. Eine Anzeige nach Titel, Priorität oder Datum ändert sie nicht. **Innerhalb der Abschnitte** wählt weiterhin für jeden Abschnitt eine Aufgabe aus; die bisherigen Ausnahmen für markierte Aufgaben sowie Fälligkeits- und Überprüfungsdaten bleiben bestehen.
+**Sequenziell → Über Abschnitte hinweg** folgt der manuellen Reihenfolge bei **Standardsortierung**: zuerst die Abschnitte, dann die Aufgaben innerhalb jedes Abschnitts; **Ohne Abschnitt** steht zuletzt. Das Verschieben eines Abschnitts oder einer Aufgabe ändert diese Reihenfolge. Eine Anzeige nach Titel, Priorität oder Datum ändert sie nicht. **Innerhalb der Abschnitte** wählt weiterhin für jeden Abschnitt eine Aufgabe aus; die bisherigen Ausnahmen für markierte Aufgaben sowie Fälligkeits- und Überprüfungsdaten bleiben bestehen.
 
 ### Fälligkeitsdaten und Erinnerungen
 
@@ -314,7 +314,7 @@ In der Ansicht **Fokus** sehen Sie:
 
 <a id="how-focus-sorts-available-actions"></a>
 
-**In der nächsten Version nach 1.2.8:** Mit **Nur Fokus** im Fokus-Kopfbereich auf Desktop und Mobilgeräten bleibt **Heutiger Fokus** geöffnet, während Heute, Zur Überprüfung, Nächste Aktionen, Demnächst und Zu überprüfende Projekte eingeklappt werden. Überschriften und Anzahlen bleiben sichtbar, sodass sich jeder Abschnitt einzeln öffnen lässt. **Abschnitte ausklappen** öffnet alle wieder. Jedes Gerät merkt sich den Zustand. Auf dem Desktop ersetzt dies **Nur die Top 3 anzeigen**, ohne die markierten Aufgaben zu begrenzen oder zu ändern.
+Mit **Nur Fokus** im Fokus-Kopfbereich auf Desktop und Mobilgeräten bleibt **Heutiger Fokus** geöffnet, während Heute, Zur Überprüfung, Nächste Aktionen, Demnächst und Zu überprüfende Projekte eingeklappt werden. Überschriften und Anzahlen bleiben sichtbar, sodass sich jeder Abschnitt einzeln öffnen lässt. **Abschnitte ausklappen** öffnet alle wieder. Jedes Gerät merkt sich den Zustand. Auf dem Desktop ersetzt dies **Nur die Top 3 anzeigen**, ohne die markierten Aufgaben zu begrenzen oder zu ändern.
 
 ### So sortiert „Fokus“ verfügbare Aktionen
 
@@ -323,7 +323,7 @@ In der Ansicht **Fokus** sehen Sie:
 1. **Heutiger Fokus** zeigt Aufgaben, die Sie ausdrücklich für heute fokussiert haben. Sie können sie manuell in die geplante Reihenfolge bringen – auf dem Desktop am Griff ziehen oder auf Mobilgeräten den Umschalter zum Sortieren in der Abschnittsüberschrift verwenden. Die manuelle Reihenfolge gilt bei der Standardsortierung von „Fokus“, wird geräteübergreifend synchronisiert und bleibt erhalten, bis eine Aufgabe „Fokus“ verlässt.
 2. **Heute / Terminplan** zeigt verfügbare `next`-Aufgaben, die überfällig oder heute fällig sind oder heute beginnen – auch mit einer Startzeit später am Tag, wobei diese Zeilen ihre Startzeit anzeigen, bis diese erreicht ist. Sortiert wird nach dem frühesten Fälligkeits-/Startzeitpunkt, dann – bei aktivierten Prioritäten – nach Priorität und schließlich nach dem ältesten Erstellungsdatum.
 
-   **In der nächsten Version nach 1.2.8:** Heute zeigt zuerst die jetzt verfügbaren Aufgaben. Falls Aufgaben erst später am selben Tag beginnen, folgen sie in der Gruppe **Später heute**. Jede Gruppe behält die gewählte Sortierung bei. Zur Startzeit wechselt die Aufgabe in die Hauptliste; eine leere Gruppe verschwindet. Startdaten ohne Uhrzeit bleiben in der Hauptliste. Es gibt keine neue Einstellung; der heutige Fokus und Anstehend bleiben unverändert.
+   Heute zeigt zuerst die jetzt verfügbaren Aufgaben. Falls Aufgaben erst später am selben Tag beginnen, folgen sie in der Gruppe **Später heute**. Jede Gruppe behält die gewählte Sortierung bei. Zur Startzeit wechselt die Aufgabe in die Hauptliste; eine leere Gruppe verschwindet. Startdaten ohne Uhrzeit bleiben in der Hauptliste. Es gibt keine neue Einstellung; der heutige Fokus und Anstehend bleiben unverändert.
 3. **Nächste Aktionen** zeigt die übrigen verfügbaren `next`-Aufgaben. Die Standardsortierung lautet:
    - bald fällige Aufgaben zuerst, mit dem frühesten Fälligkeitsdatum zuerst (derzeit innerhalb der nächsten 30 Tage fällig)
    - undatierte Aktionen danach
@@ -413,7 +413,7 @@ Einrichtungsschritte und Einzelheiten zu den Optionen finden Sie unter [Wiederke
 
 ## Eine Verpflichtung abbrechen
 
-**Ab der nächsten Version nach 1.2.8:** Mit **Aufgabe abbrechen** oder **Projekt abbrechen** beenden Sie eine Verpflichtung und behalten ihren Verlauf. Abgebrochene Aufgaben bleiben im Archiv und in der Suche als **Abgebrochen** sichtbar und zählen nicht als erledigte Arbeit. Projekte stehen unter **Geschlossen**, mit getrennten Kennzeichnungen für erledigt und abgebrochen.
+Mit **Aufgabe abbrechen** oder **Projekt abbrechen** beenden Sie eine Verpflichtung und behalten ihren Verlauf. Abgebrochene Aufgaben bleiben im Archiv und in der Suche als **Abgebrochen** sichtbar und zählen nicht als erledigte Arbeit. Projekte stehen unter **Geschlossen**, mit getrennten Kennzeichnungen für erledigt und abgebrochen.
 
 Beim Abbrechen eines Projekts bleiben erledigte Schritte erhalten; die übrigen Aktionen werden abgebrochen. **Reaktivieren** stellt die zusammen mit dem Projekt abgebrochenen Aufgaben wieder her, sofern sie danach nicht einzeln geändert wurden. Referenzmaterial, Notizen und Anhänge bleiben erhalten. Ein Grund kann in die Notizen geschrieben werden, ist aber nicht erforderlich.
 

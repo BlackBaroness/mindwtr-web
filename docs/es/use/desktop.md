@@ -54,7 +54,7 @@ Mindwtr se ejecuta en segundo plano para gestionar la sincronización automátic
 En macOS 14 y versiones posteriores, la aplicación de escritorio trae su propio widget.
 
 - **Añádelo desde la galería de widgets** — haz clic en la fecha de la barra de menús y luego en **Editar widgets** — y elige **Mindwtr** en tamaño pequeño, mediano o grande. Muestra las tareas del foco de hoy y se actualiza cuando esa lista cambia.
-- **Haz clic en la lista de tareas** para abrir la aplicación de escritorio. En la próxima versión después de 1.2.8, el widget también tendrá un botón de **Captura rápida** que abre solo el panel flotante existente de captura rápida, no la ventana principal. Si Mindwtr no está en ejecución, macOS puede iniciarlo en segundo plano para mostrar el panel. El widget de Mac también tiene prioridad sobre el widget del iPhone que la galería ofrecía mediante Continuidad, que abría la aplicación en el teléfono.
+- **Haz clic en la lista de tareas** para abrir la aplicación de escritorio. El widget también tiene un botón de **Captura rápida** que abre solo el panel flotante existente de captura rápida, no la ventana principal. Si Mindwtr no está en ejecución, macOS puede iniciarlo en segundo plano para mostrar el panel. El widget de Mac también tiene prioridad sobre el widget del iPhone que la galería ofrecía mediante Continuidad, que abría la aplicación en el teléfono.
 - El widget se incluye en la versión firmada con Developer ID (el DMG); la versión de la Mac App Store lo tendrá en una entrega posterior.
 
 ## Vistas
@@ -432,7 +432,7 @@ Configura las notificaciones en Ajustes:
 - Las casillas Markdown de la descripción son solo notas; no afectan a la lista de comprobación de la tarea
 - Pega texto de varias líneas en un elemento de la lista para crear un elemento por línea (se reconocen viñetas, numeración y marcadores `[x]`)
 - Asigna la tarea a un proyecto desde el editor o desde el menú `⋯` de una fila de tarea: **Proyecto…** la mueve a un proyecto o la saca del que tiene
-- **Próxima versión:** En ese selector de **Proyecto…**, escribe un nombre nuevo y elige **Crear**. El proyecto se guarda de inmediato; la tarea solo se mueve al elegir **Guardar**. **Cancelar** deja la tarea sin cambios y conserva el proyecto creado.
+- En ese selector de **Proyecto…**, escribe un nombre nuevo y elige **Crear**. El proyecto se guarda de inmediato; la tarea solo se mueve al elegir **Guardar**. **Cancelar** deja la tarea sin cambios y conserva el proyecto creado.
 
 ### Propiedades de las tareas
 
@@ -479,7 +479,7 @@ Usa la misma hoja de recurrencia para establecer una fecha final o un número de
 
 ## Acciones en bloque
 
-**Próxima versión:** En **Organizar en lote**, busca un proyecto o área, o escribe un nombre nuevo y elige **Crear** sin perder la selección de tareas ni los demás campos. Al crear se guarda y selecciona el destino; las tareas solo se mueven al pulsar **Aplicar a las seleccionadas**. Cancelar la edición no cambia las tareas y conserva los destinos creados. Si la creación falla, se mantienen la selección y el formulario para volver a intentarlo.
+En **Organizar en lote**, busca un proyecto o área, o escribe un nombre nuevo y elige **Crear** sin perder la selección de tareas ni los demás campos. Al crear se guarda y selecciona el destino; las tareas solo se mueven al pulsar **Aplicar a las seleccionadas**. Cancelar la edición no cambia las tareas y conserva los destinos creados. Si la creación falla, se mantienen la selección y el formulario para volver a intentarlo.
 
 Selecciona varias tareas para realizar operaciones por lotes:
 

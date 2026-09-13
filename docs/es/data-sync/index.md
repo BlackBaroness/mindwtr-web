@@ -308,7 +308,7 @@ Si la sincronización sigue gastando más batería de la que quieres:
 - **Restringe el uso en segundo plano** de Mindwtr en los ajustes de batería de Android. Esto detiene solo la tarea programada; la sincronización con la aplicación abierta no se ve afectada. Es seguro para tus datos: cada ciclo es una lectura, una fusión y una escritura completas, y un ciclo que el sistema interrumpa simplemente vuelve a ejecutarse desde el principio la próxima vez que la aplicación esté abierta.
 - **Usa la sincronización de archivos** con la aplicación de sincronización que prefieras si no necesitas que Mindwtr sincronice por su cuenta en segundo plano.
 
-En la próxima versión después de la 1.2.8, la programación en segundo plano será automática y se eliminará el selector de intervalo. Al volver a abrir la aplicación, todos los intervalos guardados, incluida la opción Desactivada, pasarán a la misma programación automática. Desactivar por completo la sincronización seguirá desactivando las tareas en segundo plano. El sistema puede retrasar u omitir una ejecución; la sincronización manual y la sincronización con la aplicación abierta seguirán disponibles.
+La programación en segundo plano es automática y se elimina el selector de intervalo. Al volver a abrir la aplicación, todos los intervalos guardados, incluida la opción Desactivada, pasarán a la misma programación automática. Desactivar por completo la sincronización seguirá desactivando las tareas en segundo plano. El sistema puede retrasar u omitir una ejecución; la sincronización manual y la sincronización con la aplicación abierta seguirán disponibles.
 
 ### Opciones de sincronización de ajustes
 

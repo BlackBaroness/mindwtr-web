@@ -34,7 +34,7 @@ Toutes les colonnes sauf `Title` sont facultatives : n’incluez que celles dont
 | --- | --- | --- |
 | `Title` | tout texte | Obligatoire. Le titre de la tâche. |
 | `Description` | tout texte | La description de la tâche. Les sauts de ligne sont conservés à l’intérieur d’une valeur entre guillemets. |
-| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | Insensible à la casse. Laissé vide, le statut devient `archived` si `Cancelled At` est renseigné (à partir de la prochaine version après 1.2.8), sinon `done` si `Completed At` est renseigné, sinon `next` si la ligne indique un projet, sinon `inbox`. Une valeur non reconnue devient `inbox` avec un avertissement. |
+| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | Insensible à la casse. Laissé vide, le statut devient `archived` si `Cancelled At` est renseigné , sinon `done` si `Completed At` est renseigné, sinon `next` si la ligne indique un projet, sinon `inbox`. Une valeur non reconnue devient `inbox` avec un avertissement. |
 | `Project` | un nom de projet | Crée le projet une seule fois et y place la tâche. Les noms sont comparés sans tenir compte de la casse. |
 | `Section` | un nom de section dans le projet de cette ligne | Exige un `Project` sur la même ligne. Sans lui, la valeur est ignorée avec un avertissement. |
 | `Area` | un nom de domaine | Si la ligne indique un `Project`, le domaine accueille le projet. Sinon, c’est la tâche elle-même qui est classée dans le domaine. |
@@ -47,7 +47,7 @@ Toutes les colonnes sauf `Title` sont facultatives : n’incluez que celles dont
 | `Due Date` | une date, avec ou sans heure | L’échéance. |
 | `Review Date` | une date, avec ou sans heure | La date de revue, pour réexaminer la tâche plus tard. |
 | `Completed At` | une date avec heure | L’horodatage de fin. Sans `Cancelled At`, il transforme un `Status` vide en `done`. Il est conservé uniquement pour les tâches `done` ou les tâches `archived` non annulées. |
-| `Cancelled At` | une date avec heure | À partir de la prochaine version après 1.2.8 : l’horodatage d’annulation. Si `Status` est vide, il choisit `archived` avant de prendre en compte `Completed At`. Il est conservé uniquement pour les tâches `archived` ; l’annulation efface `Completed At` et ne génère aucune occurrence suivante. |
+| `Cancelled At` | une date avec heure | l’horodatage d’annulation. Si `Status` est vide, il choisit `archived` avant de prendre en compte `Completed At`. Il est conservé uniquement pour les tâches `archived` ; l’annulation efface `Completed At` et ne génère aucune occurrence suivante. |
 | `Created At` | une date avec heure | L’horodatage de création. Laissé vide, la tâche est créée à la date de l’import. |
 | `Checklist` | des éléments séparés par des sauts de ligne ou par `\|` | Devient la liste de contrôle de la tâche. Un élément écrit `[x] Buy stamps` démarre terminé ; `[ ] Buy stamps` et un simple `Buy stamps` démarrent ouverts. Une tâche pourvue d’éléments de contrôle devient une tâche liste. |
 | `Location` | tout texte | Le champ de lieu de la tâche. |
@@ -100,7 +100,7 @@ Mindwtr attribue à chaque ligne une identité stable : importer deux fois le m�
 
 Mindwtr écrit ce même format : l’aller-retour est donc complet. **Réglages → Données → Sauvegarde → Exporter en CSV** enregistre vos tâches actuelles dans un seul fichier CSV, sur ordinateur comme sur mobile.
 
-- À partir de la prochaine version, l’export CSV sur ordinateur sera disponible parmi les actions de sélection multiple. Filtrez une liste de tâches ou la vue Contextes, cliquez sur **Sélectionner**, cochez les tâches voulues, puis choisissez **Exporter les tâches sélectionnées en CSV**. Seules les tâches sélectionnées sont exportées, y compris celles hors écran. Pour inclure toute la liste filtrée, dépliez les groupes souhaités avant de tout sélectionner. L’export ne modifie ni les tâches ni la sélection. L’export complet reste dans les paramètres.
+- L’export CSV sur ordinateur est disponible parmi les actions de sélection multiple. Filtrez une liste de tâches ou la vue Contextes, cliquez sur **Sélectionner**, cochez les tâches voulues, puis choisissez **Exporter les tâches sélectionnées en CSV**. Seules les tâches sélectionnées sont exportées, y compris celles hors écran. Pour inclure toute la liste filtrée, dépliez les groupes souhaités avant de tout sélectionner. L’export ne modifie ni les tâches ni la sélection. L’export complet reste dans les paramètres.
 - La colonne `ID` est toujours écrite : réimporter un export ne duplique rien, les lignes dont l’`ID` correspond à une tâche existante sont ignorées avec un avertissement. Les modifications apportées à un fichier exporté ne sont **pas** réinjectées — modifiez ces tâches dans l’application. Les remarques sur l’identité ci-dessus s’appliquent telles quelles.
 - Les tâches supprimées ne sont jamais exportées. Le format n’a pas de colonne pour elles et une telle ligne reviendrait comme tâche active au prochain import.
 - La récurrence est écrite sous la forme de la règle de répétition que l’importateur relit : les répétitions survivent donc à l’aller-retour. L’avancement d’une série comptée n’est pas écrit, une répétition importée démarre donc une nouvelle série.

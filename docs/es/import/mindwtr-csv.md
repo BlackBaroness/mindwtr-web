@@ -34,7 +34,7 @@ Todas las columnas salvo `Title` son opcionales: basta con incluir las que realm
 | --- | --- | --- |
 | `Title` | cualquier texto | Obligatoria. El título de la tarea. |
 | `Description` | cualquier texto | La descripción de la tarea. Los saltos de línea se conservan dentro de un valor entrecomillado. |
-| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | No distingue mayúsculas. Si se deja vacío, el estado pasa a `archived` cuando hay `Cancelled At` (desde la próxima versión posterior a 1.2.8), a `done` cuando hay `Completed At`, a `next` cuando la fila indica un proyecto y, si no, a `inbox`. Un valor no reconocido se convierte en `inbox` con un aviso. |
+| `Status` | `inbox`, `next`, `waiting`, `someday`, `reference`, `done`, `archived` | No distingue mayúsculas. Si se deja vacío, el estado pasa a `archived` cuando hay `Cancelled At` , a `done` cuando hay `Completed At`, a `next` cuando la fila indica un proyecto y, si no, a `inbox`. Un valor no reconocido se convierte en `inbox` con un aviso. |
 | `Project` | el nombre de un proyecto | Crea el proyecto una sola vez y coloca la tarea dentro. Los nombres se comparan sin distinguir mayúsculas. |
 | `Section` | el nombre de una sección del proyecto de esa fila | Necesita un `Project` en la misma fila. Sin él, el valor se ignora con un aviso. |
 | `Area` | el nombre de un área | Si la fila indica un `Project`, el área contiene el proyecto. Si no, la propia tarea se archiva en el área. |
@@ -47,7 +47,7 @@ Todas las columnas salvo `Title` son opcionales: basta con incluir las que realm
 | `Due Date` | una fecha, con hora o sin ella | La fecha límite. |
 | `Review Date` | una fecha, con hora o sin ella | La fecha de revisión para reconsiderar la tarea más adelante. |
 | `Completed At` | una fecha con hora | La marca de finalización. Si no hay `Cancelled At`, convierte un `Status` vacío en `done`. Solo se conserva para tareas `done` o `archived` que no estén canceladas. |
-| `Cancelled At` | una fecha con hora | Desde la próxima versión posterior a 1.2.8: la fecha de cancelación. Si `Status` está vacío, elige `archived` antes de considerar `Completed At`. Solo se conserva para tareas `archived`; la cancelación borra `Completed At` y no genera otra repetición. |
+| `Cancelled At` | una fecha con hora | La fecha de cancelación. Si `Status` está vacío, elige `archived` antes de considerar `Completed At`. Solo se conserva para tareas `archived`; la cancelación borra `Completed At` y no genera otra repetición. |
 | `Created At` | una fecha con hora | La marca de creación. Si se deja vacía, la tarea se crea con la fecha de la importación. |
 | `Checklist` | elementos separados por saltos de línea o `\|` | Se convierte en la lista de comprobación de la tarea. Un elemento escrito como `[x] Buy stamps` empieza completado; `[ ] Buy stamps` y un simple `Buy stamps` empiezan pendientes. Una tarea con elementos de comprobación se convierte en tarea de lista. |
 | `Location` | cualquier texto | El campo de ubicación de la tarea. |
@@ -100,7 +100,7 @@ Mindwtr da a cada fila una identidad estable, así que importar dos veces el mis
 
 Mindwtr escribe este mismo formato, así que el viaje de ida y vuelta está completo. **Ajustes → Datos → Copia de seguridad → Exportar CSV** guarda tus tareas actuales en un único archivo CSV, tanto en escritorio como en móvil.
 
-- A partir de la próxima versión, la exportación CSV de escritorio estará entre las acciones de selección múltiple. Filtra una lista de tareas o la vista Contextos, pulsa **Seleccionar**, marca las tareas que quieras y elige **Exportar tareas seleccionadas como CSV**. Solo se exportan las tareas seleccionadas, incluidas las que están fuera de la pantalla. Para incluir toda la lista filtrada, despliega los grupos que quieras antes de seleccionar todas las tareas. La exportación no modifica las tareas ni la selección. La exportación completa sigue en Ajustes.
+- La exportación CSV de escritorio está entre las acciones de selección múltiple. Filtra una lista de tareas o la vista Contextos, pulsa **Seleccionar**, marca las tareas que quieras y elige **Exportar tareas seleccionadas como CSV**. Solo se exportan las tareas seleccionadas, incluidas las que están fuera de la pantalla. Para incluir toda la lista filtrada, despliega los grupos que quieras antes de seleccionar todas las tareas. La exportación no modifica las tareas ni la selección. La exportación completa sigue en Ajustes.
 - La columna `ID` se escribe siempre, así que reimportar un export no duplica nada: las filas cuyo `ID` coincide con una tarea que ya tienes se omiten con un aviso. Los cambios hechos en un archivo exportado **no** se devuelven a la aplicación; edita esas tareas dentro de ella. Las notas sobre identidad de más arriba se aplican tal cual.
 - Las tareas eliminadas nunca se exportan. El formato no tiene columna para ellas y una fila así volvería como tarea activa en la siguiente importación.
 - La recurrencia se escribe como la regla de repetición que el importador vuelve a leer, así que las repeticiones sobreviven al viaje de ida y vuelta. Cuánto ha avanzado ya una serie contada no se escribe, así que una repetición importada empieza una serie nueva.
