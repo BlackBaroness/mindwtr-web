@@ -75,6 +75,8 @@ MINDWTR_DIAGNOSTICS=1 ./src-tauri/target/release/mindwtr
 - Konfliktzusammenfassungen: Zusammenführungen mit gelösten Konflikten werden auch bei deaktivierter Debug-Protokollierung immer in `mindwtr.log` geschrieben, damit die Lösung später nachvollziehbar bleibt. Diese Einträge enthalten Datensatz-IDs, Namen geänderter Felder und die gewählte Seite, jedoch niemals Inhalte wie Titel oder Notizen.
 - Unerwartete Laufzeitfehler
 
+Auf Mobilgeräten kann ein schwerwiegender JavaScript-Fehler einen lokalen Absturzbericht hinterlassen (bis zu 16 KiB), auch bei deaktivierter Debug-Protokollierung. Er enthält Zeitpunkt, App-/Build-Version, Plattform, erkannte technische Fehlerdetails und begrenzte Stackframes; unbekannte Meldungen werden zum Schutz privater Inhalte weggelassen. Beim nächsten erfolgreichen Start wird der Bericht ins Protokoll übernommen. Teilen Sie ihn über **Protokoll teilen** oder fügen Sie einem Feedback ausdrücklich Diagnosedaten bei; es wird nichts automatisch hochgeladen. **Protokoll löschen** entfernt auch den zurückbehaltenen Absturzbericht. Die Erfassung ist nicht garantiert und umfasst keine nativen Abstürze, Beendigungen durch das System oder Fehler vor dem Start der Fehlerbehandlung.
+
 Vertrauliche Werte wie API-Schlüssel, Token, Passwörter und URLs mit Zugangsdaten werden automatisch unkenntlich gemacht.
 
 ---

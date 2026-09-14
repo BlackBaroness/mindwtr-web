@@ -75,6 +75,8 @@ MINDWTR_DIAGNOSTICS=1 ./src-tauri/target/release/mindwtr
 - Résumés de conflits : les fusions ayant résolu un conflit sont toujours écrites dans `mindwtr.log`, même si la journalisation de débogage est désactivée, afin que les résolutions restent vérifiables par la suite. Ces entrées permanentes indiquent les identifiants des enregistrements, les noms des champs modifiés et le côté retenu ; le contenu des enregistrements, comme les titres et les notes, n’est jamais écrit.
 - Erreurs d’exécution inattendues
 
+Sur mobile, une erreur JavaScript fatale peut laisser un rapport local (jusqu’à 16 KiB), même si la journalisation de débogage est désactivée. Il conserve l’heure, la version de l’app et de la compilation, la plateforme, les détails techniques reconnus et une trace limitée ; les messages non reconnus sont omis par confidentialité. Au prochain démarrage réussi, le rapport est ajouté au journal. Utilisez **Partager le journal**, ou joignez explicitement les diagnostics à un retour, pour le transmettre ; rien n’est envoyé automatiquement. **Effacer le journal** supprime aussi le rapport conservé. La capture n’est pas garantie et ne couvre pas les plantages natifs, les arrêts imposés par le système ni les erreurs précédant le démarrage du gestionnaire d’erreurs.
+
 Les valeurs sensibles — clés d’API, jetons, mots de passe et URL contenant des identifiants — sont automatiquement masquées.
 
 ---

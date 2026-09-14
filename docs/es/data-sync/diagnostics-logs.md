@@ -75,6 +75,8 @@ MINDWTR_DIAGNOSTICS=1 ./src-tauri/target/release/mindwtr
 - Resúmenes de conflictos: las combinaciones que resolvieron conflictos siempre se escriben en `mindwtr.log`, aunque la depuración esté desactivada, para que las resoluciones puedan auditarse después. Estas entradas incluyen identificadores de registros, nombres de campos modificados y qué lado prevaleció; nunca escriben el contenido del registro, como títulos o notas.
 - Errores inesperados durante la ejecución.
 
+En móvil, un error fatal de JavaScript puede dejar un registro local del fallo (hasta 16 KiB), incluso con la depuración desactivada. Conserva la hora, versión de la app y compilación, plataforma, detalles técnicos reconocidos y una traza limitada; los mensajes no reconocidos se omiten por privacidad. En el siguiente inicio correcto, se añade al registro. Usa **Compartir registro**, o incluye explícitamente los diagnósticos al enviar comentarios, para compartirlo; no se sube nada automáticamente. **Borrar registro** también elimina el informe retenido. La captura no está garantizada y no cubre fallos nativos, cierres del sistema ni errores anteriores al inicio del controlador de errores.
+
 Los valores sensibles —claves de API, tokens, contraseñas y URL con credenciales— se ocultan automáticamente.
 
 ---

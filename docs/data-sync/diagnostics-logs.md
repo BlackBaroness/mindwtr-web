@@ -72,6 +72,8 @@ MINDWTR_DIAGNOSTICS=1 ./src-tauri/target/release/mindwtr
 - Conflict summaries: merges that resolved conflicts are always written to `mindwtr.log`, even with debug logging off, so resolutions stay auditable after the fact. These always-on entries carry record IDs, changed field names, and which side won; record content (titles, notes) is never written.
 - Unexpected runtime errors
 
+On mobile, a fatal JavaScript error can leave one local crash record (up to 16 KiB), even with debug logging off. It keeps the time, app/build version, platform, recognized technical error details and bounded stack frames; unrecognized messages are omitted for privacy. On the next successful startup, the record is added to the log. Use **Share log**, or explicitly include diagnostics with feedback, to share it; nothing uploads automatically. **Clear log** also removes the retained crash record. Capture is best effort and does not cover native crashes, system kills or failures before the error handler starts.
+
 Sensitive values (API keys, tokens, passwords, URLs with credentials) are redacted automatically.
 
 ---
