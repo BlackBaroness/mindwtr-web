@@ -219,11 +219,11 @@ On Android, dated rows show **Today**, a weekday for the coming week, or a compa
 
 Choose **Tasks** for the regular widget, available in small, medium and large sizes (plus extra-large on supported iPads), or **Compact** for smaller text and a flat Focus list. Compact has no list picker or check-off rings; medium and larger sizes still link to tasks and quick capture.
 
-The iOS Tasks widget shows Today's Focus and Today, including overdue tasks, with the date, priority rings, project or area labels, and the app's Focus filters and sort order. It does not fill unused space with other next actions.
+Tasks and Compact show Today's Focus and Today first, including overdue tasks. When that list is empty, they show Next Actions instead, with a short Today or Next heading to identify the list. They do not mix Next Actions into a nonempty Today list. Rows adapt to the widget's size and text size. The Tasks widget keeps the date, priority rings, project or area labels, and the app's filters, theme and sort order.
 
-On iOS 17 and later, long-press a Tasks widget and choose **Edit Widget** to select Focus, Inbox, Next Actions, Waiting For, Someday/Maybe, or a saved filter. Multiple widgets can show different lists. Tap a ring to queue completion; the row stays struck through until Mindwtr next runs and saves the change. Tap the ring again to undo before the app claims it. There is a minimum three-second grace period. Completion and sync happen through the app, not directly from the widget.
+On iOS 17 and later, long-press a Tasks widget and choose **Edit Widget** to select Focus, Inbox, Next Actions, Waiting For, Someday/Maybe, or a saved filter. Multiple widgets can show different lists; an explicitly selected list other than Focus never falls back to another list. Tap a ring to queue completion and tap again within three seconds to undo. After that window, the row hides and another cached task can fill the space. WidgetKit may delay the visible refresh. The completion stays safely queued until Mindwtr runs and saves it; completion and sync happen through the app, not directly from the widget.
 
-Medium and larger widgets link task rows to their task in Mindwtr and **+** to quick capture. The small widget opens Focus when tapped; its rings remain interactive on iOS 17+. On older iOS versions, the widget stays on Focus without inline check-off or list configuration. WidgetKit controls refresh timing. Lock screen widgets are unchanged.
+Tap the heading, empty state, or small widget to open the displayed list. Medium and larger widgets link task rows to their task in Mindwtr and **+** to quick capture; small-widget rings remain interactive on iOS 17+. Older iOS versions use the default Today/Next behavior without inline check-off or list configuration. WidgetKit controls refresh timing. Lock screen widgets are unchanged.
 
 ### iOS Lock Screen Widget
 
