@@ -87,7 +87,7 @@ Focus keeps future-start tasks and later tasks in sequential projects out of its
 **Features:**
 - **Context Filters**: Filter Next Actions by context (e.g., @home, @work) or tag. The filter picker groups contexts and tags so long metadata lists stay scannable.
 - **Group by Context**: Use the list grouping control to group Next Actions by primary context, with context-less tasks collected under **No context**.
-- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates.
+- **Saved Filters**: Save reusable Focus criteria such as projects, contexts, tags, priority, energy level, and time estimates. Click a saved filter to apply it; click it again or click **All** to clear it. To delete one, open its **…** menu, choose **Delete**, and confirm. Open **Filters** to inspect or edit the active filter criteria.
 - **Zen Mode**: Toggle to hide everything except Today's Focus tasks.
 - **Pomodoro (Optional)**: Enable in **Settings → GTD → Features → Pomodoro timer** to show a focus/break timer panel (15/3, 25/5, 50/10, plus one optional custom preset). Leave it as **Timer only**, or turn on **Link timer to task** to show the Timer task picker and **Mark task done** action.
 

@@ -87,7 +87,7 @@ Ihr gemeinsames Dashboard für das tägliche Erledigen. „Fokus“ ist kein vol
 **Funktionen:**
 - **Kontextfilter**: Nächste Aktionen nach Kontext (z. B. @home, @work) oder Tag filtern. Die Auswahl gruppiert Kontexte und Tags, damit lange Metadatenlisten übersichtlich bleiben.
 - **Nach Kontext gruppieren**: Nächste Aktionen nach ihrem primären Kontext gruppieren; Aufgaben ohne Kontext erscheinen unter **Kein Kontext**.
-- **Gespeicherte Filter**: Wiederverwendbare Fokusbedingungen wie Projekte, Kontexte, Tags, Priorität, Energie und Zeitschätzung speichern.
+- **Gespeicherte Filter**: Wiederverwendbare Fokusbedingungen wie Projekte, Kontexte, Tags, Priorität, Energie und Zeitschätzung speichern. Klicken Sie auf einen gespeicherten Filter, um ihn anzuwenden; klicken Sie erneut darauf oder auf **Alle**, um ihn aufzuheben. Zum Löschen öffnen Sie sein **…**-Menü, wählen **Löschen** und bestätigen. Unter **Filter** können Sie die aktiven Filterbedingungen prüfen oder bearbeiten.
 - **Zen-Modus**: Alles außer den Aufgaben im heutigen Fokus ausblenden.
 - **Pomodoro (optional)**: Unter **Einstellungen → GTD → Funktionen → Pomodoro-Zeitgeber** ein Fokus-/Pausenfeld aktivieren (15/3, 25/5, 50/10 und eine optionale eigene Voreinstellung). Belassen Sie es bei **Nur Zeitgeber** oder aktivieren Sie **Zeitgeber mit Aufgabe verknüpfen** für Aufgabenauswahl und **Aufgabe als erledigt markieren**.
 

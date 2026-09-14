@@ -87,7 +87,7 @@ Focus tient les tâches dont la date de début est future et les tâches ultéri
 **Fonctionnalités :**
 - **Filtres de contexte** : filtrez les Actions suivantes par contexte (par ex., @home, @work) ou par étiquette. Le sélecteur de filtres regroupe les contextes et les étiquettes afin que les longues listes de métadonnées restent faciles à parcourir.
 - **Grouper par contexte** : utilisez la commande de regroupement de la liste pour regrouper les Actions suivantes selon leur contexte principal, les tâches sans contexte étant rassemblées sous **Aucun contexte**.
-- **Filtres enregistrés** : enregistrez des critères Focus réutilisables tels que les projets, contextes, étiquettes, priorités, niveaux d’énergie et estimations de temps.
+- **Filtres enregistrés** : enregistrez des critères Focus réutilisables tels que les projets, contextes, étiquettes, priorités, niveaux d’énergie et estimations de temps. Cliquez sur un filtre enregistré pour l’appliquer ; cliquez à nouveau dessus ou sur **Tous** pour le désactiver. Pour le supprimer, ouvrez son menu **…**, choisissez **Supprimer**, puis confirmez. Ouvrez **Filtres** pour consulter ou modifier les critères actifs.
 - **Mode Zen** : activez-le pour tout masquer à l’exception des tâches du Focus du jour.
 - **Pomodoro (facultatif)** : activez-le dans **Paramètres → GTD → Fonctionnalités → Minuteur Pomodoro** pour afficher un panneau de minuteur de concentration/pause (15/3, 25/5, 50/10, ainsi qu’un préréglage personnalisé facultatif). Laissez-le sur **Minuteur uniquement**, ou activez **Lier le minuteur à la tâche** pour afficher le sélecteur de tâche du Minuteur et l’action **Marquer la tâche comme terminée**.
 

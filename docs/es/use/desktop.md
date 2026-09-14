@@ -87,7 +87,7 @@ Foco mantiene fuera de sus listas accionables las tareas cuya fecha de inicio es
 **Funciones:**
 - **Filtros de contexto**: filtra las Próximas acciones por contexto (por ejemplo, @home o @work) o etiqueta. El selector agrupa contextos y etiquetas para que las listas largas de metadatos sigan siendo fáciles de recorrer.
 - **Agrupar por contexto**: usa el control de agrupación de la lista para agrupar las Próximas acciones por contexto principal; las tareas sin contexto se reúnen en **Sin contexto**.
-- **Filtros guardados**: guarda criterios de Foco reutilizables, como proyectos, contextos, etiquetas, prioridad, nivel de energía y estimaciones de tiempo.
+- **Filtros guardados**: guarda criterios de Foco reutilizables, como proyectos, contextos, etiquetas, prioridad, nivel de energía y estimaciones de tiempo. Haz clic en un filtro guardado para aplicarlo; vuelve a pulsarlo o haz clic en **Todo** para quitarlo. Para eliminarlo, abre su menú **…**, elige **Eliminar** y confirma. Abre **Filtros** para consultar o editar los criterios activos.
 - **Modo Zen**: actívalo para ocultar todo salvo las tareas de Foco de hoy.
 - **Pomodoro (opcional)**: actívalo en **Ajustes → GTD → Funciones → Temporizador Pomodoro** para mostrar un panel de temporizador de concentración/descanso (15/3, 25/5, 50/10 y un preajuste personalizado opcional). Déjalo en **Solo temporizador** o activa **Vincular temporizador a tarea** para mostrar el selector de tarea del temporizador y la acción **Marcar tarea como terminada**.
 
