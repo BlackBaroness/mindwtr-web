@@ -207,7 +207,7 @@ The Android Compact widget uses smaller text and a flat Focus list for small wid
 
 On Android, tapping a task row in Tasks or Compact opens a small task sheet over your home screen, without opening the main app. The sheet shows the title, the project or area, the note, the contexts and tags, the start and due dates, and the priority. **Complete** checks the task off the same way the Tasks ring does, with the same short undo window. **Open** takes you to the task in the app.
 
-On Android, tapping a ring in the Tasks widget completes the task. The row shows struck through straight away. The task stays struck through on the widget until Mindwtr next runs and completes it there, so it also syncs to your other devices from the app. Tapping the ring of a struck-through row undoes it, both within the first few seconds and afterwards, as long as the app has not taken it in yet.
+On Android, tapping a ring in the Tasks widget crosses out the row immediately. Tap it again within about three seconds to undo. After this window, the row disappears from Tasks and Compact, making room for the remaining tasks without opening the app. The completion stays saved on the device until Mindwtr next opens, applies it and syncs it to your other devices.
 
 On Android, the capture button on any of the three widgets, the Quick Settings tile, the app shortcut and the capture notification open the same native floating capture window on top of whatever you are doing, without opening the main app. **Save** adds the task to the Inbox, shows a short confirmation and closes the window; the task appears the next time you open Mindwtr. iOS captures through the app as before.
 
