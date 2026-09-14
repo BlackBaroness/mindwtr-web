@@ -64,6 +64,27 @@ Beim Erstellen akzeptiert `props` diese Aufgabenfelder: `status`, `projectId`, `
 
 Ab Mindwtr Cloud 1.2.8 liefern `GET /v1/tasks/:id` und `GET /v1/projects/:id` einen starken `ETag`. Um die gelesene Version zu ändern, sende diesen Wert im Header `If-Match` beim zugehörigen `PATCH`. Der Server prüft den aktuellen Datensatz innerhalb seiner Schreibsperre. Hat sich der Datensatz geändert, auch nur ein Anhang, antwortet er mit `412 Precondition Failed`, ohne zu schreiben. Lies den Datensatz erneut und erstelle die Änderung neu, bevor du es noch einmal versuchst. Ohne `If-Match` bleibt das bisherige bedingungslose Patch-Verhalten erhalten.
 
+Setze bei Automatisierungen `status` innerhalb von `props` und lasse `dueDate` weg, wenn es keine Frist gibt. `attachments` muss ein Array von Anhangsobjekten sein, keine URL-Zeichenfolge. Ein Link-Anhang benötigt eine ID, `kind: "link"`, Titel, URI sowie Erstellungs- und Änderungszeit wie im Beispiel. Erzeuge für jeden neuen Anhang eine eindeutige ID und behalte sie beim Bearbeiten desselben Links bei. Eine URL kann auch in `props.description` stehen, wenn sie nur in den Aufgabennotizen benötigt wird.
+
+```json
+{
+  "title": "JIRA-123 - Follow up",
+  "props": {
+    "status": "next",
+    "attachments": [
+      {
+        "id": "890b7cda-e1ec-43de-a0d1-60b5385b7f8d",
+        "kind": "link",
+        "title": "JIRA-123",
+        "uri": "https://jira.example.com/browse/JIRA-123",
+        "createdAt": "2026-09-13T12:00:00.000Z",
+        "updatedAt": "2026-09-13T12:00:00.000Z"
+      }
+    ]
+  }
+}
+```
+
 ## Erfassung
 
 ```text

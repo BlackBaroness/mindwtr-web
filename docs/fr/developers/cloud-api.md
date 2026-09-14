@@ -64,6 +64,27 @@ La création accepte soit `title`, soit l’`input` d’ajout rapide, ainsi que 
 
 Mindwtr Cloud 1.2.8 et les versions suivantes renvoient un `ETag` fort pour `GET /v1/tasks/:id` et `GET /v1/projects/:id`. Pour modifier la version que vous avez lue, transmettez cette valeur dans `If-Match` avec le `PATCH` correspondant. Le serveur vérifie le contenu actuel sous son verrou d’écriture et renvoie `412 Precondition Failed` sans écrire si le contenu a changé, y compris si seule une pièce jointe a changé. Relisez le contenu et reconstruisez votre modification avant de réessayer. Sans `If-Match`, le comportement précédent de modification sans condition reste inchangé.
 
+Pour les automatisations, placez `status` dans `props` et omettez `dueDate` si aucune échéance n’est définie. `attachments` doit être un tableau d’objets de pièce jointe, pas une chaîne contenant une URL. Pour joindre un lien, fournissez un ID, `kind: "link"`, un titre, une URI et les dates de création et de modification, comme dans l’exemple. Générez un ID unique pour chaque nouvelle pièce jointe et conservez-le lors de la modification de ce lien. Vous pouvez aussi placer l’URL dans `props.description` si elle doit seulement figurer dans les notes de la tâche.
+
+```json
+{
+  "title": "JIRA-123 - Follow up",
+  "props": {
+    "status": "next",
+    "attachments": [
+      {
+        "id": "890b7cda-e1ec-43de-a0d1-60b5385b7f8d",
+        "kind": "link",
+        "title": "JIRA-123",
+        "uri": "https://jira.example.com/browse/JIRA-123",
+        "createdAt": "2026-09-13T12:00:00.000Z",
+        "updatedAt": "2026-09-13T12:00:00.000Z"
+      }
+    ]
+  }
+}
+```
+
 ## Capture
 
 ```text

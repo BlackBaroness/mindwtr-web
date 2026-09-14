@@ -64,6 +64,27 @@ On create, `props` accepts these task fields: `status`, `projectId`, `sectionId`
 
 Mindwtr Cloud 1.2.8 and later return a strong `ETag` on `GET /v1/tasks/:id` and `GET /v1/projects/:id`. To update the version you read, send that tag in `If-Match` on the corresponding `PATCH`. The server checks the current record inside its write lock and returns `412 Precondition Failed` without writing if the record changed, including an attachment-only change. Read the record again and rebuild your update before retrying. Omitting `If-Match` keeps the existing unconditional patch behavior.
 
+For automation, put `status` inside `props` and omit `dueDate` when no deadline is set. `attachments` must be an array of attachment objects, not a URL string. For a link attachment, supply an ID, `kind: "link"`, title, URI, and creation/update timestamps as shown below. Generate a unique ID for each new attachment and keep it when editing that link. You can also put a URL in `props.description` if you only need it in the task notes.
+
+```json
+{
+  "title": "JIRA-123 - Follow up",
+  "props": {
+    "status": "next",
+    "attachments": [
+      {
+        "id": "890b7cda-e1ec-43de-a0d1-60b5385b7f8d",
+        "kind": "link",
+        "title": "JIRA-123",
+        "uri": "https://jira.example.com/browse/JIRA-123",
+        "createdAt": "2026-09-13T12:00:00.000Z",
+        "updatedAt": "2026-09-13T12:00:00.000Z"
+      }
+    ]
+  }
+}
+```
+
 ## Capture
 
 ```text

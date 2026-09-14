@@ -64,6 +64,27 @@ POST /v1/tasks/:id/archive
 
 Mindwtr Cloud 1.2.8 及更高版本会在 `GET /v1/tasks/:id` 和 `GET /v1/projects/:id` 的响应中返回强 `ETag`。要更新刚读取的版本，请在对应的 `PATCH` 请求中通过 `If-Match` 发送该标签。服务器会在写锁内检查当前记录；如果记录已改变，即使只改变了附件，也会返回 `412 Precondition Failed`，不执行写入。请重新读取记录并重新构建更新后再试。省略 `If-Match` 时，仍使用原有的无条件更新行为。
 
+自动化创建任务时，请把 `status` 放在 `props` 内；没有截止日期时省略 `dueDate`。`attachments` 必须是附件对象数组，不能直接传入 URL 字符串。链接附件需要提供 ID、`kind: "link"`、标题、URI 和创建/更新时间，格式如下。为每个新附件生成唯一 ID；编辑同一链接时保留该 ID。如果只需在任务备注中保存网址，也可以使用 `props.description`。
+
+```json
+{
+  "title": "JIRA-123 - Follow up",
+  "props": {
+    "status": "next",
+    "attachments": [
+      {
+        "id": "890b7cda-e1ec-43de-a0d1-60b5385b7f8d",
+        "kind": "link",
+        "title": "JIRA-123",
+        "uri": "https://jira.example.com/browse/JIRA-123",
+        "createdAt": "2026-09-13T12:00:00.000Z",
+        "updatedAt": "2026-09-13T12:00:00.000Z"
+      }
+    ]
+  }
+}
+```
+
 ## 收集
 
 ```text
