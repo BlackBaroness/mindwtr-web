@@ -71,6 +71,31 @@ In den KI-Assistenten-Einstellungen auf Desktop und Mobilgeräten finden Sie unt
 
 Das Limit gilt für Antworten des KI-Assistenten und von Copilot, nicht für Transkription oder das Laden der Modellliste. Abgebrochene Anfragen und Anfragen mit Zeitüberschreitung werden nicht automatisch wiederholt. Vorübergehende Netzwerk- oder Serverfehler können weiterhin begrenzt wiederholt werden. Das Zeitlimit folgt Ihrer bestehenden Einstellung zur Synchronisierung der KI-Einstellungen.
 
+### Kürzere Antworten von lokalen Modellen
+
+Ein längeres Zeitlimit gibt dem Modell mehr Zeit, verringert aber nicht die erzeugte Textmenge. Manche Modelle verbrauchen Tokens für das Nachdenken, bevor die kurze sichtbare Antwort entsteht.
+
+Wählen Sie **Anbieter → OpenAI**, öffnen Sie **Zusätzliche Anfrageparameter** in den KI-Assistenten-Einstellungen, fügen Sie ein JSON-Objekt ein und speichern Sie die Parameter. Mindwtr fügt diese Felder direkt in Anfragen des KI-Assistenten und von Copilot ein; umschließen Sie sie nicht mit `extra_body`. Die Felder `model`, `messages` und `response_format` werden weiterhin von Mindwtr festgelegt.
+
+Für **llama.cpp mit einem Qwen-Modell, dessen Chat-Vorlage das Abschalten des Nachdenkens unterstützt**, können Sie hiermit beginnen:
+
+```json
+{
+  "max_tokens": 512,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}
+```
+
+Der verschachtelte Parameter folgt der [llama.cpp-Serverdokumentation](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md). Andere Server benötigen möglicherweise ein anderes Feld oder eine serverseitige Einstellung; `enable_thinking` auf oberster Ebene ist nicht mit diesem Objekt austauschbar. Prüfen Sie Serverversion und Modellvorlage.
+
+- **512 ist eine anfängliche Obergrenze, kein Zielwert.** Wird die Antwort abgeschnitten oder kann Mindwtr sie nicht auswerten, versuchen Sie 1024 oder entfernen Sie die Grenze. Eine Review-Analyse benötigt eventuell mehr Platz als eine kurze Aufgabenaufteilung.
+- **Ändern Sie jeweils nur eine Einstellung.** Vergleichen Sie dieselbe Aufgabe mit deaktiviertem Nachdenken und passen Sie danach die Grenze an. Eine niedrigere `temperature` verändert die Auswahl der Tokens; sie begrenzt nicht die Länge.
+- **Bei weiteren Zeitüberschreitungen** versuchen Sie ein kleineres Modell oder 300 Sekunden. Leeren und speichern Sie die zusätzlichen Parameter, um zu Mindwtrs Standardwerten zurückzukehren.
+
+[HeikoMarkgraf teilte in Diskussion #1188 eine funktionierende Qwen3.5-4B-Konfiguration](https://github.com/dongdongbh/Mindwtr/discussions/1188#discussioncomment-18448971) mit etwa 6,45 Sekunden für Vorschläge und 37 Sekunden für die Aufgabenaufteilung. Das sind Community-Ergebnisse für diese Umgebung, kein Benchmark für das kleinere Beispiel oben. Die vollständige Konfiguration steht in der Diskussion; manche Felder können serverspezifisch sein oder anderswo ignoriert werden.
+
 ## Funktionen
 
 ### Klären

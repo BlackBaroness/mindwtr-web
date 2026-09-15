@@ -72,6 +72,31 @@ Ouvrez **Avancé → Délai d’attente** dans les paramètres de l’assistant 
 
 Ce délai concerne les réponses de l’assistant IA et de Copilot, pas la transcription ni la récupération de la liste des modèles. Les requêtes annulées ou expirées ne sont pas relancées automatiquement. Les erreurs temporaires de réseau ou de serveur peuvent encore entraîner un nombre limité de nouvelles tentatives. Le délai suit votre préférence actuelle de synchronisation des paramètres IA.
 
+### Des réponses plus courtes avec les modèles locaux
+
+Un délai plus long donne davantage de temps au modèle, sans réduire ce qu’il génère. Certains modèles consomment des tokens de raisonnement avant de produire la courte réponse visible.
+
+Avec **Fournisseur → OpenAI**, ouvrez **Paramètres supplémentaires de requête** dans les paramètres de l’assistant IA, collez un objet JSON et enregistrez les paramètres. Mindwtr ajoute directement ces champs aux requêtes de l’assistant IA et de Copilot ; ne les placez pas dans `extra_body`. Mindwtr garde le contrôle de `model`, `messages` et `response_format`.
+
+Pour **llama.cpp avec un modèle Qwen dont le modèle de conversation permet de désactiver le raisonnement**, essayez ce point de départ :
+
+```json
+{
+  "max_tokens": 512,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}
+```
+
+Le paramètre imbriqué suit la [documentation du serveur llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md). D’autres serveurs peuvent nécessiter un autre champ ou un réglage côté serveur ; un `enable_thinking` au premier niveau n’est pas interchangeable avec cet objet. Vérifiez la version du serveur et le modèle de conversation.
+
+- **512 est un plafond de départ, pas un objectif.** Si la réponse est tronquée ou que Mindwtr ne peut pas l’interpréter, essayez 1024 ou retirez la limite. L’analyse de revue peut nécessiter plus de place qu’une courte décomposition de tâche.
+- **Modifiez un seul réglage à la fois.** Comparez la même tâche avec le raisonnement désactivé, puis ajustez le plafond. Réduire `temperature` change l’échantillonnage ; cela ne limite pas la longueur.
+- **Si le délai est toujours dépassé**, essayez un modèle plus petit ou 300 secondes. Effacez les paramètres supplémentaires et enregistrez pour retrouver les valeurs par défaut de Mindwtr.
+
+[HeikoMarkgraf a partagé une configuration fonctionnelle de Qwen3.5-4B dans la discussion #1188](https://github.com/dongdongbh/Mindwtr/discussions/1188#discussioncomment-18448971), avec environ 6,45 secondes pour les suggestions et 37 secondes pour la décomposition. Ce sont des résultats communautaires pour cette configuration, pas des mesures du petit exemple ci-dessus. La discussion conserve la configuration complète ; certains champs peuvent être propres à ce serveur ou ignorés ailleurs.
+
 ## Fonctionnalités
 
 ### Clarifier

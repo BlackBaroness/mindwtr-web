@@ -71,6 +71,31 @@ Open **Advanced → Request timeout** inside the AI assistant settings on deskto
 
 This limit covers AI assistant and Copilot responses, not speech transcription or fetching model lists. A timed-out or cancelled request is not retried automatically. Temporary network or server errors may still receive bounded retries. The timeout follows your existing AI-settings sync preference.
 
+### Shorter responses from local models
+
+A longer timeout gives a model more time; it does not reduce how much it generates. Some models spend tokens on thinking before producing the short answer you see.
+
+With **Provider → OpenAI**, open **Extra request parameters** in the AI assistant settings, paste a JSON object, and choose **Save parameters**. Mindwtr merges these fields directly into AI assistant and Copilot requests; do not wrap them in `extra_body`. The fields `model`, `messages`, and `response_format` remain controlled by Mindwtr.
+
+For **llama.cpp with a Qwen model whose chat template supports disabling thinking**, try this starting point:
+
+```json
+{
+  "max_tokens": 512,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}
+```
+
+The nested thinking parameter follows the [llama.cpp server documentation](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md). Other servers may require a different field or a server-side setting; a top-level `enable_thinking` is not interchangeable with this object. Check your server version and model template.
+
+- **512 is a starting cap, not a target.** If the response is cut off or Mindwtr cannot parse it, try 1024 or remove the cap. Review analysis may need more space than a short task breakdown.
+- **Change one setting at a time.** Compare the same task with thinking disabled, then adjust the cap. Lowering `temperature` changes sampling; it is not a length limit.
+- **If it still times out**, try a smaller model or 300 seconds. Clear the extra parameters and save to return to Mindwtr's defaults.
+
+[HeikoMarkgraf shared a working Qwen3.5-4B configuration in discussion #1188](https://github.com/dongdongbh/Mindwtr/discussions/1188#discussioncomment-18448971), reporting about 6.45 seconds for suggestions and 37 seconds for breakdown. Those are community results for that setup, not a benchmark for the smaller example above. The discussion preserves the full configuration; some of its fields may be specific to that server or ignored elsewhere.
+
 ## Features
 
 ### Clarify

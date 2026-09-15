@@ -72,6 +72,31 @@ xAI（Grok）示例：
 
 此限制适用于 AI 助手和 Copilot 的响应，不影响语音转写或模型列表获取。超时或取消的请求不会自动重试；临时网络或服务器错误仍可能进行有限次数的重试。超时设置遵循现有的 AI 设置同步选项。
 
+### 让本地模型生成更短的响应
+
+延长超时只会给模型更多时间，并不会减少生成量。有些模型会先消耗 token 进行思考，再输出你看到的简短答案。
+
+选择**提供方 → OpenAI**，在 AI 助手设置中打开**额外请求参数**，粘贴 JSON 对象并保存参数。Mindwtr 会将这些字段直接合并到 AI 助手和 Copilot 的请求中，不要再用 `extra_body` 包裹。`model`、`messages` 和 `response_format` 仍由 Mindwtr 控制。
+
+对于**使用 llama.cpp、且聊天模板支持关闭思考的 Qwen 模型**，可以从以下配置开始尝试：
+
+```json
+{
+  "max_tokens": 512,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}
+```
+
+嵌套的思考参数遵循 [llama.cpp 服务器文档](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md)。其他服务器可能需要不同字段或服务端设置；顶层的 `enable_thinking` 与此对象不能互换。请核对服务器版本和模型模板。
+
+- **512 是初始上限，不是目标值。** 如果响应被截断或 Mindwtr 无法解析，可以尝试 1024 或移除上限。回顾分析可能比简短的任务拆解需要更多空间。
+- **每次只改一个设置。** 先对同一任务比较关闭思考后的表现，再调整上限。降低 `temperature` 会改变采样方式，并不限制长度。
+- **如果仍然超时**，可以尝试更小的模型或 300 秒。清空额外参数并保存，即可恢复 Mindwtr 的默认请求设置。
+
+[HeikoMarkgraf 在讨论 #1188 中分享了可用的 Qwen3.5-4B 配置](https://github.com/dongdongbh/Mindwtr/discussions/1188#discussioncomment-18448971)，报告建议功能约耗时 6.45 秒，任务拆解约耗时 37 秒。这是该环境下的社区反馈，并非对上方精简示例的性能测试。讨论中保留了完整配置；其中一些字段可能只适用于该服务器，或被其他服务器忽略。
+
 ## 功能
 
 ### 明确

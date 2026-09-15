@@ -72,6 +72,31 @@ Abre **Avanzado → Tiempo de espera** dentro de los ajustes del asistente de IA
 
 El límite se aplica a las respuestas del asistente y de Copilot, no a la transcripción ni a la consulta de modelos. Las solicitudes canceladas o que agoten el tiempo no se reintentan automáticamente. Los errores temporales de red o del servidor pueden seguir teniendo un número limitado de reintentos. El tiempo de espera sigue tu preferencia actual de sincronización de los ajustes de IA.
 
+### Respuestas más cortas de modelos locales
+
+Un tiempo de espera mayor da más tiempo al modelo, pero no reduce lo que genera. Algunos modelos consumen tokens de razonamiento antes de producir la respuesta breve que ves.
+
+Con **Proveedor → OpenAI**, abre **Parámetros adicionales de solicitud** en los ajustes del asistente de IA, pega un objeto JSON y guarda los parámetros. Mindwtr incorpora estos campos directamente a las solicitudes del asistente y de Copilot; no los envuelvas en `extra_body`. Mindwtr sigue controlando `model`, `messages` y `response_format`.
+
+Para **llama.cpp con un modelo Qwen cuya plantilla de chat permita desactivar el razonamiento**, prueba este punto de partida:
+
+```json
+{
+  "max_tokens": 512,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}
+```
+
+El parámetro anidado sigue la [documentación del servidor llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md). Otros servidores pueden necesitar otro campo o un ajuste del servidor; un `enable_thinking` en el nivel superior no es intercambiable con este objeto. Comprueba la versión del servidor y la plantilla del modelo.
+
+- **512 es un límite inicial, no un objetivo.** Si la respuesta se corta o Mindwtr no puede interpretarla, prueba 1024 o elimina el límite. El análisis de revisión puede necesitar más espacio que la división de una tarea sencilla.
+- **Cambia un ajuste cada vez.** Compara la misma tarea con el razonamiento desactivado y después ajusta el límite. Reducir `temperature` cambia el muestreo; no limita la longitud.
+- **Si sigue agotándose el tiempo**, prueba un modelo más pequeño o 300 segundos. Borra los parámetros adicionales y guarda para volver a los valores predeterminados de Mindwtr.
+
+[HeikoMarkgraf compartió una configuración funcional de Qwen3.5-4B en la discusión #1188](https://github.com/dongdongbh/Mindwtr/discussions/1188#discussioncomment-18448971), con unos 6,45 segundos para sugerencias y 37 segundos para dividir una tarea. Son resultados de la comunidad para esa configuración, no mediciones del ejemplo reducido anterior. La discusión conserva la configuración completa; algunos campos pueden ser específicos de ese servidor o ignorarse en otros.
+
 ## Funciones
 
 ### Aclarar
