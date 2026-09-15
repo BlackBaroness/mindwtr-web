@@ -78,6 +78,8 @@ Microsoft Store 测试版使用仓库变量 `MSSTORE_FLIGHT_ID`，以及现有�
 
 RC 输入 `run_msstore_flight` 默认启用。Windows 工作流对 RC 保持 `run_msstore=false`，仅调用测试版提交 API。它会拒绝不属于本次上传的待处理草稿，包括最初在 Partner Center 创建的草稿；重试前请检查并发布或丢弃该测试版草稿。不要在 Partner Center 编辑 API 创建的提交。工作流摘要会记录提交 ID 和接收处理状态；认证和测试者安装仍需分别确认。
 
+发布版本后如需恢复 Store 测试版，`.github/workflows/release-msstore-flight.yml` 接受已发布的稳定版或 RC 标签。它用 GitHub 的 SHA256 摘要验证现有 Windows 便携版资源，并打包未修改的可执行文件。测试版提交要求发布的预发布状态与标签一致；它不会替换公开发布资源，也不会重新构建应用。
+
 商店软件包版本将 `X.Y.Z-rc.N` 映射为 `X.Y.(Z*100+N).0`，RC 编号范围为 1–98；稳定版 `X.Y.Z` 映射为 `X.Y.(Z*100+99).0`。每一段必须在 0–65535 范围内，第一段必须为正数。例如，`1.3.0-rc.2` 对应 `1.3.2.0`，稳定版 `1.3.0` 对应 `1.3.99.0`。第四段保留给商店，保持为零。稳定版也会更新已配置的测试版，因为加入的账号仍分配给该测试版。请确认通过商店升级后任务和附件得到保留。
 
 如需单独构建 Windows 安装程序和便携版，请手动运行 **Release Windows**，并关闭 `run_msstore` 和 `run_msstore_flight`。选择已有标签不会启用商店发布；这类构建接受 `1.3.0-rc.2a` 等自定义发布后缀，不应用商店软件包版本规则。公开商店发布由稳定版标签推送或显式的 `run_msstore` 请求启用；Beta 测试版使用 `run_msstore_flight`。

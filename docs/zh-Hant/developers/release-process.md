@@ -78,6 +78,8 @@ Microsoft Store 測試版使用儲存庫變數 `MSSTORE_FLIGHT_ID`，以及現�
 
 RC 輸入 `run_msstore_flight` 預設啟用。Windows 工作流程對 RC 保持 `run_msstore=false`，僅呼叫測試版提交 API。它會拒絕不屬於本次上傳的待處理草稿，包括最初在 Partner Center 建立的草稿；重試前請檢查並發布或捨棄該測試版草稿。不要在 Partner Center 編輯 API 建立的提交。工作流程摘要會記錄提交 ID 與接收處理狀態；認證和測試人員安裝仍須分別確認。
 
+版本發布後如需恢復 Store 測試版，`.github/workflows/release-msstore-flight.yml` 接受已發布的穩定版或 RC 標籤。它使用 GitHub 的 SHA256 摘要驗證現有 Windows 可攜版資源，並封裝未修改的執行檔。測試版提交要求發布的預發布狀態與標籤一致；它不會取代公開發布資源，也不會重新建置應用程式。
+
 商店套件版本將 `X.Y.Z-rc.N` 對應為 `X.Y.(Z*100+N).0`，RC 編號範圍為 1–98；穩定版 `X.Y.Z` 對應為 `X.Y.(Z*100+99).0`。每一段必須在 0–65535 範圍內，第一段必須為正數。例如，`1.3.0-rc.2` 對應 `1.3.2.0`，穩定版 `1.3.0` 對應 `1.3.99.0`。第四段保留給商店，保持為零。穩定版也會更新已設定的測試版，因為加入的帳號仍分配給該測試版。請確認透過商店升級後任務與附件都能保留。
 
 如需單獨建置 Windows 安裝程式與可攜版，請手動執行 **Release Windows**，並關閉 `run_msstore` 和 `run_msstore_flight`。選擇既有標籤不會啟用商店發布；這類建置接受 `1.3.0-rc.2a` 等自訂發布後綴，不套用商店套件版本規則。公開商店發布由穩定版標籤推送或明確的 `run_msstore` 請求啟用；Beta 測試版使用 `run_msstore_flight`。
