@@ -192,6 +192,8 @@ See [Tasker’s intent guide](https://tasker.joaoapps.com/userguide/en/intents.h
 
 ### Home Widget
 
+In the next release, tapping blank space in a Tasks or Compact widget opens Focus on Android and iOS. Task links, completion controls, list selection and quick capture keep their existing actions.
+
 The controls below describe Android. For iOS, see **iOS Home Screen Widget** below.
 
 Add the Mindwtr widget to your home screen for quick access:

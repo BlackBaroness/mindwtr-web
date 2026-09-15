@@ -183,6 +183,8 @@ Weitere Angaben zu den Feldern finden Sie in [Taskers Intent-Anleitung](https://
 
 ### Startbildschirm-Widget
 
+Ab der nächsten Version öffnet ein Tippen auf eine freie Fläche im Tasks- oder Compact-Widget unter Android und iOS die Fokus-Ansicht. Aufgabenlinks, Erledigen-Schaltflächen, Listenauswahl und Schnellerfassung behalten ihre bisherigen Funktionen.
+
 Die folgenden Bedienelemente gelten für Android. Für iOS siehe **iOS-Widget auf dem Home-Bildschirm** weiter unten.
 
 1. Startbildschirm lange drücken

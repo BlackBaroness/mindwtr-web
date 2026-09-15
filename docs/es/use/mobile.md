@@ -192,6 +192,8 @@ Consulta la [guía de intents de Tasker](https://tasker.joaoapps.com/userguide/e
 
 ### Widget de inicio
 
+En la próxima versión, tocar un espacio vacío en los widgets Tasks o Compact abrirá Focus en Android e iOS. Los enlaces de tareas, los controles para completar, la selección de listas y la captura rápida conservarán sus acciones actuales.
+
 Los controles siguientes corresponden a Android. Para iOS, consulta **Widget de la pantalla de inicio de iOS** más abajo.
 
 Añade el widget de Mindwtr a la pantalla de inicio para acceder rápidamente:
