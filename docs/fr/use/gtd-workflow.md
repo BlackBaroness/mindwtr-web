@@ -44,6 +44,8 @@ Utilisez ces modèles pour garder un système léger :
 
 ## 1. Capturer (Boîte de réception)
 
+La Boîte de réception rassemble les éléments de tous les domaines, y compris ceux qui n’en ont pas encore. Sur ordinateur et mobile, le filtre de domaine ne limite ni sa liste, ni son compteur, ni son traitement. Vous pouvez garder **Travail** sélectionné et traiter une nouvelle capture sans domaine. Attribuez un domaine lorsque cela aide à organiser l’élément ; la capture n’en exige pas.
+
 ### Capture rapide
 
 - **Ordinateur :** saisissez dans le champ inférieur ou utilisez le raccourci `a` lorsque l’application est active. `o` ouvre également l’ajout d’une tâche.

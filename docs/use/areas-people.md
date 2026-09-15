@@ -43,6 +43,8 @@ Clicking an area cycles it through three states:
 
 Select several areas to see them together, or exclude one to see everything except it. **No area** appears in the list too, so you can include or exclude work that has no Area. The choice applies across views: Focus, Next actions, Projects, Calendar, Search, Review, Board, and Contexts all follow it until you clear it.
 
+**Inbox stays unified on desktop and mobile.** Its list, count, and **Process Inbox** queue include items from every area, including **No area**, regardless of the area filter. The Inbox count and processing step in Review follow the same rule. Inbox shows **All areas**; opening it keeps your filter selection for other views and preserves any areas already assigned to tasks.
+
 ## People
 
 People are reusable assignee names for delegated tasks, Waiting For items, and person-centered searches. They can also hold notes and reference links, such as an email address, contact page, or Obsidian link.

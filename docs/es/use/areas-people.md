@@ -43,6 +43,8 @@ Al pulsar un área, esta recorre tres estados:
 
 Selecciona varias áreas para verlas juntas, o excluye una para ver todo lo demás. **Sin área** también aparece en la lista, así que puedes incluir o excluir el trabajo que no tiene área. La elección se aplica en todas las vistas: Foco, Próximas acciones, Proyectos, Calendario, Búsqueda, Revisión, Tablero y Contextos la respetan hasta que la borres.
 
+**La Bandeja de entrada se mantiene unificada en escritorio y móvil.** Su lista, contador y cola de **Procesar bandeja de entrada** incluyen elementos de todas las áreas, también **Sin área**, independientemente del filtro. El contador y el paso de procesamiento de la bandeja en Revisión siguen la misma regla. La bandeja muestra **Todas las áreas**; al abrirla se conservan el filtro para las demás vistas y las áreas ya asignadas a las tareas.
+
 ## Personas
 
 Las personas son nombres de responsables reutilizables para tareas delegadas, elementos En espera y búsquedas centradas en alguien. También pueden contener notas y enlaces de referencia, como una dirección de correo, una página de contacto o un enlace de Obsidian.

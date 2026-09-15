@@ -43,6 +43,8 @@ Ein Klick auf einen Bereich schaltet ihn durch drei Zustände:
 
 Wählen Sie mehrere Bereiche aus, um sie gemeinsam zu sehen, oder schließen Sie einen aus, um alles außer diesem zu sehen. **Keine Bereiche** steht ebenfalls in der Liste, sodass Sie Arbeit ohne Bereich einschließen oder ausschließen können. Die Auswahl gilt in allen Ansichten: Fokus, Nächste Aktionen, Projekte, Kalender, Suche, Rückblick, Board und Kontexte folgen ihr, bis Sie sie zurücksetzen.
 
+**Der Eingang bleibt auf Desktop und Mobilgeräten bereichsübergreifend.** Seine Liste, Anzahl und die Warteschlange von **Eingang verarbeiten** umfassen unabhängig vom Bereichsfilter Einträge aus allen Bereichen, auch solche ohne Bereich. Dasselbe gilt für die Eingangsanzahl und den Verarbeitungsschritt im Rückblick. Der Eingang zeigt **Alle Bereiche** an; beim Öffnen bleiben Ihre Filterauswahl für andere Ansichten und bereits zugewiesene Aufgabenbereiche erhalten.
+
 ## Personen
 
 Personen sind wiederverwendbare Namen von Verantwortlichen für delegierte Aufgaben, Einträge unter „Warten“ und personenbezogene Suchen. Sie können außerdem Notizen und Referenzlinks enthalten, etwa eine E-Mail-Adresse, eine Kontaktseite oder einen Obsidian-Link.

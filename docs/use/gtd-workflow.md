@@ -44,6 +44,8 @@ Use these patterns to keep the system light:
 
 ## 1. Capture (Inbox)
 
+Inbox collects items from all areas, including items with no area yet. On desktop and mobile, the area filter does not narrow the Inbox list, its count, or **Process Inbox**. You can leave **Work** selected and still process a new unassigned capture. Assign an area when it helps you organize the item; capture does not require one.
+
 ### Quick Capture
 
 - **Desktop:** Type in the bottom input field or use the app-focused `a` shortcut. `o` also opens add task.

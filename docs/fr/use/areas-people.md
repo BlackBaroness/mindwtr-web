@@ -43,6 +43,8 @@ Un clic sur un domaine le fait passer par trois états :
 
 Sélectionnez plusieurs domaines pour les voir ensemble, ou excluez-en un pour voir tout le reste. **Aucun domaine** figure aussi dans la liste, ce qui permet d’inclure ou d’exclure le travail sans domaine. Le choix s’applique à toutes les vues : Focus, Prochaines actions, Projets, Calendrier, Recherche, Revue, Tableau et Contextes le suivent tant que vous ne l’effacez pas.
 
+**La Boîte de réception reste unifiée sur ordinateur et mobile.** Sa liste, son compteur et la file de **Traiter la boîte de réception** incluent les éléments de tous les domaines, y compris ceux sans domaine, quel que soit le filtre. Le compteur et l’étape de traitement de la boîte de réception dans la Revue suivent la même règle. La boîte affiche **Tous les domaines** ; son ouverture conserve le filtre des autres vues et les domaines déjà attribués aux tâches.
+
 ## Personnes
 
 Les personnes sont des noms d’attributaires réutilisables pour les tâches déléguées, les éléments En attente et les recherches centrées sur quelqu’un. Elles peuvent aussi contenir des notes et liens de référence, tels qu’une adresse e-mail, une fiche de contact ou un lien Obsidian.

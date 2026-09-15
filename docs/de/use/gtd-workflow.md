@@ -44,6 +44,8 @@ Mit diesen Mustern bleibt das System leicht:
 
 ## 1. Erfassen (Eingang)
 
+Der Eingang sammelt Einträge aus allen Bereichen, auch solche, die noch keinen Bereich haben. Auf Desktop und Mobilgeräten schränkt der Bereichsfilter weder die Eingangsliste noch ihre Anzahl oder die Eingangsverarbeitung ein. Sie können **Arbeit** ausgewählt lassen und trotzdem einen neuen Eintrag ohne Bereich verarbeiten. Weisen Sie einen Bereich zu, wenn er beim Organisieren hilft; zum Erfassen ist keiner erforderlich.
+
 ### Schnellerfassung
 
 - **Desktop:** Geben Sie die Aufgabe im unteren Eingabefeld ein oder verwenden Sie das app-interne Kürzel `a`. Auch `o` öffnet „Aufgabe hinzufügen“.

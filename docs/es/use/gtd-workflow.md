@@ -44,6 +44,8 @@ Usa estos patrones para mantener el sistema ligero:
 
 ## 1. Capturar (Bandeja de entrada)
 
+La Bandeja de entrada reúne elementos de todas las áreas, incluidos los que aún no tienen área. En escritorio y móvil, el filtro de áreas no limita su lista, contador ni **Procesar bandeja de entrada**. Puedes dejar **Trabajo** seleccionado y procesar una nueva captura sin área. Asigna un área cuando te ayude a organizar el elemento; no hace falta para capturarlo.
+
 ### Captura rápida
 
 - **Escritorio:** escribe en el campo de entrada inferior o usa el atajo `a` cuando la aplicación tenga el foco. `o` también abre la creación de tareas.
