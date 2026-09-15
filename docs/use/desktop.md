@@ -132,6 +132,13 @@ Track delegated items or tasks waiting on external events.
 
 ### 💭 Someday/Maybe
 
+Coming in v1.3.1: organize tasks into Someday sections directly from this list.
+
+- Right-click a task and choose **Move to section…**.
+- Select several tasks to move them together with the same action. The picker includes empty sections, **No section**, and **New section…**.
+- Use **New section…** in the list to create a heading. When grouped by Someday section, use **Add task** on a heading to create a task in that section.
+- A saved move offers **Undo**. Section changes preserve the task’s status, project, project section, and dates. Manage section names and ordering in **Settings → Manage**.
+
 Incubate ideas you might want to pursue later.
 
 ### 🗓️ Calendar
@@ -564,7 +571,7 @@ Access Settings from the sidebar.
 
 ### General
 - **Appearance**: System, Light, Dark, E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia, or OLED / Midnight
-- **Language**: English, Chinese (Simplified), Chinese (Traditional), Hindi, Spanish, Arabic, French, Portuguese (Brazil), Russian, German, Japanese, Persian, Vietnamese, Turkish, Korean, Italian, Polish, Dutch, Czech, Swedish, Hungarian
+- **Language**: English, Chinese (Simplified), Chinese (Traditional), Hindi, Spanish, Arabic, French, Portuguese (Brazil), Russian, German, Japanese, Persian, Vietnamese, Turkish, Korean, Italian, Polish, Dutch, Czech, Swedish, Hungarian, Ukrainian
 - **Keyboard Shortcuts**: Standard, Vim, or Emacs preset
 - **Launch at Startup**: Start Mindwtr automatically when you sign in
 - **Sidebar views**: Hide sidebar entries you don't use, such as Someday/Maybe, Calendar, or Board. Inbox and Projects always stay visible. The choice applies to this device only, and hidden views keep their data and are still reachable from search.

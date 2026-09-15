@@ -132,6 +132,13 @@ Suivez les éléments délégués ou les tâches qui dépendent d’événements
 
 ### 💭 Un jour/Peut-être
 
+À partir de la v1.3.1 : classez les tâches dans des sections Un jour/Peut-être directement depuis cette liste.
+
+- Faites un clic droit sur une tâche et choisissez **Déplacer vers une section…**.
+- Sélectionnez plusieurs tâches pour les déplacer ensemble avec la même action. Le sélecteur inclut les sections vides, **Aucune section** et **Nouvelle section…**.
+- Utilisez **Nouvelle section…** dans la liste pour créer un titre de section. Avec le regroupement par section Un jour/Peut-être, **Ajouter une tâche** sur un titre crée une tâche dans cette section.
+- Un déplacement enregistré peut être **annulé**. Le statut, le projet, la section du projet et les dates de la tâche sont conservés. Gérez les noms et l’ordre des sections dans **Paramètres → Gérer**.
+
 Laissez mûrir les idées que vous voudrez peut-être poursuivre plus tard.
 
 ### 🗓️ Calendrier
@@ -564,7 +571,7 @@ Accédez aux Paramètres depuis la barre latérale.
 
 ### Général
 - **Apparence** : Système, Clair, Sombre, Encre électronique, Nord, Catppuccin Macchiato, Dracula, Sépia ou OLED / Minuit
-- **Langue** : anglais, chinois (simplifié), chinois (traditionnel), hindi, espagnol, arabe, français, portugais (Brésil), russe, allemand, japonais, persan, vietnamien, turc, coréen, italien, polonais, néerlandais, tchèque, suédois, hongrois
+- **Langue** : anglais, chinois (simplifié), chinois (traditionnel), hindi, espagnol, arabe, français, portugais (Brésil), russe, allemand, japonais, persan, vietnamien, turc, coréen, italien, polonais, néerlandais, tchèque, suédois, hongrois, ukrainien
 - **Raccourcis clavier** : préréglage Standard, Vim ou Emacs
 - **Lancer au démarrage** : démarrer Mindwtr automatiquement lors de votre connexion
 - **Vues de la barre latérale** : masquez les entrées de la barre latérale que vous n'utilisez pas, comme Un jour/Peut-être, Calendrier ou Tableau. Boîte de réception et Projets restent toujours visibles. Le choix ne s'applique qu'à cet appareil ; les vues masquées conservent leurs données et restent accessibles depuis la recherche.

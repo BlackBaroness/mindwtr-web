@@ -132,6 +132,13 @@ Delegierte Einträge oder Aufgaben verfolgen, die auf externe Ereignisse warten.
 
 ### 💭 Irgendwann/Vielleicht
 
+Ab v1.3.1: Ordnen Sie Aufgaben direkt in dieser Liste in Irgendwann-Abschnitte ein.
+
+- Klicken Sie mit der rechten Maustaste auf eine Aufgabe und wählen Sie **In Abschnitt verschieben…**.
+- Wählen Sie mehrere Aufgaben aus, um sie mit derselben Aktion gemeinsam zu verschieben. Die Auswahl enthält leere Abschnitte, **Kein Abschnitt** und **Neuer Abschnitt…**.
+- Erstellen Sie mit **Neuer Abschnitt…** in der Liste eine Überschrift. Bei Gruppierung nach Irgendwann-Abschnitt erstellt **Aufgabe hinzufügen** an einer Überschrift eine Aufgabe in diesem Abschnitt.
+- Nach dem Speichern können Sie die Verschiebung **rückgängig machen**. Status, Projekt, Projektabschnitt und Termine bleiben erhalten. Namen und Reihenfolge der Abschnitte verwalten Sie unter **Einstellungen → Verwalten**.
+
 Ideen reifen lassen, die Sie später verfolgen möchten.
 
 ### 🗓️ Kalender
@@ -559,7 +566,7 @@ In jeder Voreinstellung setzt `s` plus Buchstabe direkt den Status (`si` Eingang
 
 ### Allgemein
 - **Darstellung**: System, Hell, Dunkel, E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia oder OLED / Mitternacht
-- **Sprache**: Englisch, Chinesisch (vereinfacht/traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch, Ungarisch
+- **Sprache**: Englisch, Chinesisch (vereinfacht), Chinesisch (traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch, Ungarisch, Ukrainisch
 - **Tastenkürzel**: Standard, Vim oder Emacs
 - **Beim Systemstart öffnen**: Mindwtr nach der Anmeldung automatisch starten
 - **Ansichten der Seitenleiste**: Blenden Sie Einträge der Seitenleiste aus, die Sie nicht nutzen, etwa Irgendwann/Vielleicht, Kalender oder Board. Eingang und Projekte bleiben immer sichtbar. Die Auswahl gilt nur für dieses Gerät; ausgeblendete Ansichten behalten ihre Daten und bleiben über die Suche erreichbar.

@@ -625,6 +625,13 @@ Beim Abschluss wird die aktuelle Zeit gespeichert. Wenn Sie früher fertig waren
 
 ## Irgendwann/Vielleicht
 
+Ab v1.3.1: Ordnen Sie Aufgaben direkt in dieser Liste in Irgendwann-Abschnitte ein.
+
+- Öffnen Sie das Menü einer Aufgabe und wählen Sie **In Abschnitt verschieben…**.
+- Wählen Sie mehrere Aufgaben aus, um sie mit derselben Aktion gemeinsam zu verschieben. Die Auswahl enthält leere Abschnitte, **Kein Abschnitt** und **Neuer Abschnitt…**.
+- Erstellen Sie mit **Neuer Abschnitt…** in der Liste eine Überschrift. Bei Gruppierung nach Irgendwann-Abschnitt erstellt **Aufgabe hinzufügen** an einer Überschrift eine Aufgabe in diesem Abschnitt.
+- Nach dem Speichern können Sie die Verschiebung **rückgängig machen**. Status, Projekt, Projektabschnitt und Termine bleiben erhalten. Namen und Reihenfolge der Abschnitte verwalten Sie unter **Einstellungen → Verwalten**.
+
 - im Wochenrückblick regelmäßig prüfen
 - durch Verschieben nach „Nächstes“ aktivieren
 - archivieren, wenn nicht mehr relevant
@@ -664,7 +671,7 @@ Tippen Sie auf **Zulassen**, um den Android-Berechtigungsbildschirm für Mindwtr
 ### Allgemein
 
 - **Darstellung**: System, Hell, Dunkel, Material 3 (Hell), Material 3 (Dunkel), E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia oder OLED / Mitternacht
-- **Sprache**: Englisch, Chinesisch (vereinfacht/traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch, Ungarisch
+- **Sprache**: Englisch, Chinesisch (vereinfacht), Chinesisch (traditionell), Hindi, Spanisch, Arabisch, Französisch, Portugiesisch (Brasilien), Russisch, Deutsch, Japanisch, Persisch, Vietnamesisch, Türkisch, Koreanisch, Italienisch, Polnisch, Niederländisch, Tschechisch, Schwedisch, Ungarisch, Ukrainisch
 
 ### Benachrichtigungen
 

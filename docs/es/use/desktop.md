@@ -132,6 +132,13 @@ Controla los elementos delegados o las tareas que esperan acontecimientos extern
 
 ### 💭 Algún día/Tal vez
 
+A partir de v1.3.1: organiza tareas en secciones de Algún día directamente desde esta lista.
+
+- Haz clic derecho en una tarea y elige **Mover a sección…**.
+- Selecciona varias tareas para moverlas juntas con la misma acción. El selector incluye secciones vacías, **Sin sección** y **Nueva sección…**.
+- Usa **Nueva sección…** en la lista para crear un encabezado. Al agrupar por sección de Algún día, usa **Añadir tarea** en un encabezado para crear una tarea en esa sección.
+- Después de guardar el cambio puedes **Deshacer**. Se conservan el estado, el proyecto, la sección del proyecto y las fechas de la tarea. Gestiona los nombres y el orden de las secciones en **Ajustes → Gestionar**.
+
 Incuba ideas que quizá quieras llevar a cabo más adelante.
 
 ### 🗓️ Calendario
@@ -564,7 +571,7 @@ Abre Ajustes desde la barra lateral.
 
 ### General
 - **Apariencia**: Sistema, Clara, Oscura, E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia u OLED / Medianoche
-- **Idioma**: inglés, chino (simplificado), chino (tradicional), hindi, español, árabe, francés, portugués (Brasil), ruso, alemán, japonés, persa, vietnamita, turco, coreano, italiano, polaco, neerlandés, checo, sueco, húngaro
+- **Idioma**: inglés, chino (simplificado), chino (tradicional), hindi, español, árabe, francés, portugués (Brasil), ruso, alemán, japonés, persa, vietnamita, turco, coreano, italiano, polaco, neerlandés, checo, sueco, húngaro, ucraniano
 - **Atajos de teclado**: preajuste Estándar, Vim o Emacs
 - **Abrir al iniciar**: inicia Mindwtr automáticamente al iniciar sesión
 - **Vistas de la barra lateral**: oculta las entradas de la barra lateral que no uses, como Algún día/Tal vez, Calendario o Tablero. Bandeja de entrada y Proyectos siempre quedan visibles. La elección se aplica solo a este dispositivo; las vistas ocultas conservan sus datos y siguen siendo accesibles desde la búsqueda.

@@ -94,6 +94,7 @@ Mindwtr 目前支持以下语言选项，大致按全球使用者总数排列：
 - 한국어
 - Italiano
 - Polski
+- Українська
 - Nederlands
 - Čeština
 - Svenska

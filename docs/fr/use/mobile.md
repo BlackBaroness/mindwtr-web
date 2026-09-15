@@ -682,6 +682,13 @@ Suivez les éléments délégués ou qui dépendent d’événements externes.
 
 ## Un jour/Peut-être
 
+À partir de la v1.3.1 : classez les tâches dans des sections Un jour/Peut-être directement depuis cette liste.
+
+- Ouvrez le menu d’une tâche et choisissez **Déplacer vers une section…**.
+- Sélectionnez plusieurs tâches pour les déplacer ensemble avec la même action. Le sélecteur inclut les sections vides, **Aucune section** et **Nouvelle section…**.
+- Utilisez **Nouvelle section…** dans la liste pour créer un titre de section. Avec le regroupement par section Un jour/Peut-être, **Ajouter une tâche** sur un titre crée une tâche dans cette section.
+- Un déplacement enregistré peut être **annulé**. Le statut, le projet, la section du projet et les dates de la tâche sont conservés. Gérez les noms et l’ordre des sections dans **Paramètres → Gérer**.
+
 Laissez mûrir les idées pour l’avenir.
 
 - Passez-les périodiquement en revue pendant la Revue hebdomadaire
@@ -726,7 +733,7 @@ Touchez **Autoriser** pour ouvrir l’écran d’autorisation Android de Mindwtr
 ### Général
 
 - **Apparence** : Système, Clair, Sombre, Material 3 (clair), Material 3 (sombre), Encre électronique, Nord, Catppuccin Macchiato, Dracula, Sépia ou OLED / Minuit
-- **Langue** : anglais, chinois (simplifié), chinois (traditionnel), hindi, espagnol, arabe, français, portugais (Brésil), russe, allemand, japonais, persan, vietnamien, turc, coréen, italien, polonais, néerlandais, tchèque, suédois, hongrois
+- **Langue** : anglais, chinois (simplifié), chinois (traditionnel), hindi, espagnol, arabe, français, portugais (Brésil), russe, allemand, japonais, persan, vietnamien, turc, coréen, italien, polonais, néerlandais, tchèque, suédois, hongrois, ukrainien
 
 ### Notifications
 

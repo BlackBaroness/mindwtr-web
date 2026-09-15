@@ -682,6 +682,13 @@ Track items delegated or waiting on external events.
 
 ## Someday/Maybe
 
+Coming in v1.3.1: organize tasks into Someday sections directly from this list.
+
+- Open a task’s menu and choose **Move to section…**.
+- Select several tasks to move them together with the same action. The picker includes empty sections, **No section**, and **New section…**.
+- Use **New section…** in the list to create a heading. When grouped by Someday section, use **Add task** on a heading to create a task in that section.
+- A saved move offers **Undo**. Section changes preserve the task’s status, project, project section, and dates. Manage section names and ordering in **Settings → Manage**.
+
 Incubate ideas for the future.
 
 - Review periodically during Weekly Review
@@ -726,7 +733,7 @@ Tap **Allow** to open the Android permission screen for Mindwtr. You can also re
 ### General
 
 - **Appearance**: System, Light, Dark, Material 3 (Light), Material 3 (Dark), E-Ink, Nord, Catppuccin Macchiato, Dracula, Sepia, or OLED / Midnight
-- **Language**: English, Chinese (Simplified), Chinese (Traditional), Hindi, Spanish, Arabic, French, Portuguese (Brazil), Russian, German, Japanese, Persian, Vietnamese, Turkish, Korean, Italian, Polish, Dutch, Czech, Swedish, Hungarian
+- **Language**: English, Chinese (Simplified), Chinese (Traditional), Hindi, Spanish, Arabic, French, Portuguese (Brazil), Russian, German, Japanese, Persian, Vietnamese, Turkish, Korean, Italian, Polish, Dutch, Czech, Swedish, Hungarian, Ukrainian
 
 ### Notifications
 
